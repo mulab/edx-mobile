@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface EDXLoginViewController : UIViewController
-
+{
+    __weak IBOutlet UITextField *userName;
+    __weak IBOutlet UITextField *passWord;
+}
+- (IBAction)LoginAction:(id)sender;
 @end
