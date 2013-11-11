@@ -62,6 +62,7 @@
 		C396517218316B8400984745 /* StressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C396514718316B8400984745 /* StressTests.m */; };
 		C396517318316B8400984745 /* README-GHUnit in Resources */ = {isa = PBXBuildFile; fileRef = C396514A18316B8400984745 /* README-GHUnit */; };
 		C396517418316B8400984745 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C396514D18316B8400984745 /* Reachability.m */; };
+		C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C396517618316D7600984745 /* EDXNetworkRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,8 @@
 		C396514A18316B8400984745 /* README-GHUnit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "README-GHUnit"; sourceTree = "<group>"; };
 		C396514C18316B8400984745 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C396514D18316B8400984745 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C396517518316D7600984745 /* EDXNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkRequest.h; sourceTree = "<group>"; };
+		C396517618316D7600984745 /* EDXNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,8 @@
 				C39650EF18314F4D00984745 /* EDXLoginViewController.h */,
 				C39650F018314F4D00984745 /* EDXLoginViewController.m */,
 				C39650F118314F4D00984745 /* EDXLoginViewController.xib */,
+				C396517518316D7600984745 /* EDXNetworkRequest.h */,
+				C396517618316D7600984745 /* EDXNetworkRequest.m */,
 			);
 			path = "edx-mobile";
 			sourceTree = "<group>";
@@ -586,6 +591,7 @@
 				C396517118316B8400984745 /* ProxyTests.m in Sources */,
 				C396517218316B8400984745 /* StressTests.m in Sources */,
 				C396517418316B8400984745 /* Reachability.m in Sources */,
+				C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
