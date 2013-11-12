@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-
+enum kRequestStatus{//the status define of a request
+    kRequestStatusNone=0,
+    kRequestStatusBeging=1,
+    kRequestStatusEnded=2,
+    kRequestStatusError=3,
+    kRequestStatusReceiving=4
+};
+typedef enum kRequestStatus kRequestStatus;
+enum kBusinessTag//the request tag
+{
+	kBusinessTagUserLogin=0,
+};
+typedef enum kBusinessTag kBusinessTag;
 @protocol EDXNetworkDelegate <NSObject>
-
+@optional
+-(void)beginPost:(kBusinessTag)tag;
+-(void)endPost:(NSString*)result business:(kBusinessTag)tag;
+-(void)errorPost:(NSError*)err;
 @end
