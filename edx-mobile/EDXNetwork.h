@@ -13,7 +13,7 @@
 <ASIHTTPRequestDelegate>{
     NSMutableDictionary* queue;
 }
-+(EDXNetwork*)sharedNetworkModule;
++(EDXNetwork*)sharedEDXNetwork;
 -(void)postBusinessReq:(NSString*)json
                    tag:(kBusinessTag)tag
                  owner:(id<EDXNetworkDelegate>)owner;

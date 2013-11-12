@@ -24,6 +24,6 @@ typedef enum kBusinessTag kBusinessTag;
 @protocol EDXNetworkDelegate <NSObject>
 @optional
 -(void)beginPost:(kBusinessTag)tag;
--(void)endPost:(NSString*)result business:(kBusinessTag)tag;
+-(void)endPost:(NSData*)result business:(kBusinessTag)tag;
 -(void)errorPost:(NSError*)err;
 @end

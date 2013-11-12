@@ -62,6 +62,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXNetwork);
     }
     
 }
+- (void)requestStarted:(ASIHTTPRequest *)request{
+    NSLog(@"request start");
+    NSLog(@"%@",[request description]);
+}
 // 请求失败，获取 error
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
@@ -69,8 +73,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXNetwork);
                                     [NSNumber numberWithInt:request.tag]];
 	NSError *error = [request error];
 	if (req.owner!=nil) {
-        [req.owner errorPost:error
-					business: req.businessTag];
+        [req.owner errorPost:error];
     }
 }
 -(void)dealloc{

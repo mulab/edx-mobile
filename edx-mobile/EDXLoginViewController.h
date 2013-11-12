@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EDXLoginViewController : UIViewController
+#import "EDXNetworkDelegate.h"
+@interface EDXLoginViewController : UIViewController<EDXNetworkDelegate>
 {
-    __weak IBOutlet UITextField *userName;
-    __weak IBOutlet UITextField *passWord;
 }
+@property (retain, nonatomic) IBOutlet UITextField *userName;
+@property (retain, nonatomic) IBOutlet UITextField *password;
 - (IBAction)LoginAction:(id)sender;
 @end

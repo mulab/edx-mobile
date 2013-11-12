@@ -7,13 +7,15 @@
 //
 
 #import "EDXLoginViewController.h"
-
+#import "EDXNetwork.h"
+#import "EDXConstants.h"
 @interface EDXLoginViewController ()
 
 @end
 
 @implementation EDXLoginViewController
-
+@synthesize userName;
+@synthesize password;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,10 +34,47 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Dispose of any reso      urces that can be recreated.
 }
 
 - (IBAction)LoginAction:(id)sender {
-    
+    NSString* postData = [NSString stringWithFormat:loginPost,userName.text,password.text];
+    [[EDXNetwork sharedEDXNetwork]postBusinessReq:postData tag:kBusinessTagUserLogin owner:self];
+}
+- (void)dealloc {
+    [userName release];
+    [password release];
+    [super dealloc];
+}
+
+#pragma mark NetworkModule delegate 
+-(void) beginPost:(kBusinessTag)tag{
+}
+-(void) endPost:(NSData *)result business:(kBusinessTag)tag{
+    NSError* error;
+    UIAlertView *message = nil;
+    if(tag==kBusinessTagUserLogin){
+        NSDictionary *respond = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableLeaves error:&error];
+        if ([[[NSString alloc]initWithString:@"successful"]isEqualToString: [respond objectForKey:@"status"]] == NO) {
+            //if not success
+            message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+            [message show];
+            [message release];
+        } else {
+            //if success
+            message = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Login Succeed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+            [message show];
+            [message release];
+        }
+    }else{
+         message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [message show];
+        [message release];
+    }
+}
+-(void) errorPost:(NSError *)err{
+    NSLog(@"err:%@",[err localizedDescription]);
+    NSLog(@"reason:%@",[err localizedFailureReason]);
+    NSLog(@"suggestion:%@",[err localizedRecoverySuggestion]);
 }
 @end

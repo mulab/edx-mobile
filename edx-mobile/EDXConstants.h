@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 extern NSString * const api_key;
 extern NSString * const loginUrl;
+extern NSString * const loginPost;
 @interface EDXConstants : NSObject
 
 @end

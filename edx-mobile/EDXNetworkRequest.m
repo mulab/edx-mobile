@@ -28,12 +28,10 @@
 -(id<EDXNetworkDelegate>)owner{
     return owner;
 }
--(NSString*)result{
+-(NSData*)result{
     if(requestStatus==kRequestStatusEnded){
         NSData *data = [_request responseData];
-        NSString* string=[[NSString alloc] initWithData:data encoding:self.enc];
-        
-        return string;
+        return data;
     }else
         return nil;
 }
@@ -47,7 +45,7 @@
     [reqHeaders setValue:@"application/json; charset=UTF-8" forKey:@"Content-Type"];
     _request.requestHeaders = reqHeaders; // set header
     [reqHeaders release];
-    NSLo(@"post json:%@",json);
+    NSLog(@"post json:%@",json);
     _request.tag=self.businessTag;
     [_request appendPostData:[json dataUsingEncoding:self.enc]];//set post data
     [_request setDelegate:delegate];//set request delegate
