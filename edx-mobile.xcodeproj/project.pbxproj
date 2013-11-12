@@ -38,6 +38,7 @@
 		C396517B183235F600984745 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517A183235F600984745 /* SystemConfiguration.framework */; };
 		C396517D183235FF00984745 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517C183235FF00984745 /* MobileCoreServices.framework */; };
 		C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517E1832361600984745 /* libz.1.2.5.dylib */; };
+		C396518318323E6E00984745 /* EDXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518218323E6D00984745 /* EDXNetwork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,9 @@
 		C396517A183235F600984745 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C396517C183235FF00984745 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C396517E1832361600984745 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		C396518018323A5B00984745 /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
+		C396518118323E6D00984745 /* EDXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetwork.h; sourceTree = "<group>"; };
+		C396518218323E6D00984745 /* EDXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetwork.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,9 @@
 				C39650F118314F4D00984745 /* EDXLoginViewController.xib */,
 				C396517518316D7600984745 /* EDXNetworkRequest.h */,
 				C396517618316D7600984745 /* EDXNetworkRequest.m */,
+				C396518018323A5B00984745 /* EDXNetworkDelegate.h */,
+				C396518118323E6D00984745 /* EDXNetwork.h */,
+				C396518218323E6D00984745 /* EDXNetwork.m */,
 			);
 			path = "edx-mobile";
 			sourceTree = "<group>";
@@ -402,6 +409,7 @@
 				C396515518316B8400984745 /* ASINetworkQueue.m in Sources */,
 				C396517418316B8400984745 /* Reachability.m in Sources */,
 				C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */,
+				C396518318323E6E00984745 /* EDXNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
