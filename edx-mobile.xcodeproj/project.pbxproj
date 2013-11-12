@@ -39,6 +39,7 @@
 		C396517D183235FF00984745 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517C183235FF00984745 /* MobileCoreServices.framework */; };
 		C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517E1832361600984745 /* libz.1.2.5.dylib */; };
 		C396518318323E6E00984745 /* EDXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518218323E6D00984745 /* EDXNetwork.m */; };
+		C39651881832440200984745 /* EDXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C39651871832440200984745 /* EDXConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		C396518118323E6D00984745 /* EDXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetwork.h; sourceTree = "<group>"; };
 		C396518218323E6D00984745 /* EDXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetwork.m; sourceTree = "<group>"; };
 		C396518418323FB300984745 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		C39651861832440200984745 /* EDXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXConstants.h; sourceTree = "<group>"; };
+		C39651871832440200984745 /* EDXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				C396518018323A5B00984745 /* EDXNetworkDelegate.h */,
 				C396518118323E6D00984745 /* EDXNetwork.h */,
 				C396518218323E6D00984745 /* EDXNetwork.m */,
+				C39651861832440200984745 /* EDXConstants.h */,
+				C39651871832440200984745 /* EDXConstants.m */,
 			);
 			path = "edx-mobile";
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				C396517418316B8400984745 /* Reachability.m in Sources */,
 				C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */,
 				C396518318323E6E00984745 /* EDXNetwork.m in Sources */,
+				C39651881832440200984745 /* EDXConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

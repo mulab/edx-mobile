@@ -7,6 +7,8 @@
 //
 
 #import "EDXConstants.h"
+NSString * const api_key = @"dev";
+NSString * const loginUrl = @"http://api.tsinghuax.org/api/v1/auth/login?api_key=%@";
 
 @implementation EDXConstants
 

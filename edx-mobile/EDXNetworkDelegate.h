@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ASIHTTPRequestDelegate.h"
 enum kRequestStatus{//the status define of a request
     kRequestStatusNone=0,
     kRequestStatusBeging=1,

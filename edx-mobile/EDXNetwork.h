@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SynthesizeSingleton.h"
+#import "EDXNetworkRequest.h"
 @interface EDXNetwork : NSObject
+<ASIHTTPRequestDelegate>{
+    NSMutableDictionary* queue;
+}
++(EDXNetwork*)sharedNetworkModule;
+-(void)postBusinessReq:(NSString*)json
+                   tag:(kBusinessTag)tag
+                 owner:(id<EDXNetworkDelegate>)owner;
+-(void)cancel:(kBusinessTag)tag;
 
 @end

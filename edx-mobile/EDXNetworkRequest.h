@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ASIHTTPRequest.h"
 #import "EDXNetworkDelegate.h"
 @interface EDXNetworkRequest : NSObject
 @property (nonatomic,retain)id<EDXNetworkDelegate> owner;//who delegate the request
