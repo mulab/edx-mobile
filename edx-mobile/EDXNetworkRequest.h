@@ -15,7 +15,7 @@
 @property (assign)NSStringEncoding enc;//response encodeing
 @property (assign)kRequestStatus requestStatus;
 @property (assign)kBusinessTag businessTag;
-@property (nonatomic,readonly,getter = result)NSData* result;
+@property (nonatomic,readonly,getter = result)id result;
 -(void)cancel;
 -(void)postJson: (NSString*)json delegate:(id)delegate;//post json method
 @end

@@ -18,7 +18,9 @@ enum kRequestStatus{//the status define of a request
 typedef enum kRequestStatus kRequestStatus;
 enum kBusinessTag//the request tag
 {
-	kBusinessTagUserLogin=0,
+    kBusinessTagGetStatus=0,
+	kBusinessTagUserLogin=1,
+    kBusinessTagGetEnrollments=2,
 };
 typedef enum kBusinessTag kBusinessTag;
 @protocol EDXNetworkDelegate <NSObject>

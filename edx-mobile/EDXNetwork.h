@@ -17,6 +17,7 @@
 -(void)postBusinessReq:(NSString*)json
                    tag:(kBusinessTag)tag
                  owner:(id<EDXNetworkDelegate>)owner;
+-(void)getBusinessReq:(kBusinessTag)tag owner:(id<EDXNetworkDelegate>)owner;
 -(void)cancel:(kBusinessTag)tag;
 
 @end

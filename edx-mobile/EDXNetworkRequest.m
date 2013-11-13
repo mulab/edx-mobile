@@ -28,10 +28,11 @@
 -(id<EDXNetworkDelegate>)owner{
     return owner;
 }
--(NSData*)result{
+-(id)result{
     if(requestStatus==kRequestStatusEnded){
         NSData *data = [_request responseData];
-        return data;
+        NSError* error;
+        return  [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
     }else
         return nil;
 }

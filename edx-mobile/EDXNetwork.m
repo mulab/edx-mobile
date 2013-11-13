@@ -19,7 +19,23 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXNetwork);
     }
     return self;
 }
-
+-(void)getBusinessReq:(kBusinessTag)tag owner:(id<EDXNetworkDelegate>)owner{
+    EDXNetworkRequest* req=(EDXNetworkRequest*)[queue objectForKey:[NSNumber numberWithInt:tag]];
+    if (req==nil) {
+        req=[[EDXNetworkRequest alloc]init];
+    }
+    req.businessTag=tag;
+    req.requestStatus=kRequestStatusNone;
+    [queue setObject:req forKey:[NSNumber numberWithInt:tag]];
+    req.enc=NSUTF8StringEncoding;
+    req.owner=owner;
+    if (tag==kBusinessTagGetEnrollments) {
+        req.url=@"string";
+    } else {
+        req.url=@"string";
+    }
+    
+}
 -(void)postBusinessReq:(NSString*)json
                    tag:(kBusinessTag)tag
                  owner:(id<EDXNetworkDelegate>)owner{

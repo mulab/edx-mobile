@@ -50,11 +50,10 @@
 #pragma mark NetworkModule delegate 
 -(void) beginPost:(kBusinessTag)tag{
 }
--(void) endPost:(NSData *)result business:(kBusinessTag)tag{
-    NSError* error;
+-(void) endPost:(id)result business:(kBusinessTag)tag{
     UIAlertView *message = nil;
     if(tag==kBusinessTagUserLogin){
-        NSDictionary *respond = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableLeaves error:&error];
+        NSDictionary *respond = result;
         if ([[[NSString alloc]initWithString:@"successful"]isEqualToString: [respond objectForKey:@"status"]] == NO) {
             //if not success
             message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
