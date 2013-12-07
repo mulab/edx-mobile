@@ -21,6 +21,8 @@ enum kBusinessTag//the request tag
     kBusinessTagGetStatus=0,
 	kBusinessTagUserLogin=1,
     kBusinessTagGetEnrollments=2,
+    kBusinessTagGetCourseNavigation=3,
+    kBusinessTagGetCourseVideoList=4
 };
 typedef enum kBusinessTag kBusinessTag;
 @protocol EDXNetworkDelegate <NSObject>

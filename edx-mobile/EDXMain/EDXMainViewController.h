@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EDXMainViewController : UIViewController
-
+#import "EDXNetworkDelegate.h"
+#import "EDXGetCourseContent.h"
+@interface EDXMainViewController : UIViewController<EDXNetworkDelegate,EDXGetCourseContent>
+{
+    NSInteger buttonTag;
+    NSInteger videoTag;
+}
+- (IBAction)showVideoAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UILabel *courseName;
+@property (retain, nonatomic) IBOutlet UILabel *videoName;
+@property (retain, nonatomic) IBOutlet UIButton *showCouseButton;
+@property (retain, nonatomic) IBOutlet UIButton *showVideoButton;
+@property (retain)NSMutableArray *courseURI;
+@property (retain)NSMutableArray *videoURI;
+- (IBAction)enterCourseAction:(id)sender;
 @end

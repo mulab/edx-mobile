@@ -9,6 +9,7 @@
 #import "EDXLoginViewController.h"
 #import "EDXNetwork.h"
 #import "EDXConstants.h"
+#import "EDXMainViewController.h"
 @interface EDXLoginViewController ()
 
 @end
@@ -41,6 +42,10 @@
     NSString* postData = [NSString stringWithFormat:loginPost,userName.text,password.text];
     [[EDXNetwork sharedEDXNetwork]postBusinessReq:postData tag:kBusinessTagUserLogin owner:self];
 }
+
+- (IBAction)GetEnrollMentAction:(id)sender {
+    [[EDXNetwork sharedEDXNetwork]getBusinessReq:kBusinessTagGetEnrollments owner:self];
+}
 - (void)dealloc {
     [userName release];
     [password release];
@@ -54,21 +59,24 @@
     UIAlertView *message = nil;
     if(tag==kBusinessTagUserLogin){
         NSDictionary *respond = result;
-        if ([[[NSString alloc]initWithString:@"successful"]isEqualToString: [respond objectForKey:@"status"]] == NO) {
+        if ([respond objectForKey:@"access_token"]) {
+            //if success
+            NSLog(@"access_token:%@",[respond objectForKey:@"access_token"]);
+            EDXMainViewController* mainVC = [[[EDXMainViewController alloc]init]autorelease];
+            UINavigationController* vc =[[[UINavigationController alloc]initWithRootViewController:mainVC]autorelease];
+            [self.view.window setRootViewController:vc];
+        } else {
             //if not success
             message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
             [message show];
             [message release];
-        } else {
-            //if success
-            message = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Login Succeed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-            [message show];
-            [message release];
         }
-    }else{
-         message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-        [message show];
-        [message release];
+    }else if (tag==kBusinessTagGetEnrollments){
+        NSDictionary *response = result;
+        if([response objectForKey:@"enrollments"]){
+            NSArray *enrolls =  [response objectForKey:@"enrollments"];
+            NSLog(@"enrolls:%@",[enrolls[0] objectForKey:@"display_name"]);
+        }
     }
 }
 -(void) errorPost:(NSError *)err{

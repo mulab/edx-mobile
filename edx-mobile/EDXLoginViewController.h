@@ -14,4 +14,5 @@
 @property (retain, nonatomic) IBOutlet UITextField *userName;
 @property (retain, nonatomic) IBOutlet UITextField *password;
 - (IBAction)LoginAction:(id)sender;
+- (IBAction)GetEnrollMentAction:(id)sender;
 @end

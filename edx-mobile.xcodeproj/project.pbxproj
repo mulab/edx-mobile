@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C369794F185308FB006055C3 /* EDXURIHelper.m */; };
+		C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36979B91853A2C4006055C3 /* MediaPlayer.framework */; };
+		C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36979C21853A406006055C3 /* EDXMPViewController.m */; };
+		C36979C51853A406006055C3 /* EDXMPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36979C31853A406006055C3 /* EDXMPViewController.xib */; };
 		C39650BB18314F1C00984745 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BA18314F1C00984745 /* UIKit.framework */; };
 		C39650BD18314F1C00984745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BC18314F1C00984745 /* Foundation.framework */; };
 		C39650BF18314F1C00984745 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BE18314F1C00984745 /* CoreGraphics.framework */; };
@@ -55,6 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C369794E185308FB006055C3 /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
+		C369794F185308FB006055C3 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
+		C36979B818539094006055C3 /* EDXGetCourseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseContent.h; sourceTree = "<group>"; };
+		C36979B91853A2C4006055C3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C36979C11853A406006055C3 /* EDXMPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXMPViewController.h; sourceTree = "<group>"; };
+		C36979C21853A406006055C3 /* EDXMPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXMPViewController.m; sourceTree = "<group>"; };
+		C36979C31853A406006055C3 /* EDXMPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDXMPViewController.xib; sourceTree = "<group>"; };
 		C39650B718314F1C00984745 /* edx-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "edx-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39650BA18314F1C00984745 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C39650BC18314F1C00984745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */,
 				C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */,
 				C39650BF18314F1C00984745 /* CoreGraphics.framework in Frameworks */,
 				C396517D183235FF00984745 /* MobileCoreServices.framework in Frameworks */,
@@ -148,6 +160,7 @@
 		C39650AE18314F1B00984745 = {
 			isa = PBXGroup;
 			children = (
+				C36979B91853A2C4006055C3 /* MediaPlayer.framework */,
 				C396517E1832361600984745 /* libz.1.2.5.dylib */,
 				C396517C183235FF00984745 /* MobileCoreServices.framework */,
 				C396517A183235F600984745 /* SystemConfiguration.framework */,
@@ -200,6 +213,12 @@
 				C396518B1832645F00984745 /* EDXMainViewController.h */,
 				C396518C1832645F00984745 /* EDXMainViewController.m */,
 				C396518D1832645F00984745 /* EDXMainViewController.xib */,
+				C369794E185308FB006055C3 /* EDXURIHelper.h */,
+				C369794F185308FB006055C3 /* EDXURIHelper.m */,
+				C36979B818539094006055C3 /* EDXGetCourseContent.h */,
+				C36979C11853A406006055C3 /* EDXMPViewController.h */,
+				C36979C21853A406006055C3 /* EDXMPViewController.m */,
+				C36979C31853A406006055C3 /* EDXMPViewController.xib */,
 			);
 			path = "edx-mobile";
 			sourceTree = "<group>";
@@ -378,6 +397,7 @@
 				C39650F318314F4D00984745 /* EDXLoginViewController.xib in Resources */,
 				C396517318316B8400984745 /* README-GHUnit in Resources */,
 				C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */,
+				C36979C51853A406006055C3 /* EDXMPViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +448,8 @@
 				C396518318323E6E00984745 /* EDXNetwork.m in Sources */,
 				C39651881832440200984745 /* EDXConstants.m in Sources */,
 				C396518E1832645F00984745 /* EDXMainViewController.m in Sources */,
+				C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */,
+				C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +626,7 @@
 				C39650EB18314F1C00984745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C39650EC18314F1C00984745 /* Build configuration list for PBXNativeTarget "edx-mobileTests" */ = {
 			isa = XCConfigurationList;
@@ -612,6 +635,7 @@
 				C39650EE18314F1C00984745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
