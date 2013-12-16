@@ -35,4 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark EDXUIView delegate
+
+- (void) CancelBeforeRefreshFinished{
+    NSLog(@"call base view controller : %s",__func__);
+}
+
+- (void) BeforeRefreshView{
+    NSLog(@"call base view controller : %s",__func__);
+}
+
 @end

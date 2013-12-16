@@ -16,4 +16,5 @@
 -(NSString *) GetUserName;
 -(NSArray *) GetMyCourseList:(id<EDXUIViewDelegate>) owner;
 -(NSArray *) GetAllCourseList:(id<EDXUIViewDelegate>) owner;
+@property (nonatomic,retain) id<EDXUIViewDelegate> _owner;
 @end
