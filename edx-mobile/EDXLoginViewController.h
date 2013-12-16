@@ -16,4 +16,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *password;
 - (IBAction)LoginAction:(id)sender;
 - (IBAction)GetEnrollMentAction:(id)sender;
+- (void) LoginWith:(NSString *)username password:(NSString *)password;
+- (void) LoginWith:(NSString *)access;
+- (void) NavigateToDashBoard;
 @end

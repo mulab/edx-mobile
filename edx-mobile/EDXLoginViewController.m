@@ -52,6 +52,18 @@
     [super dealloc];
 }
 
+- (void) LoginWith:(NSString *)username password:(NSString *)password{
+    NSLog(@"login with user name:%@ password:%@ ",username,password);
+}
+
+- (void) LoginWith:(NSString *)access{
+    NSLog(@"login with access token:%@",access);
+}
+
+- (void) NavigateToDashBoard{
+    NSLog(@"navigate to dashboard");
+}
+
 #pragma mark NetworkModule delegate 
 -(void) beginPost:(kBusinessTag)tag{
 }
