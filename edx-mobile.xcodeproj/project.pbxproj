@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34156FB185F1A3C00F62FB1 /* EDXViewController.m */; };
 		C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C369794F185308FB006055C3 /* EDXURIHelper.m */; };
 		C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36979B91853A2C4006055C3 /* MediaPlayer.framework */; };
 		C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36979C21853A406006055C3 /* EDXMPViewController.m */; };
@@ -60,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
+		C34156FA185F1A3C00F62FB1 /* EDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXViewController.h; sourceTree = "<group>"; };
+		C34156FB185F1A3C00F62FB1 /* EDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXViewController.m; sourceTree = "<group>"; };
 		C369794E185308FB006055C3 /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
 		C369794F185308FB006055C3 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
 		C36979B818539094006055C3 /* EDXGetCourseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseContent.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				C39650F018314F4D00984745 /* EDXLoginViewController.m */,
 				C39650F118314F4D00984745 /* EDXLoginViewController.xib */,
 				C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */,
+				C34156FA185F1A3C00F62FB1 /* EDXViewController.h */,
+				C34156FB185F1A3C00F62FB1 /* EDXViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -460,6 +465,7 @@
 				C396518E1832645F00984745 /* EDXMainViewController.m in Sources */,
 				C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */,
 				C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */,
+				C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "EDXNetworkDelegate.h"
 #import "EDXGetCourseContent.h"
-@interface EDXMainViewController : UIViewController<EDXNetworkDelegate,EDXGetCourseContent>
+#import "EDXViewController.h"
+@interface EDXMainViewController : EDXViewController<EDXNetworkDelegate,EDXGetCourseContent>
 {
     NSInteger buttonTag;
     NSInteger videoTag;

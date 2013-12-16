@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "EDXNetworkDelegate.h"
-@interface EDXLoginViewController : UIViewController<EDXNetworkDelegate>
+#import "EDXViewController.h"
+@interface EDXLoginViewController : EDXViewController<EDXNetworkDelegate>
 {
 }
 @property (retain, nonatomic) IBOutlet UITextField *userName;
