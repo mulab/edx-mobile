@@ -10,6 +10,7 @@
 #import "EDXNetwork.h"
 #import "EDXConstants.h"
 #import "EDXMainViewController.h"
+#import "EDXDataManager.h"
 @interface EDXLoginViewController ()
 
 @end
@@ -30,6 +31,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [userName setText:[[EDXDataManager sharedEDXDataManager] GetUserName]];
 }
 
 - (void)didReceiveMemoryWarning
