@@ -59,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
 		C369794E185308FB006055C3 /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
 		C369794F185308FB006055C3 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
 		C36979B818539094006055C3 /* EDXGetCourseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseContent.h; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 				C39650EF18314F4D00984745 /* EDXLoginViewController.h */,
 				C39650F018314F4D00984745 /* EDXLoginViewController.m */,
 				C39650F118314F4D00984745 /* EDXLoginViewController.xib */,
+				C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
