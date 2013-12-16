@@ -32,6 +32,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [userName setText:[[EDXDataManager sharedEDXDataManager] GetUserName]];
+    if ([[[EDXDataManager sharedEDXDataManager] GetLoginAccess:self] isEqualToString:@""] == NO) {
+        [self NavigateToDashBoard];
+    }
 }
 
 - (void)didReceiveMemoryWarning
