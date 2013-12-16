@@ -12,5 +12,6 @@
 @optional
 -(void)BeforeRefreshView;
 -(void)RefreshView;
+-(void)CancelBeforeRefreshFinished;
 -(void)RaiseRequest;
 @end
