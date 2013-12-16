@@ -15,8 +15,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
     return @"user@user.com";
 }
 
--(NSString *) GetLoginAccess{
+-(NSString *) GetLoginAccess:(id<EDXUIViewDelegate>) owner{
     NSLog(@"call %s",__func__);
+    [owner BeforeRefreshView];
     return @"0987654321user";
 }
 

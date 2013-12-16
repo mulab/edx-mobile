@@ -12,7 +12,7 @@
 #import "EDXUIViewDelegate.h"
 @interface EDXDataManager : NSObject<EDXNetworkDelegate>
 +(EDXDataManager *)sharedEDXDataManager;
--(NSString *) GetLoginAccess;
+-(NSString *) GetLoginAccess:(id<EDXUIViewDelegate>) owner;
 -(NSString *) GetUserName;
 -(NSArray *) GetMyCourseList:(id<EDXUIViewDelegate>) owner;
 -(NSArray *) GetAllCourseList:(id<EDXUIViewDelegate>) owner;
