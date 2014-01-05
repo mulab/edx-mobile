@@ -27,7 +27,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
 
 -(id)init{
     [super init];
-    self._MyCourseList = [[NSArray alloc] init];
+    self._MyCourseList = [[[NSArray alloc] init] autorelease];
     return self;
 }
 
@@ -38,16 +38,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
     switch (tag) {
         case kGetLoginAccess:
             return [self _GetLoginAccess];
-            break;
         case kGetAllCourseList:
             return [self _GetAllCourseList];
-            break;
         case kGetMyCourseList:
             return [self _GetMyCourseList];
-            break;
-        default:
-            break;
     }
+    return nil;
 }
 
 -(NSString *) GetUserName{
@@ -86,6 +82,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
 
 -(void) dealloc{
     [self._MyCourseList release];
+    [_owner release];
     [super dealloc];
 }
 
