@@ -10,10 +10,12 @@
 #import "ASIHTTPRequest.h"
 #import "SynthesizeSingleton.h"
 #import "EDXNetworkDelegate.h"
+#import "EDXNetworkRequest.h"
 @interface EDXNetworkManager : NSObject
 <ASIHTTPRequestDelegate>{
     NSMutableDictionary* queue;
 }
+@property (assign)NSStringEncoding enc;
 +(EDXNetworkManager *) sharedEDXNetworkManager;
 -(void)cancel:(kBusinessTag)tag;
 -(void)getBusinessReq:(kBusinessTag)tag owner:(id<EDXNetworkDelegate>)owner;
