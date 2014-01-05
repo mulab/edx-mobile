@@ -9,7 +9,7 @@
 @required
 @property (retain, nonatomic)NSString *location;
 @property (retain, nonatomic)NSString *displayName;
-@property (retain, nonatomic)NSString *fileLocation;
--(NSString *)serialize;
+-(NSString *)serializeToJsonString;
 +(instancetype)initWithJsonString:(NSString *)JsonString;
++(instancetype)initWithDictionary:(NSDictionary *)Dictionary;
 @end
