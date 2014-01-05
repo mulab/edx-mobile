@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB19B96DF2A2476489342A0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 251084FF92044528BFE61E59 /* libPods.a */; };
+		C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34156FB185F1A3C00F62FB1 /* EDXViewController.m */; };
+		C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36979B91853A2C4006055C3 /* MediaPlayer.framework */; };
+		C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36979C21853A406006055C3 /* EDXMPViewController.m */; };
+		C36979C51853A406006055C3 /* EDXMPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36979C31853A406006055C3 /* EDXMPViewController.xib */; };
 		C39650BB18314F1C00984745 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BA18314F1C00984745 /* UIKit.framework */; };
 		C39650BD18314F1C00984745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BC18314F1C00984745 /* Foundation.framework */; };
 		C39650BF18314F1C00984745 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BE18314F1C00984745 /* CoreGraphics.framework */; };
@@ -33,15 +38,19 @@
 		C396515518316B8400984745 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C396510818316B8400984745 /* ASINetworkQueue.m */; };
 		C396517318316B8400984745 /* README-GHUnit in Resources */ = {isa = PBXBuildFile; fileRef = C396514A18316B8400984745 /* README-GHUnit */; };
 		C396517418316B8400984745 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C396514D18316B8400984745 /* Reachability.m */; };
-		C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C396517618316D7600984745 /* EDXNetworkRequest.m */; };
 		C3965179183235EB00984745 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3965178183235EB00984745 /* CFNetwork.framework */; };
 		C396517B183235F600984745 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517A183235F600984745 /* SystemConfiguration.framework */; };
 		C396517D183235FF00984745 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517C183235FF00984745 /* MobileCoreServices.framework */; };
 		C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517E1832361600984745 /* libz.1.2.5.dylib */; };
-		C396518318323E6E00984745 /* EDXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518218323E6D00984745 /* EDXNetwork.m */; };
 		C39651881832440200984745 /* EDXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C39651871832440200984745 /* EDXConstants.m */; };
 		C396518E1832645F00984745 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518C1832645F00984745 /* EDXMainViewController.m */; };
 		C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C396518D1832645F00984745 /* EDXMainViewController.xib */; };
+		EE3DB0457E251AAF99F8AF59 /* EDXURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */; };
+		EE3DB415A6F0ECB78B6905AB /* EDXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */; };
+		EE3DB59C642AD27658BF758A /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */; };
+		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
+		EE3DB8F3581E594250E540ED /* EDXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */; };
+		EE3DBDB4917A19F21337C5F4 /* EDXChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB495F47D29982B4874EC /* EDXChapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251084FF92044528BFE61E59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
+		C34156FA185F1A3C00F62FB1 /* EDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXViewController.h; sourceTree = "<group>"; };
+		C34156FB185F1A3C00F62FB1 /* EDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXViewController.m; sourceTree = "<group>"; };
+		C36979B818539094006055C3 /* EDXGetCourseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseContent.h; sourceTree = "<group>"; };
+		C36979B91853A2C4006055C3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C36979C11853A406006055C3 /* EDXMPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXMPViewController.h; sourceTree = "<group>"; };
+		C36979C21853A406006055C3 /* EDXMPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXMPViewController.m; sourceTree = "<group>"; };
+		C36979C31853A406006055C3 /* EDXMPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDXMPViewController.xib; sourceTree = "<group>"; };
 		C39650B718314F1C00984745 /* edx-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "edx-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39650BA18314F1C00984745 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C39650BC18314F1C00984745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,21 +118,31 @@
 		C396514A18316B8400984745 /* README-GHUnit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "README-GHUnit"; sourceTree = "<group>"; };
 		C396514C18316B8400984745 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C396514D18316B8400984745 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		C396517518316D7600984745 /* EDXNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkRequest.h; sourceTree = "<group>"; };
-		C396517618316D7600984745 /* EDXNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequest.m; sourceTree = "<group>"; };
 		C3965178183235EB00984745 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C396517A183235F600984745 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C396517C183235FF00984745 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C396517E1832361600984745 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
-		C396518018323A5B00984745 /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
-		C396518118323E6D00984745 /* EDXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetwork.h; sourceTree = "<group>"; };
-		C396518218323E6D00984745 /* EDXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetwork.m; sourceTree = "<group>"; };
 		C396518418323FB300984745 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		C39651861832440200984745 /* EDXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXConstants.h; sourceTree = "<group>"; };
 		C39651871832440200984745 /* EDXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXConstants.m; sourceTree = "<group>"; };
 		C396518B1832645F00984745 /* EDXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EDXMainViewController.h; path = EDXMain/EDXMainViewController.h; sourceTree = "<group>"; };
 		C396518C1832645F00984745 /* EDXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EDXMainViewController.m; path = EDXMain/EDXMainViewController.m; sourceTree = "<group>"; };
 		C396518D1832645F00984745 /* EDXMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EDXMainViewController.xib; path = EDXMain/EDXMainViewController.xib; sourceTree = "<group>"; };
+		EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
+		EE3DB25AEC4F5B4FDD9AA8F9 /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
+		EE3DB495F47D29982B4874EC /* EDXChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXChapter.m; sourceTree = "<group>"; };
+		EE3DB4C08EA1C72C3A904B9B /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
+		EE3DB57AD638EB1529EF12C3 /* EDXNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkRequest.h; sourceTree = "<group>"; };
+		EE3DB757FFB339B0AB779DF5 /* EDXChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXChapter.h; sourceTree = "<group>"; };
+		EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkManager.m; sourceTree = "<group>"; };
+		EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetwork.m; sourceTree = "<group>"; };
+		EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXDataManager.m; sourceTree = "<group>"; };
+		EE3DBBEF13D66BAE5BECADDB /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
+		EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequest.m; sourceTree = "<group>"; };
+		EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDataManager.h; sourceTree = "<group>"; };
+		EE3DBEB90A01E3F7F2C46622 /* EDXBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXBlock.h; sourceTree = "<group>"; };
+		EE3DBFA4D42B25BF664D5347 /* EDXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetwork.h; sourceTree = "<group>"; };
+		F113093608F84F158AC24FD4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */,
 				C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */,
 				C39650BF18314F1C00984745 /* CoreGraphics.framework in Frameworks */,
 				C396517D183235FF00984745 /* MobileCoreServices.framework in Frameworks */,
@@ -129,6 +158,7 @@
 				C3965179183235EB00984745 /* CFNetwork.framework in Frameworks */,
 				C39650BB18314F1C00984745 /* UIKit.framework in Frameworks */,
 				C39650BD18314F1C00984745 /* Foundation.framework in Frameworks */,
+				BB19B96DF2A2476489342A0E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +175,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C34156F8185F14DB00F62FB1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C36979C11853A406006055C3 /* EDXMPViewController.h */,
+				C36979C21853A406006055C3 /* EDXMPViewController.m */,
+				C36979C31853A406006055C3 /* EDXMPViewController.xib */,
+				C396518B1832645F00984745 /* EDXMainViewController.h */,
+				C396518C1832645F00984745 /* EDXMainViewController.m */,
+				C396518D1832645F00984745 /* EDXMainViewController.xib */,
+				C39650EF18314F4D00984745 /* EDXLoginViewController.h */,
+				C39650F018314F4D00984745 /* EDXLoginViewController.m */,
+				C39650F118314F4D00984745 /* EDXLoginViewController.xib */,
+				C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */,
+				C34156FA185F1A3C00F62FB1 /* EDXViewController.h */,
+				C34156FB185F1A3C00F62FB1 /* EDXViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		C39650AE18314F1B00984745 = {
 			isa = PBXGroup;
 			children = (
+				C36979B91853A2C4006055C3 /* MediaPlayer.framework */,
 				C396517E1832361600984745 /* libz.1.2.5.dylib */,
 				C396517C183235FF00984745 /* MobileCoreServices.framework */,
 				C396517A183235F600984745 /* SystemConfiguration.framework */,
@@ -156,6 +206,7 @@
 				C39650DE18314F1C00984745 /* edx-mobileTests */,
 				C39650B918314F1C00984745 /* Frameworks */,
 				C39650B818314F1C00984745 /* Products */,
+				F113093608F84F158AC24FD4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +226,7 @@
 				C39650BC18314F1C00984745 /* Foundation.framework */,
 				C39650BE18314F1C00984745 /* CoreGraphics.framework */,
 				C39650D818314F1C00984745 /* SenTestingKit.framework */,
+				251084FF92044528BFE61E59 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,24 +234,17 @@
 		C39650C018314F1C00984745 /* edx-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				C34156F8185F14DB00F62FB1 /* UI */,
 				C396518418323FB300984745 /* SynthesizeSingleton.h */,
 				C39650F418316B8400984745 /* ASIHTTPRequest */,
 				C39650C918314F1C00984745 /* EDXAppDelegate.h */,
 				C39650CA18314F1C00984745 /* EDXAppDelegate.m */,
 				C39650C118314F1C00984745 /* Supporting Files */,
-				C39650EF18314F4D00984745 /* EDXLoginViewController.h */,
-				C39650F018314F4D00984745 /* EDXLoginViewController.m */,
-				C39650F118314F4D00984745 /* EDXLoginViewController.xib */,
-				C396517518316D7600984745 /* EDXNetworkRequest.h */,
-				C396517618316D7600984745 /* EDXNetworkRequest.m */,
-				C396518018323A5B00984745 /* EDXNetworkDelegate.h */,
-				C396518118323E6D00984745 /* EDXNetwork.h */,
-				C396518218323E6D00984745 /* EDXNetwork.m */,
 				C39651861832440200984745 /* EDXConstants.h */,
 				C39651871832440200984745 /* EDXConstants.m */,
-				C396518B1832645F00984745 /* EDXMainViewController.h */,
-				C396518C1832645F00984745 /* EDXMainViewController.m */,
-				C396518D1832645F00984745 /* EDXMainViewController.xib */,
+				C36979B818539094006055C3 /* EDXGetCourseContent.h */,
+				EE3DB099C73A04516BF8FD52 /* Data */,
+				EE3DB3041A1285CABC4172A8 /* Network */,
 			);
 			path = "edx-mobile";
 			sourceTree = "<group>";
@@ -299,6 +344,42 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		EE3DB099C73A04516BF8FD52 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */,
+				EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */,
+				EE3DB8B9F5519DD0D2D8818C /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EE3DB3041A1285CABC4172A8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DB25AEC4F5B4FDD9AA8F9 /* EDXNetworkManager.h */,
+				EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */,
+				EE3DBFA4D42B25BF664D5347 /* EDXNetwork.h */,
+				EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */,
+				EE3DB4C08EA1C72C3A904B9B /* EDXURIHelper.h */,
+				EE3DB57AD638EB1529EF12C3 /* EDXNetworkRequest.h */,
+				EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */,
+				EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */,
+				EE3DBBEF13D66BAE5BECADDB /* EDXNetworkDelegate.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EE3DB8B9F5519DD0D2D8818C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DB495F47D29982B4874EC /* EDXChapter.m */,
+				EE3DB757FFB339B0AB779DF5 /* EDXChapter.h */,
+				EE3DBEB90A01E3F7F2C46622 /* EDXBlock.h */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,9 +387,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C39650E918314F1C00984745 /* Build configuration list for PBXNativeTarget "edx-mobile" */;
 			buildPhases = (
+				BB16EEE1BAEA4A41B47EB7D2 /* Check Pods Manifest.lock */,
 				C39650B318314F1C00984745 /* Sources */,
 				C39650B418314F1C00984745 /* Frameworks */,
 				C39650B518314F1C00984745 /* Resources */,
+				3FF00E0F6FFF43429A81C38B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +441,8 @@
 			mainGroup = C39650AE18314F1B00984745;
 			productRefGroup = C39650B818314F1C00984745 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				C39650B618314F1C00984745 /* edx-mobile */,
@@ -378,6 +463,7 @@
 				C39650F318314F4D00984745 /* EDXLoginViewController.xib in Resources */,
 				C396517318316B8400984745 /* README-GHUnit in Resources */,
 				C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */,
+				C36979C51853A406006055C3 /* EDXMPViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +478,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3FF00E0F6FFF43429A81C38B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB16EEE1BAEA4A41B47EB7D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		C39650D518314F1C00984745 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,10 +540,16 @@
 				C396515418316B8400984745 /* ASIInputStream.m in Sources */,
 				C396515518316B8400984745 /* ASINetworkQueue.m in Sources */,
 				C396517418316B8400984745 /* Reachability.m in Sources */,
-				C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */,
-				C396518318323E6E00984745 /* EDXNetwork.m in Sources */,
 				C39651881832440200984745 /* EDXConstants.m in Sources */,
 				C396518E1832645F00984745 /* EDXMainViewController.m in Sources */,
+				C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */,
+				C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */,
+				EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */,
+				EE3DB8F3581E594250E540ED /* EDXNetworkManager.m in Sources */,
+				EE3DB0457E251AAF99F8AF59 /* EDXURIHelper.m in Sources */,
+				EE3DB59C642AD27658BF758A /* EDXNetworkRequest.m in Sources */,
+				EE3DB415A6F0ECB78B6905AB /* EDXNetwork.m in Sources */,
+				EE3DBDB4917A19F21337C5F4 /* EDXChapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +651,7 @@
 		};
 		C39650EA18314F1C00984745 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F113093608F84F158AC24FD4 /* Pods.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -541,6 +664,7 @@
 		};
 		C39650EB18314F1C00984745 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F113093608F84F158AC24FD4 /* Pods.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -555,6 +679,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/edx-mobile.app/edx-mobile";
+				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -572,6 +697,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/edx-mobile.app/edx-mobile";
+				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -604,6 +730,7 @@
 				C39650EB18314F1C00984745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C39650EC18314F1C00984745 /* Build configuration list for PBXNativeTarget "edx-mobileTests" */ = {
 			isa = XCConfigurationList;
@@ -612,6 +739,7 @@
 				C39650EE18314F1C00984745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

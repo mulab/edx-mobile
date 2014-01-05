@@ -7,7 +7,8 @@
 //
 
 #import "edx_mobileTests.h"
-
+#import "EDXDataManager.h"
+#import "EDXViewController.h"
 @implementation edx_mobileTests
 
 - (void)setUp
@@ -24,9 +25,12 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in edx-mobileTests");
+- (void)testEDXDataManager{
+    EDXViewController * vc = [[[EDXViewController alloc] init] autorelease];
+    STAssertNotNil([[EDXDataManager sharedEDXDataManager] GetUserName], @"should get username");
+    STAssertNotNil([[EDXDataManager sharedEDXDataManager] GetLoginAccess:vc], @"should get access");
+    STAssertNotNil([[EDXDataManager sharedEDXDataManager] GetMyCourseList:vc], @"should get my course list");
+    STAssertNotNil([[EDXDataManager sharedEDXDataManager] GetAllCourseList:vc], @"should get all course list");
 }
 
 @end

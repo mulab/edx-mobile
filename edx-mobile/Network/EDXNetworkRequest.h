@@ -18,4 +18,5 @@
 @property (nonatomic,readonly,getter = result)id result;
 -(void)cancel;
 -(void)postJson: (NSString*)json delegate:(id)delegate;//post json method
+-(void)getWithDelegate:(id)delegate;//get method
 @end
