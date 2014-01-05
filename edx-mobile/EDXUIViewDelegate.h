@@ -14,5 +14,4 @@
 -(void)RefreshView;
 -(void)CancelBeforeRefreshFinished;
 -(void)ErrorOnRefreshView:(NSError *)err;
--(void)RaiseRequest;
 @end

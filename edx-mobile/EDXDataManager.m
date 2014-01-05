@@ -7,6 +7,7 @@
 //
 
 #import "EDXDataManager.h"
+#import "EDXNetworkManager.h"
 enum methodTag{
     kGetLoginAccess=0,
     kGetMyCourseList=1,
@@ -15,26 +16,34 @@ enum methodTag{
 typedef enum methodTag kMethodTag;
 @interface EDXDataManager(Private)
 -(id) methodProxy:(kMethodTag)tag owner:(id<EDXUIViewDelegate>) owner;
--(NSString *) _GetLoginAccess:(id<EDXUIViewDelegate>) owner;
--(NSArray *) _GetMyCourseList:(id<EDXUIViewDelegate>)owner;
--(NSArray *) _GetAllCourseList:(id<EDXUIViewDelegate>)owner;
+-(NSString *) _GetLoginAccess;
+-(NSArray *) _GetMyCourseList;
+-(NSArray *) _GetAllCourseList;
+@property (nonatomic,retain) NSArray * _MyCourseList;
 @end
 @implementation EDXDataManager
 SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
 @synthesize _owner;
+
+-(id)init{
+    [super init];
+    self._MyCourseList = [[NSArray alloc] init];
+    return self;
+}
+
 -(id) methodProxy:(kMethodTag)tag owner:(id<EDXUIViewDelegate>)owner{
     if(_owner != nil)[_owner CancelBeforeRefreshFinished];
     _owner = owner;
     [owner BeforeRefreshView];
     switch (tag) {
         case kGetLoginAccess:
-            return [self _GetLoginAccess:owner];
+            return [self _GetLoginAccess];
             break;
         case kGetAllCourseList:
-            return [self _GetAllCourseList:owner];
+            return [self _GetAllCourseList];
             break;
         case kGetMyCourseList:
-            return [self _GetMyCourseList:owner];
+            return [self _GetMyCourseList];
             break;
         default:
             break;
@@ -51,7 +60,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
     return [self methodProxy:kGetLoginAccess owner:owner];
 }
 
--(NSString *) _GetLoginAccess:(id<EDXUIViewDelegate>) owner{
+-(NSString *) _GetLoginAccess{
     return @"0987654321user";
 }
 
@@ -60,8 +69,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
     return [self methodProxy:kGetMyCourseList owner:owner];
 }
 
--(NSArray *) _GetMyCourseList:(id<EDXUIViewDelegate>)owner{
-    return [[[NSArray alloc] init] autorelease];
+-(NSArray *) _GetMyCourseList{
+    //TODO : send msg to NetworkManager
+    [[EDXNetworkManager sharedEDXNetworkManager] getBusinessReq:kBusinessTagGetEnrollments owner:self];
+    return self._MyCourseList;
 }
 
 -(NSArray *) GetAllCourseList:(id<EDXUIViewDelegate>)owner{
@@ -69,11 +80,26 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
     return [self methodProxy:kGetAllCourseList owner:owner];
 }
 
--(NSArray *) _GetAllCourseList:(id<EDXUIViewDelegate>)owner{
+-(NSArray *) _GetAllCourseList{
     return [[[NSArray alloc] init] autorelease];
 }
 
 -(void) dealloc{
+    [self._MyCourseList release];
     [super dealloc];
 }
+
+#pragma mark EDXNetwork delegate
+
+
+- (void)endRequest:(NSData *)result business:(kBusinessTag)tag{
+    //TODO : write to database
+    //TODO : write to cache
+    [_owner RefreshView];
+}
+
+- (void)errorRequest:(NSError *)err{
+    [_owner ErrorOnRefreshView:err];
+}
+
 @end
