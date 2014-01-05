@@ -8,6 +8,8 @@
 
 #import "EDXNetwork.h"
 #import "EDXConstants.h"
+#import "EDXURIHelper.h"
+#import "EDXGetCourseContent.h"
 @implementation EDXNetwork
 SYNTHESIZE_SINGLETON_FOR_CLASS(EDXNetwork);
 
@@ -30,11 +32,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXNetwork);
     req.enc=NSUTF8StringEncoding;
     req.owner=owner;
     if (tag==kBusinessTagGetEnrollments) {
-        req.url=@"string";
+        req.url=[EDXURIHelper GetEnrollUrl];
+    }else if (tag==kBusinessTagGetCourseVideoList){
+        req.url=[EDXURIHelper GetVideoListWithCourseId:[(id<EDXGetCourseContent>)owner GetCouseId]];
     } else {
         req.url=@"string";
     }
-    
+    NSLog(@"%s:%@",__FUNCTION__,req.url);
+    [req getWithDelegate:self];
+    if(owner!=nil)[owner beginPost:tag];
 }
 -(void)postBusinessReq:(NSString*)json
                    tag:(kBusinessTag)tag
@@ -51,7 +57,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EDXNetwork);
     req.owner=owner;
     
     if (tag==kBusinessTagUserLogin) {
-        req.url=[NSString stringWithFormat:loginUrl,api_key];
+        req.url=[EDXURIHelper GetLoginUrl];
     }
     else{
         req.url=@"";

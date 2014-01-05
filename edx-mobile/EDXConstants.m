@@ -9,7 +9,7 @@
 #import "EDXConstants.h"
 NSString * const api_key = @"dev";
 NSString * const loginUrl = @"http://api.tsinghuax.org/api/v1/auth/login?api_key=%@";
-NSString * const loginPost = @"{\"email\":\"%@\",\"password\":\"%@\"}";
+NSString * const loginPost = @"{\"client_id\":11111,\"client_secret\":11111,\"grant_type\":\"password\",\"username\":\"%@\",\"password\":\"%@\"}";
 @implementation EDXConstants
-
+//"{\"client_id\":11111,\"client_secret\":11111,\"grant_type\":\"password\",\"username\":\"user@user.com\",\"password\":\"password\"
 @end

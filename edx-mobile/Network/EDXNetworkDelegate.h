@@ -21,6 +21,8 @@ enum kBusinessTag//the request tag
     kBusinessTagGetStatus=0,
 	kBusinessTagUserLogin=1,
     kBusinessTagGetEnrollments=2,
+    kBusinessTagGetCourseNavigation=3,
+    kBusinessTagGetCourseVideoList=4
 };
 typedef enum kBusinessTag kBusinessTag;
 @protocol EDXNetworkDelegate <NSObject>
@@ -28,4 +30,8 @@ typedef enum kBusinessTag kBusinessTag;
 -(void)beginPost:(kBusinessTag)tag;
 -(void)endPost:(NSData*)result business:(kBusinessTag)tag;
 -(void)errorPost:(NSError*)err;
+
+-(void)beginRequest:(kBusinessTag)tag;
+-(void)endRequest:(NSData *) result business:(kBusinessTag) tag;
+-(void)errorRequest:(NSError*) err;
 @end
