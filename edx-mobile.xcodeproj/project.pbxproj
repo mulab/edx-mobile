@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34156FB185F1A3C00F62FB1 /* EDXViewController.m */; };
-		C34156FF185F22BB00F62FB1 /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C34156FE185F22BA00F62FB1 /* EDXDataManager.m */; };
 		C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C369794F185308FB006055C3 /* EDXURIHelper.m */; };
 		C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36979B91853A2C4006055C3 /* MediaPlayer.framework */; };
 		C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36979C21853A406006055C3 /* EDXMPViewController.m */; };
@@ -49,6 +48,7 @@
 		C396518E1832645F00984745 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518C1832645F00984745 /* EDXMainViewController.m */; };
 		C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C396518D1832645F00984745 /* EDXMainViewController.xib */; };
 		C3D245E0185F4F540050F15E /* EDXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D245DF185F4F540050F15E /* EDXNetworkManager.m */; };
+		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,6 @@
 		C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
 		C34156FA185F1A3C00F62FB1 /* EDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXViewController.h; sourceTree = "<group>"; };
 		C34156FB185F1A3C00F62FB1 /* EDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXViewController.m; sourceTree = "<group>"; };
-		C34156FD185F22BA00F62FB1 /* EDXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDataManager.h; sourceTree = "<group>"; };
-		C34156FE185F22BA00F62FB1 /* EDXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXDataManager.m; sourceTree = "<group>"; };
 		C369794E185308FB006055C3 /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
 		C369794F185308FB006055C3 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
 		C36979B818539094006055C3 /* EDXGetCourseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseContent.h; sourceTree = "<group>"; };
@@ -136,6 +134,8 @@
 		C396518D1832645F00984745 /* EDXMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EDXMainViewController.xib; path = EDXMain/EDXMainViewController.xib; sourceTree = "<group>"; };
 		C3D245DE185F4F530050F15E /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
 		C3D245DF185F4F540050F15E /* EDXNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkManager.m; sourceTree = "<group>"; };
+		EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXDataManager.m; sourceTree = "<group>"; };
+		EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDataManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,10 +240,9 @@
 				C369794E185308FB006055C3 /* EDXURIHelper.h */,
 				C369794F185308FB006055C3 /* EDXURIHelper.m */,
 				C36979B818539094006055C3 /* EDXGetCourseContent.h */,
-				C34156FD185F22BA00F62FB1 /* EDXDataManager.h */,
-				C34156FE185F22BA00F62FB1 /* EDXDataManager.m */,
 				C3D245DE185F4F530050F15E /* EDXNetworkManager.h */,
 				C3D245DF185F4F540050F15E /* EDXNetworkManager.m */,
+				EE3DB099C73A04516BF8FD52 /* Data */,
 			);
 			path = "edx-mobile";
 			sourceTree = "<group>";
@@ -341,6 +340,15 @@
 				C396514D18316B8400984745 /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		EE3DB099C73A04516BF8FD52 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */,
+				EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,8 +484,8 @@
 				C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */,
 				C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */,
 				C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */,
-				C34156FF185F22BB00F62FB1 /* EDXDataManager.m in Sources */,
 				C3D245E0185F4F540050F15E /* EDXNetworkManager.m in Sources */,
+				EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
