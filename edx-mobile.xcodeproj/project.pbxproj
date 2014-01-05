@@ -46,11 +46,11 @@
 		C396518E1832645F00984745 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518C1832645F00984745 /* EDXMainViewController.m */; };
 		C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C396518D1832645F00984745 /* EDXMainViewController.xib */; };
 		EE3DB0457E251AAF99F8AF59 /* EDXURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */; };
-		EE3DB13386D358754E4A11F6 /* EDXBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBD3752EAA7F416E74CBF /* EDXBlock.m */; };
 		EE3DB415A6F0ECB78B6905AB /* EDXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */; };
 		EE3DB59C642AD27658BF758A /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */; };
 		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
 		EE3DB8F3581E594250E540ED /* EDXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */; };
+		EE3DBDB4917A19F21337C5F4 /* EDXChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB495F47D29982B4874EC /* EDXChapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,17 +129,18 @@
 		C396518C1832645F00984745 /* EDXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EDXMainViewController.m; path = EDXMain/EDXMainViewController.m; sourceTree = "<group>"; };
 		C396518D1832645F00984745 /* EDXMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EDXMainViewController.xib; path = EDXMain/EDXMainViewController.xib; sourceTree = "<group>"; };
 		EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
-		EE3DB25548AAC79093974B7D /* EDXBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXBlock.h; sourceTree = "<group>"; };
 		EE3DB25AEC4F5B4FDD9AA8F9 /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
+		EE3DB495F47D29982B4874EC /* EDXChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXChapter.m; sourceTree = "<group>"; };
 		EE3DB4C08EA1C72C3A904B9B /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
 		EE3DB57AD638EB1529EF12C3 /* EDXNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkRequest.h; sourceTree = "<group>"; };
+		EE3DB757FFB339B0AB779DF5 /* EDXChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXChapter.h; sourceTree = "<group>"; };
 		EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkManager.m; sourceTree = "<group>"; };
 		EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetwork.m; sourceTree = "<group>"; };
 		EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXDataManager.m; sourceTree = "<group>"; };
 		EE3DBBEF13D66BAE5BECADDB /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
 		EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequest.m; sourceTree = "<group>"; };
-		EE3DBD3752EAA7F416E74CBF /* EDXBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXBlock.m; sourceTree = "<group>"; };
 		EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDataManager.h; sourceTree = "<group>"; };
+		EE3DBEB90A01E3F7F2C46622 /* EDXBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXBlock.h; sourceTree = "<group>"; };
 		EE3DBFA4D42B25BF664D5347 /* EDXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetwork.h; sourceTree = "<group>"; };
 		F113093608F84F158AC24FD4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -372,8 +373,9 @@
 		EE3DB8B9F5519DD0D2D8818C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				EE3DBD3752EAA7F416E74CBF /* EDXBlock.m */,
-				EE3DB25548AAC79093974B7D /* EDXBlock.h */,
+				EE3DB495F47D29982B4874EC /* EDXChapter.m */,
+				EE3DB757FFB339B0AB779DF5 /* EDXChapter.h */,
+				EE3DBEB90A01E3F7F2C46622 /* EDXBlock.h */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -547,7 +549,7 @@
 				EE3DB0457E251AAF99F8AF59 /* EDXURIHelper.m in Sources */,
 				EE3DB59C642AD27658BF758A /* EDXNetworkRequest.m in Sources */,
 				EE3DB415A6F0ECB78B6905AB /* EDXNetwork.m in Sources */,
-				EE3DB13386D358754E4A11F6 /* EDXBlock.m in Sources */,
+				EE3DBDB4917A19F21337C5F4 /* EDXChapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
