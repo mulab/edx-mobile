@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34156FB185F1A3C00F62FB1 /* EDXViewController.m */; };
-		C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C369794F185308FB006055C3 /* EDXURIHelper.m */; };
 		C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36979B91853A2C4006055C3 /* MediaPlayer.framework */; };
 		C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36979C21853A406006055C3 /* EDXMPViewController.m */; };
 		C36979C51853A406006055C3 /* EDXMPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36979C31853A406006055C3 /* EDXMPViewController.xib */; };
@@ -38,17 +37,18 @@
 		C396515518316B8400984745 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C396510818316B8400984745 /* ASINetworkQueue.m */; };
 		C396517318316B8400984745 /* README-GHUnit in Resources */ = {isa = PBXBuildFile; fileRef = C396514A18316B8400984745 /* README-GHUnit */; };
 		C396517418316B8400984745 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C396514D18316B8400984745 /* Reachability.m */; };
-		C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C396517618316D7600984745 /* EDXNetworkRequest.m */; };
 		C3965179183235EB00984745 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3965178183235EB00984745 /* CFNetwork.framework */; };
 		C396517B183235F600984745 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517A183235F600984745 /* SystemConfiguration.framework */; };
 		C396517D183235FF00984745 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517C183235FF00984745 /* MobileCoreServices.framework */; };
 		C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517E1832361600984745 /* libz.1.2.5.dylib */; };
-		C396518318323E6E00984745 /* EDXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518218323E6D00984745 /* EDXNetwork.m */; };
 		C39651881832440200984745 /* EDXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C39651871832440200984745 /* EDXConstants.m */; };
 		C396518E1832645F00984745 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518C1832645F00984745 /* EDXMainViewController.m */; };
 		C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C396518D1832645F00984745 /* EDXMainViewController.xib */; };
-		C3D245E0185F4F540050F15E /* EDXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D245DF185F4F540050F15E /* EDXNetworkManager.m */; };
+		EE3DB0457E251AAF99F8AF59 /* EDXURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */; };
+		EE3DB415A6F0ECB78B6905AB /* EDXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */; };
+		EE3DB59C642AD27658BF758A /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */; };
 		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
+		EE3DB8F3581E594250E540ED /* EDXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,6 @@
 		C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
 		C34156FA185F1A3C00F62FB1 /* EDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXViewController.h; sourceTree = "<group>"; };
 		C34156FB185F1A3C00F62FB1 /* EDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXViewController.m; sourceTree = "<group>"; };
-		C369794E185308FB006055C3 /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
-		C369794F185308FB006055C3 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
 		C36979B818539094006055C3 /* EDXGetCourseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseContent.h; sourceTree = "<group>"; };
 		C36979B91853A2C4006055C3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C36979C11853A406006055C3 /* EDXMPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXMPViewController.h; sourceTree = "<group>"; };
@@ -117,25 +115,27 @@
 		C396514A18316B8400984745 /* README-GHUnit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "README-GHUnit"; sourceTree = "<group>"; };
 		C396514C18316B8400984745 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C396514D18316B8400984745 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		C396517518316D7600984745 /* EDXNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkRequest.h; sourceTree = "<group>"; };
-		C396517618316D7600984745 /* EDXNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequest.m; sourceTree = "<group>"; };
 		C3965178183235EB00984745 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C396517A183235F600984745 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C396517C183235FF00984745 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C396517E1832361600984745 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
-		C396518018323A5B00984745 /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
-		C396518118323E6D00984745 /* EDXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetwork.h; sourceTree = "<group>"; };
-		C396518218323E6D00984745 /* EDXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetwork.m; sourceTree = "<group>"; };
 		C396518418323FB300984745 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		C39651861832440200984745 /* EDXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXConstants.h; sourceTree = "<group>"; };
 		C39651871832440200984745 /* EDXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXConstants.m; sourceTree = "<group>"; };
 		C396518B1832645F00984745 /* EDXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EDXMainViewController.h; path = EDXMain/EDXMainViewController.h; sourceTree = "<group>"; };
 		C396518C1832645F00984745 /* EDXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EDXMainViewController.m; path = EDXMain/EDXMainViewController.m; sourceTree = "<group>"; };
 		C396518D1832645F00984745 /* EDXMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EDXMainViewController.xib; path = EDXMain/EDXMainViewController.xib; sourceTree = "<group>"; };
-		C3D245DE185F4F530050F15E /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
-		C3D245DF185F4F540050F15E /* EDXNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkManager.m; sourceTree = "<group>"; };
+		EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURIHelper.m; sourceTree = "<group>"; };
+		EE3DB25AEC4F5B4FDD9AA8F9 /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
+		EE3DB4C08EA1C72C3A904B9B /* EDXURIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURIHelper.h; sourceTree = "<group>"; };
+		EE3DB57AD638EB1529EF12C3 /* EDXNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkRequest.h; sourceTree = "<group>"; };
+		EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkManager.m; sourceTree = "<group>"; };
+		EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetwork.m; sourceTree = "<group>"; };
 		EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXDataManager.m; sourceTree = "<group>"; };
+		EE3DBBEF13D66BAE5BECADDB /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
+		EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequest.m; sourceTree = "<group>"; };
 		EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDataManager.h; sourceTree = "<group>"; };
+		EE3DBFA4D42B25BF664D5347 /* EDXNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetwork.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,19 +230,11 @@
 				C39650C918314F1C00984745 /* EDXAppDelegate.h */,
 				C39650CA18314F1C00984745 /* EDXAppDelegate.m */,
 				C39650C118314F1C00984745 /* Supporting Files */,
-				C396517518316D7600984745 /* EDXNetworkRequest.h */,
-				C396517618316D7600984745 /* EDXNetworkRequest.m */,
-				C396518018323A5B00984745 /* EDXNetworkDelegate.h */,
-				C396518118323E6D00984745 /* EDXNetwork.h */,
-				C396518218323E6D00984745 /* EDXNetwork.m */,
 				C39651861832440200984745 /* EDXConstants.h */,
 				C39651871832440200984745 /* EDXConstants.m */,
-				C369794E185308FB006055C3 /* EDXURIHelper.h */,
-				C369794F185308FB006055C3 /* EDXURIHelper.m */,
 				C36979B818539094006055C3 /* EDXGetCourseContent.h */,
-				C3D245DE185F4F530050F15E /* EDXNetworkManager.h */,
-				C3D245DF185F4F540050F15E /* EDXNetworkManager.m */,
 				EE3DB099C73A04516BF8FD52 /* Data */,
+				EE3DB3041A1285CABC4172A8 /* Network */,
 			);
 			path = "edx-mobile";
 			sourceTree = "<group>";
@@ -349,6 +341,22 @@
 				EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		EE3DB3041A1285CABC4172A8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DB25AEC4F5B4FDD9AA8F9 /* EDXNetworkManager.h */,
+				EE3DB75EE3B59A81F3CB22D4 /* EDXNetworkManager.m */,
+				EE3DBFA4D42B25BF664D5347 /* EDXNetwork.h */,
+				EE3DB11C0F4053B703E69216 /* EDXURIHelper.m */,
+				EE3DB4C08EA1C72C3A904B9B /* EDXURIHelper.h */,
+				EE3DB57AD638EB1529EF12C3 /* EDXNetworkRequest.h */,
+				EE3DBCB1B5575F94BC0B4A46 /* EDXNetworkRequest.m */,
+				EE3DBAC7AA6683CD145A249F /* EDXNetwork.m */,
+				EE3DBBEF13D66BAE5BECADDB /* EDXNetworkDelegate.h */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,15 +485,15 @@
 				C396515418316B8400984745 /* ASIInputStream.m in Sources */,
 				C396515518316B8400984745 /* ASINetworkQueue.m in Sources */,
 				C396517418316B8400984745 /* Reachability.m in Sources */,
-				C396517718316D7600984745 /* EDXNetworkRequest.m in Sources */,
-				C396518318323E6E00984745 /* EDXNetwork.m in Sources */,
 				C39651881832440200984745 /* EDXConstants.m in Sources */,
 				C396518E1832645F00984745 /* EDXMainViewController.m in Sources */,
-				C3697950185308FB006055C3 /* EDXURIHelper.m in Sources */,
 				C36979C41853A406006055C3 /* EDXMPViewController.m in Sources */,
 				C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */,
-				C3D245E0185F4F540050F15E /* EDXNetworkManager.m in Sources */,
 				EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */,
+				EE3DB8F3581E594250E540ED /* EDXNetworkManager.m in Sources */,
+				EE3DB0457E251AAF99F8AF59 /* EDXURIHelper.m in Sources */,
+				EE3DB59C642AD27658BF758A /* EDXNetworkRequest.m in Sources */,
+				EE3DB415A6F0ECB78B6905AB /* EDXNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
