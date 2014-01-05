@@ -22,7 +22,7 @@ typedef enum methodTag kMethodTag;
 @property (nonatomic,retain) NSArray * _MyCourseList;
 @end
 @implementation EDXDataManager
-SYNTHESIZE_SINGLETON_FOR_CLASS(EDXDataManager);
+objection_register_singleton(EDXDataManager )
 @synthesize _owner;
 
 -(id)init{

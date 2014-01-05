@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EDXUIViewDelegate.h"
+#import <Objection/Objection.h>
 @interface EDXViewController : UIViewController<EDXUIViewDelegate>
 
 @end

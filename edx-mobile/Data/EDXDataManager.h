@@ -10,8 +10,8 @@
 #import "SynthesizeSingleton.h"
 #import "EDXNetworkDelegate.h"
 #import "EDXUIViewDelegate.h"
+#import <Objection/Objection.h>
 @interface EDXDataManager : NSObject<EDXNetworkDelegate>
-+(EDXDataManager *)sharedEDXDataManager;
 -(NSString *) GetLoginAccess:(id<EDXUIViewDelegate>) owner;
 -(NSString *) GetUserName;
 -(NSArray *) GetMyCourseList:(id<EDXUIViewDelegate>) owner;

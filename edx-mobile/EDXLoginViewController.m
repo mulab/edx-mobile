@@ -10,14 +10,16 @@
 #import "EDXNetwork.h"
 #import "EDXConstants.h"
 #import "EDXMainViewController.h"
-#import "EDXDataManager.h"
+#import "EDXNetworkManager.h"
 @interface EDXLoginViewController ()
 
 @end
 
 @implementation EDXLoginViewController
+objection_requires(@"dataManager");
 @synthesize userName;
 @synthesize password;
+@synthesize dataManager;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,8 +33,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [userName setText:[[EDXDataManager sharedEDXDataManager] GetUserName]];
-    if ([[[EDXDataManager sharedEDXDataManager] GetLoginAccess:self] isEqualToString:@""] == NO) {
+    [userName setText:[dataManager GetUserName]];
+    if ([[dataManager GetLoginAccess:self] isEqualToString:@""] == NO) {
         [self NavigateToDashBoard];
     }
 }
@@ -45,11 +47,11 @@
 
 - (IBAction)LoginAction:(id)sender {
     NSString* postData = [NSString stringWithFormat:loginPost,userName.text,password.text];
-    [[EDXNetwork sharedEDXNetwork]postBusinessReq:postData tag:kBusinessTagUserLogin owner:self];
+    [[EDXNetworkManager sharedEDXNetworkManager]postBusinessReq:postData tag:kBusinessTagUserLogin owner:self];
 }
 
-- (IBAction)GetEnrollMentAction:(id)sender {
-    [[EDXNetwork sharedEDXNetwork]getBusinessReq:kBusinessTagGetEnrollments owner:self];
+- (IBAction)GetEnrollmentAction:(id)sender {
+    [[EDXNetworkManager sharedEDXNetworkManager]getBusinessReq:kBusinessTagGetEnrollments owner:self];
 }
 - (void)dealloc {
     [userName release];
