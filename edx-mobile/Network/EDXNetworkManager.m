@@ -11,8 +11,8 @@
 #import "EDXGetCourseContent.h"
 
 @implementation EDXNetworkManager
+objection_register_singleton(EDXNetworkManager )
 @synthesize enc;
-SYNTHESIZE_SINGLETON_FOR_CLASS(EDXNetworkManager);
 - (id) init
 {
     self = [super init];
