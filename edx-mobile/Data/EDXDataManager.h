@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SynthesizeSingleton.h"
 #import "EDXNetworkDelegate.h"
 #import "EDXUIViewDelegate.h"
 #import <Objection/Objection.h>

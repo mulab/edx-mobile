@@ -7,7 +7,6 @@
 //
 
 #import "EDXNetworkRequest.h"
-#import "ASIHTTPRequest.h"
 @implementation EDXNetworkRequest
 {
     ASIHTTPRequest* _request;//use this object to do http request
