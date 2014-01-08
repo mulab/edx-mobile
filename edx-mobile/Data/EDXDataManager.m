@@ -8,6 +8,8 @@
 
 #import "EDXDataManager.h"
 #import "EDXNetworkManager.h"
+#import "EDXConstants.h"
+
 enum methodTag{
     kGetLoginAccess=0,
     kGetMyCourseList=1,
@@ -67,7 +69,6 @@ objection_register_singleton(EDXDataManager )
 
 -(NSArray *) _GetMyCourseList{
     //TODO : send msg to NetworkManager
-    [[EDXNetworkManager sharedEDXNetworkManager] getBusinessReq:kBusinessTagGetEnrollments owner:self];
     return self._MyCourseList;
 }
 
@@ -87,15 +88,16 @@ objection_register_singleton(EDXDataManager )
 }
 
 #pragma mark EDXNetwork delegate
+- (void)before:(kBusinessTag)tag {
+}
 
-
-- (void)endRequest:(NSData *)result business:(kBusinessTag)tag{
+- (void)success:(NSData *)result business:(kBusinessTag)tag {
     //TODO : write to database
     //TODO : write to cache
     [_owner RefreshView];
 }
 
-- (void)errorRequest:(NSError *)err{
+- (void)error:(NSError *)err {
     [_owner ErrorOnRefreshView:err];
 }
 

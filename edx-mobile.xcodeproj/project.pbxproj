@@ -36,6 +36,7 @@
 		C396518E1832645F00984745 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518C1832645F00984745 /* EDXMainViewController.m */; };
 		C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C396518D1832645F00984745 /* EDXMainViewController.xib */; };
 		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
+		EE3DBBF18651F3EC67D1A4CE /* EDXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBE980BA944702860DB4 /* EDXNetworkManager.m */; };
 		EE3DBDB4917A19F21337C5F4 /* EDXChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB495F47D29982B4874EC /* EDXChapter.m */; };
 /* End PBXBuildFile section */
 
@@ -91,8 +92,11 @@
 		C396518C1832645F00984745 /* EDXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EDXMainViewController.m; path = EDXMain/EDXMainViewController.m; sourceTree = "<group>"; };
 		C396518D1832645F00984745 /* EDXMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EDXMainViewController.xib; path = EDXMain/EDXMainViewController.xib; sourceTree = "<group>"; };
 		EE3DB495F47D29982B4874EC /* EDXChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXChapter.m; sourceTree = "<group>"; };
+		EE3DB755D9EC387A92FE186A /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
 		EE3DB757FFB339B0AB779DF5 /* EDXChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXChapter.h; sourceTree = "<group>"; };
+		EE3DB820F12CF00BA864C24D /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
 		EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXDataManager.m; sourceTree = "<group>"; };
+		EE3DBBE980BA944702860DB4 /* EDXNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkManager.m; sourceTree = "<group>"; };
 		EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDataManager.h; sourceTree = "<group>"; };
 		EE3DBEB90A01E3F7F2C46622 /* EDXBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXBlock.h; sourceTree = "<group>"; };
 		F113093608F84F158AC24FD4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -246,6 +250,9 @@
 		EE3DB3041A1285CABC4172A8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EE3DBBE980BA944702860DB4 /* EDXNetworkManager.m */,
+				EE3DB755D9EC387A92FE186A /* EDXNetworkManager.h */,
+				EE3DB820F12CF00BA864C24D /* EDXNetworkDelegate.h */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -421,6 +428,7 @@
 				C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */,
 				EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */,
 				EE3DBDB4917A19F21337C5F4 /* EDXChapter.m in Sources */,
+				EE3DBBF18651F3EC67D1A4CE /* EDXNetworkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

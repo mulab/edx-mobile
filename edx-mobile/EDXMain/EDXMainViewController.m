@@ -7,8 +7,8 @@
 //
 
 #import "EDXMainViewController.h"
-#import "EDXNetwork.h"
 #import "EDXMPViewController.h"
+#import "EDXConstants.h"
 
 @interface EDXMainViewController ()
 @end
@@ -27,7 +27,6 @@
         // Custom initialization
         courseURI = [[NSMutableArray array]retain];
         videoURI = [[NSMutableArray array]retain];
-        [[EDXNetwork sharedEDXNetwork]getBusinessReq:kBusinessTagGetEnrollments owner:self];
     }
     return self;
 }
@@ -47,7 +46,6 @@
 
 - (IBAction)enterCourseAction:(id)sender {
     buttonTag=[(UIButton*)sender tag];
-    [[EDXNetwork sharedEDXNetwork]getBusinessReq:kBusinessTagGetCourseVideoList owner:self];
 }
 
 

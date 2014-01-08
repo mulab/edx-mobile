@@ -10,6 +10,12 @@
 extern NSString * const api_key;
 extern NSString * const loginUrl;
 extern NSString * const loginPost;
+enum kBusinessTag{
+    kBusinessTagUserLogin,
+    kBusinessTagGetEnrollments,
+    kBusinessTagGetCourseVideoList
+};
+typedef enum kBusinessTag kBusinessTag;
 @interface EDXConstants : NSObject
 
 @end

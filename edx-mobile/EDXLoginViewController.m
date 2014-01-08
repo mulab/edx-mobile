@@ -46,11 +46,10 @@ objection_requires(@"dataManager",@"networkManager");
 
 - (IBAction)LoginAction:(id)sender {
     NSString* postData = [NSString stringWithFormat:loginPost,userName.text,password.text];
-    [networkManager postBusinessReq:postData tag:kBusinessTagUserLogin owner:self];
+
 }
 
 - (IBAction)GetEnrollmentAction:(id)sender {
-    [networkManager getBusinessReq:kBusinessTagGetEnrollments owner:self];
 }
 - (void)dealloc {
     [userName release];
