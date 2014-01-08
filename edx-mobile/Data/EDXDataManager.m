@@ -24,12 +24,12 @@ typedef enum methodTag kMethodTag;
 @property (nonatomic,retain) NSArray * _MyCourseList;
 @end
 @implementation EDXDataManager
-objection_register_singleton(EDXDataManager )
+//objection_register_singleton(EDXDataManager )
 @synthesize _owner;
 
 -(id)init{
-    [super init];
-    self._MyCourseList = [[[NSArray alloc] init] autorelease];
+    if (!(self = [super init])) return nil;
+    self._MyCourseList = [[NSArray alloc] init];
     return self;
 }
 
@@ -78,13 +78,11 @@ objection_register_singleton(EDXDataManager )
 }
 
 -(NSArray *) _GetAllCourseList{
-    return [[[NSArray alloc] init] autorelease];
+    return [[NSArray alloc] init];
 }
 
 -(void) dealloc{
-    [self._MyCourseList release];
-    [_owner release];
-    [super dealloc];
+    self._MyCourseList;
 }
 
 #pragma mark EDXNetwork delegate

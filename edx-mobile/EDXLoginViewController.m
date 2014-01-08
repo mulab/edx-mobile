@@ -15,7 +15,7 @@
 @end
 
 @implementation EDXLoginViewController
-objection_requires(@"dataManager",@"networkManager");
+//objection_requires(@"dataManager",@"networkManager");
 @synthesize userName;
 @synthesize password;
 @synthesize dataManager,networkManager;
@@ -51,11 +51,6 @@ objection_requires(@"dataManager",@"networkManager");
 
 - (IBAction)GetEnrollmentAction:(id)sender {
 }
-- (void)dealloc {
-    [userName release];
-    [password release];
-    [super dealloc];
-}
 
 - (void) LoginWith:(NSString *)username password:(NSString *)password{
     NSLog(@"login with user name:%@ password:%@ ",username,password);
@@ -79,14 +74,13 @@ objection_requires(@"dataManager",@"networkManager");
         if ([respond objectForKey:@"access_token"]) {
             //if success
             NSLog(@"access_token:%@",[respond objectForKey:@"access_token"]);
-            EDXMainViewController* mainVC = [[[EDXMainViewController alloc]init]autorelease];
-            UINavigationController* vc =[[[UINavigationController alloc]initWithRootViewController:mainVC]autorelease];
+            EDXMainViewController* mainVC = [[EDXMainViewController alloc]init];
+            UINavigationController* vc =[[UINavigationController alloc]initWithRootViewController:mainVC];
             [self.view.window setRootViewController:vc];
         } else {
             //if not success
             message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
             [message show];
-            [message release];
         }
     }else if (tag==kBusinessTagGetEnrollments){
         NSDictionary *response = result;

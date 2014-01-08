@@ -25,8 +25,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        courseURI = [[NSMutableArray array]retain];
-        videoURI = [[NSMutableArray array]retain];
+        courseURI = [NSMutableArray array];
+        videoURI = [NSMutableArray array];
     }
     return self;
 }
@@ -51,7 +51,7 @@
 
 - (IBAction)showVideoAction:(id)sender {
     NSURL* url = [NSURL URLWithString:[NSString stringWithString:videoURI[[(UIButton*)sender tag]]]];
-    EDXMPViewController* mp = [[[EDXMPViewController alloc]initWithContentURL:url]autorelease];
+    EDXMPViewController* mp = [[EDXMPViewController alloc]initWithContentURL:url];
     [self.navigationController pushViewController:mp animated:YES];
 }
 
@@ -85,14 +85,5 @@
 }
 -(void) errorPost:(NSError *)err{}
 
-- (void)dealloc {
-    [courseName release];
-    [showCouseButton release];
-    [videoName release];
-    [showVideoButton release];
-    [courseURI release];
-    [videoURI release];
-    [super dealloc];
-}
 
 @end

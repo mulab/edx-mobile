@@ -15,8 +15,8 @@
 {
     EDXDataManager *dataManager;
 }
-@property (retain, nonatomic) IBOutlet UITextField *userName;
-@property (retain, nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic) IBOutlet UITextField *userName;
+@property (strong, nonatomic) IBOutlet UITextField *password;
 @property (nonatomic, strong) EDXDataManager *dataManager;
 @property (nonatomic, strong) EDXNetworkManager *networkManager;
 - (IBAction)LoginAction:(id)sender;

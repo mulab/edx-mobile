@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "EDXNetworkDelegate.h"
 #import "EDXUIViewDelegate.h"
-#import <Objection/Objection.h>
+//#import <Objection/Objection.h>
 @interface EDXDataManager : NSObject<EDXNetworkDelegate>
 -(NSString *) GetLoginAccess:(id<EDXUIViewDelegate>) owner;
 -(NSString *) GetUserName;
 -(NSArray *) GetMyCourseList:(id<EDXUIViewDelegate>) owner;
 -(NSArray *) GetAllCourseList:(id<EDXUIViewDelegate>) owner;
-@property (nonatomic,retain) id<EDXUIViewDelegate> _owner;
+@property (nonatomic,strong) id<EDXUIViewDelegate> _owner;
 @end

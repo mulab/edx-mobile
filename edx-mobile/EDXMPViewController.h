@@ -9,5 +9,5 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface EDXMPViewController : MPMoviePlayerViewController
-@property(retain)NSString* url;
+@property(strong)NSString* url;
 @end

@@ -16,11 +16,11 @@
     NSInteger videoTag;
 }
 - (IBAction)showVideoAction:(id)sender;
-@property (retain, nonatomic) IBOutlet UILabel *courseName;
-@property (retain, nonatomic) IBOutlet UILabel *videoName;
-@property (retain, nonatomic) IBOutlet UIButton *showCouseButton;
-@property (retain, nonatomic) IBOutlet UIButton *showVideoButton;
-@property (retain)NSMutableArray *courseURI;
-@property (retain)NSMutableArray *videoURI;
+@property (strong, nonatomic) IBOutlet UILabel *courseName;
+@property (strong, nonatomic) IBOutlet UILabel *videoName;
+@property (strong, nonatomic) IBOutlet UIButton *showCouseButton;
+@property (strong, nonatomic) IBOutlet UIButton *showVideoButton;
+@property (strong)NSMutableArray *courseURI;
+@property (strong)NSMutableArray *videoURI;
 - (IBAction)enterCourseAction:(id)sender;
 @end

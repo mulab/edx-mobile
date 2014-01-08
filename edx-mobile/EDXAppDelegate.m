@@ -20,8 +20,8 @@ void uncaughtExceptionHandler(NSException *exception) {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    EDXLoginViewController *loginView = [[[EDXLoginViewController alloc] init]autorelease];
-    UINavigationController *nav = [[[UINavigationController alloc]initWithRootViewController:loginView]autorelease];
+    EDXLoginViewController *loginView = [[EDXLoginViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginView];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
