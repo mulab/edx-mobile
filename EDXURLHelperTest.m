@@ -7,7 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "Kiwi.h"
+#import "EDXURLHelper.h"
+#import <Objection/Objection.h>
 @interface EDXURLHelperTest : XCTestCase
 
 @end
