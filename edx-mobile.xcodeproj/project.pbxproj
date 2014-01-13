@@ -24,8 +24,6 @@
 		C39650D918314F1C00984745 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650D818314F1C00984745 /* SenTestingKit.framework */; };
 		C39650DA18314F1C00984745 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BA18314F1C00984745 /* UIKit.framework */; };
 		C39650DB18314F1C00984745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BC18314F1C00984745 /* Foundation.framework */; };
-		C39650E318314F1C00984745 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39650E118314F1C00984745 /* InfoPlist.strings */; };
-		C39650E618314F1C00984745 /* edx_mobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C39650E518314F1C00984745 /* edx_mobileTests.m */; };
 		C39650F218314F4D00984745 /* EDXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39650F018314F4D00984745 /* EDXLoginViewController.m */; };
 		C39650F318314F4D00984745 /* EDXLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39650F118314F4D00984745 /* EDXLoginViewController.xib */; };
 		C3965179183235EB00984745 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3965178183235EB00984745 /* CFNetwork.framework */; };
@@ -75,10 +73,6 @@
 		C39650D018314F1C00984745 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C39650D718314F1C00984745 /* edx-mobileTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "edx-mobileTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39650D818314F1C00984745 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C39650E018314F1C00984745 /* edx-mobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "edx-mobileTests-Info.plist"; sourceTree = "<group>"; };
-		C39650E218314F1C00984745 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C39650E418314F1C00984745 /* edx_mobileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = edx_mobileTests.h; sourceTree = "<group>"; };
-		C39650E518314F1C00984745 /* edx_mobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = edx_mobileTests.m; sourceTree = "<group>"; };
 		C39650EF18314F4D00984745 /* EDXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXLoginViewController.h; sourceTree = "<group>"; };
 		C39650F018314F4D00984745 /* EDXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXLoginViewController.m; sourceTree = "<group>"; };
 		C39650F118314F4D00984745 /* EDXLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDXLoginViewController.xib; sourceTree = "<group>"; };
@@ -160,7 +154,6 @@
 				C396517A183235F600984745 /* SystemConfiguration.framework */,
 				C3965178183235EB00984745 /* CFNetwork.framework */,
 				C39650C018314F1C00984745 /* edx-mobile */,
-				C39650DE18314F1C00984745 /* edx-mobileTests */,
 				C39650B918314F1C00984745 /* Frameworks */,
 				C39650B818314F1C00984745 /* Products */,
 				F113093608F84F158AC24FD4 /* Pods.xcconfig */,
@@ -214,25 +207,6 @@
 				C39650CC18314F1C00984745 /* Default.png */,
 				C39650CE18314F1C00984745 /* Default@2x.png */,
 				C39650D018314F1C00984745 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C39650DE18314F1C00984745 /* edx-mobileTests */ = {
-			isa = PBXGroup;
-			children = (
-				C39650E418314F1C00984745 /* edx_mobileTests.h */,
-				C39650E518314F1C00984745 /* edx_mobileTests.m */,
-				C39650DF18314F1C00984745 /* Supporting Files */,
-			);
-			path = "edx-mobileTests";
-			sourceTree = "<group>";
-		};
-		C39650DF18314F1C00984745 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C39650E018314F1C00984745 /* edx-mobileTests-Info.plist */,
-				C39650E118314F1C00984745 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -360,7 +334,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39650E318314F1C00984745 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +407,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39650E618314F1C00984745 /* edx_mobileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,14 +425,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				C39650C418314F1C00984745 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C39650E118314F1C00984745 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C39650E218314F1C00984745 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
