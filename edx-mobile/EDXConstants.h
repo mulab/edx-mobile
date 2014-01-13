@@ -11,6 +11,7 @@ extern NSString * const api_key;
 extern NSString * const loginUrl;
 extern NSString * const loginPost;
 enum kBusinessTag{
+    kBusinessTagSignUp,
     kBusinessTagUserLogin,
     kBusinessTagGetEnrollments,
     kBusinessTagGetCourseVideoList
