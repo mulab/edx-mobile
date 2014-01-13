@@ -35,6 +35,7 @@
 		C39651881832440200984745 /* EDXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C39651871832440200984745 /* EDXConstants.m */; };
 		C396518E1832645F00984745 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518C1832645F00984745 /* EDXMainViewController.m */; };
 		C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C396518D1832645F00984745 /* EDXMainViewController.xib */; };
+		D86E9125A76B4B1C8B95334B /* libPods-edx-mobile Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F752CA97F5D643EEAD405A84 /* libPods-edx-mobile Tests.a */; };
 		EE3DB271FA79CDD3B181BD0B /* EDXSignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB41D1F6BBC078C91EAEF /* EDXSignUpModel.m */; };
 		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
 		EE3DBBF03813455685492B5F /* EDXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB989DF77A764B6766B65 /* EDXURLHelper.m */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		251084FF92044528BFE61E59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FE0D02D74D4B09A79D0CA5 /* Pods-edx-mobile Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edx-mobile Tests.xcconfig"; path = "Pods/Pods-edx-mobile Tests.xcconfig"; sourceTree = "<group>"; };
 		6ABF62FEAAF24ACF9E57CD7E /* libPods-edx-mobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-edx-mobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4E66F5EA3C4E259F3D5BC3 /* Pods-edx-mobileTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edx-mobileTests.xcconfig"; path = "Pods/Pods-edx-mobileTests.xcconfig"; sourceTree = "<group>"; };
 		8ACD2C561883E81D006ACA9B /* edx-mobile Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "edx-mobile Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 		EE3DBD7DDC2EC103D0E4B5CD /* EDXDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDataManager.h; sourceTree = "<group>"; };
 		EE3DBEB90A01E3F7F2C46622 /* EDXBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXBlock.h; sourceTree = "<group>"; };
 		F113093608F84F158AC24FD4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F752CA97F5D643EEAD405A84 /* libPods-edx-mobile Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-edx-mobile Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 				8ACD2C581883E81D006ACA9B /* XCTest.framework in Frameworks */,
 				8ACD2C5A1883E81D006ACA9B /* UIKit.framework in Frameworks */,
 				8ACD2C591883E81D006ACA9B /* Foundation.framework in Frameworks */,
+				D86E9125A76B4B1C8B95334B /* libPods-edx-mobile Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +200,7 @@
 				C39650B818314F1C00984745 /* Products */,
 				F113093608F84F158AC24FD4 /* Pods.xcconfig */,
 				7B4E66F5EA3C4E259F3D5BC3 /* Pods-edx-mobileTests.xcconfig */,
+				58FE0D02D74D4B09A79D0CA5 /* Pods-edx-mobile Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +223,7 @@
 				251084FF92044528BFE61E59 /* libPods.a */,
 				6ABF62FEAAF24ACF9E57CD7E /* libPods-edx-mobileTests.a */,
 				8ACD2C571883E81D006ACA9B /* XCTest.framework */,
+				F752CA97F5D643EEAD405A84 /* libPods-edx-mobile Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -303,9 +309,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ACD2C661883E81D006ACA9B /* Build configuration list for PBXNativeTarget "edx-mobile Tests" */;
 			buildPhases = (
+				EF46DC74809146CDBDB7F361 /* Check Pods Manifest.lock */,
 				8ACD2C521883E81D006ACA9B /* Sources */,
 				8ACD2C531883E81D006ACA9B /* Frameworks */,
 				8ACD2C541883E81D006ACA9B /* Resources */,
+				A88F7A0E72E941E385D5DAFB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,6 +372,8 @@
 			mainGroup = C39650AE18314F1B00984745;
 			productRefGroup = C39650B818314F1C00984745 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				C39650B618314F1C00984745 /* edx-mobile */,
@@ -413,7 +423,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A88F7A0E72E941E385D5DAFB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-edx-mobile Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BB16EEE1BAEA4A41B47EB7D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF46DC74809146CDBDB7F361 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -491,6 +531,7 @@
 /* Begin XCBuildConfiguration section */
 		8ACD2C671883E81D006ACA9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FE0D02D74D4B09A79D0CA5 /* Pods-edx-mobile Tests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/edx-mobile.app/edx-mobile";
@@ -523,6 +564,7 @@
 		};
 		8ACD2C681883E81D006ACA9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FE0D02D74D4B09A79D0CA5 /* Pods-edx-mobile Tests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/edx-mobile.app/edx-mobile";
