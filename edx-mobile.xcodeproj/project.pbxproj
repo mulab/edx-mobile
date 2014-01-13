@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		985789DD543F48A4BDBDE38D /* libPods-edx-mobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ABF62FEAAF24ACF9E57CD7E /* libPods-edx-mobileTests.a */; };
 		BB19B96DF2A2476489342A0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 251084FF92044528BFE61E59 /* libPods.a */; };
 		C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34156FB185F1A3C00F62FB1 /* EDXViewController.m */; };
 		C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36979B91853A2C4006055C3 /* MediaPlayer.framework */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		251084FF92044528BFE61E59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ABF62FEAAF24ACF9E57CD7E /* libPods-edx-mobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-edx-mobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B4E66F5EA3C4E259F3D5BC3 /* Pods-edx-mobileTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edx-mobileTests.xcconfig"; path = "Pods/Pods-edx-mobileTests.xcconfig"; sourceTree = "<group>"; };
 		C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
 		C34156FA185F1A3C00F62FB1 /* EDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXViewController.h; sourceTree = "<group>"; };
 		C34156FB185F1A3C00F62FB1 /* EDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXViewController.m; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 				C39650D918314F1C00984745 /* SenTestingKit.framework in Frameworks */,
 				C39650DA18314F1C00984745 /* UIKit.framework in Frameworks */,
 				C39650DB18314F1C00984745 /* Foundation.framework in Frameworks */,
+				985789DD543F48A4BDBDE38D /* libPods-edx-mobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +164,7 @@
 				C39650B918314F1C00984745 /* Frameworks */,
 				C39650B818314F1C00984745 /* Products */,
 				F113093608F84F158AC24FD4 /* Pods.xcconfig */,
+				7B4E66F5EA3C4E259F3D5BC3 /* Pods-edx-mobileTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +185,7 @@
 				C39650BE18314F1C00984745 /* CoreGraphics.framework */,
 				C39650D818314F1C00984745 /* SenTestingKit.framework */,
 				251084FF92044528BFE61E59 /* libPods.a */,
+				6ABF62FEAAF24ACF9E57CD7E /* libPods-edx-mobileTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,10 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C39650EC18314F1C00984745 /* Build configuration list for PBXNativeTarget "edx-mobileTests" */;
 			buildPhases = (
+				E88AE445DA614B448366D9E4 /* Check Pods Manifest.lock */,
 				C39650D218314F1C00984745 /* Sources */,
 				C39650D318314F1C00984745 /* Frameworks */,
 				C39650D418314F1C00984745 /* Resources */,
 				C39650D518314F1C00984745 /* ShellScript */,
+				38E4982BCA1646BE8FD01E30 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,6 +328,8 @@
 			mainGroup = C39650AE18314F1B00984745;
 			productRefGroup = C39650B818314F1C00984745 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				C39650B618314F1C00984745 /* edx-mobile */,
@@ -353,6 +363,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		38E4982BCA1646BE8FD01E30 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-edx-mobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3FF00E0F6FFF43429A81C38B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,6 +420,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		E88AE445DA614B448366D9E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -538,6 +578,7 @@
 		};
 		C39650ED18314F1C00984745 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4E66F5EA3C4E259F3D5BC3 /* Pods-edx-mobileTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/edx-mobile.app/edx-mobile";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -556,6 +597,7 @@
 		};
 		C39650EE18314F1C00984745 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4E66F5EA3C4E259F3D5BC3 /* Pods-edx-mobileTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/edx-mobile.app/edx-mobile";
 				CLANG_ENABLE_OBJC_ARC = YES;
