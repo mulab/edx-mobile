@@ -12,6 +12,7 @@
 		8ACD2C5A1883E81D006ACA9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BA18314F1C00984745 /* UIKit.framework */; };
 		8ACD2C601883E81D006ACA9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD2C5E1883E81D006ACA9B /* InfoPlist.strings */; };
 		8ACD2C621883E81D006ACA9B /* edx_mobile_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD2C611883E81D006ACA9B /* edx_mobile_Tests.m */; };
+		8ACD2C6A1883E91D006ACA9B /* EDXURLHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD2C691883E91D006ACA9B /* EDXURLHelperTest.m */; };
 		BB19B96DF2A2476489342A0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 251084FF92044528BFE61E59 /* libPods.a */; };
 		C34156FC185F1A3C00F62FB1 /* EDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34156FB185F1A3C00F62FB1 /* EDXViewController.m */; };
 		C36979BA1853A2C4006055C3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36979B91853A2C4006055C3 /* MediaPlayer.framework */; };
@@ -65,6 +66,7 @@
 		8ACD2C5F1883E81D006ACA9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8ACD2C611883E81D006ACA9B /* edx_mobile_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = edx_mobile_Tests.m; sourceTree = "<group>"; };
 		8ACD2C631883E81D006ACA9B /* edx-mobile Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "edx-mobile Tests-Prefix.pch"; sourceTree = "<group>"; };
+		8ACD2C691883E91D006ACA9B /* EDXURLHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURLHelperTest.m; sourceTree = "<group>"; };
 		C34156F9185F196D00F62FB1 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
 		C34156FA185F1A3C00F62FB1 /* EDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXViewController.h; sourceTree = "<group>"; };
 		C34156FB185F1A3C00F62FB1 /* EDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXViewController.m; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		8ACD2C5B1883E81D006ACA9B /* edx-mobile Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8ACD2C691883E91D006ACA9B /* EDXURLHelperTest.m */,
 				8ACD2C611883E81D006ACA9B /* edx_mobile_Tests.m */,
 				8ACD2C5C1883E81D006ACA9B /* Supporting Files */,
 			);
@@ -372,8 +375,6 @@
 			mainGroup = C39650AE18314F1B00984745;
 			productRefGroup = C39650B818314F1C00984745 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				C39650B618314F1C00984745 /* edx-mobile */,
@@ -476,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ACD2C621883E81D006ACA9B /* edx_mobile_Tests.m in Sources */,
+				8ACD2C6A1883E91D006ACA9B /* EDXURLHelperTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +694,7 @@
 				8ACD2C681883E81D006ACA9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C39650B218314F1B00984745 /* Build configuration list for PBXProject "edx-mobile" */ = {
 			isa = XCConfigurationList;
