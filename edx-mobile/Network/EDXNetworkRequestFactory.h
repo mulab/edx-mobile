@@ -6,9 +6,9 @@
 #import <Foundation/Foundation.h>
 #import "EDXConstants.h"
 #import "EDXURLHelper.h"
+#import "EDXSignUpRequest.h"
 
 @interface EDXNetworkRequestFactory : NSObject
--(NSMutableURLRequest *)SignUpRequest;
--(NSURLRequest *)RequestFor:(kBusinessTag)tag;
+- (NSMutableURLRequest *)SignUpRequestWithData: (EDXSignUpData)data;
 @property (nonatomic, strong)EDXURLHelper *helper;
 @end

@@ -4,13 +4,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EDXSignUpModel.h"
 #import "EDXNetworkDelegate.h"
 #import "EDXNetworkRequestFactory.h"
+#import "EDXSignUpRequest.h"
 
 @interface EDXNetworkManager : NSObject{
     EDXNetworkRequestFactory *factory;
 }
-- (void)SignUpWith:(EDXSignUpModel *)info owner:(id<EDXNetworkDelegate>)owner;
+- (void)SignUpWith:(EDXSignUpData)info owner:(id<EDXNetworkDelegate>)owner;
 @property (nonatomic, strong)EDXNetworkRequestFactory *factory;
 @end
