@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EDXURLHelper.h"
+#import "EDXUtilities.h"
 
 @interface EDXNetworkRequest : NSMutableURLRequest{
     EDXURLHelper *helper;
