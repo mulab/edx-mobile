@@ -3,19 +3,19 @@
 // Copyright (c) 2014 mulab. All rights reserved.
 //
 
+#import <Objection/Objection.h>
 #import "EDXNetworkRequest.h"
-#import "EDXConstants.h"
 
 @implementation EDXNetworkRequest {
 
 }
+objection_requires(@"helper")
+@synthesize helper;
 - (id)init {
     self = [super init];
     if (self) {
-        [self setRequestURL];
+        helper = [[JSObjection defaultInjector] getObject:[EDXURLHelper class]];
         [self addValue:api_key forHTTPHeaderField:@"X-edx-api-key"];
-        [self setContentType];
-        [self setMethod];
     }
     return self;
 }

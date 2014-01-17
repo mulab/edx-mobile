@@ -5,16 +5,25 @@
 
 #import "EDXNetworkRequestFactory.h"
 #import <Objection/Objection.h>
-
+@interface EDXNetworkRequestFactory()
+-(NSURLRequest *)ProduceRequest:(EDXNetworkRequest *)request;
+@end
 @implementation EDXNetworkRequestFactory {
 
 }
-objection_register_singleton(EDXNetworkRequestFactory )
+objection_register_singleton(EDXNetworkRequestFactory)
 objection_requires(@"helper")
 @synthesize helper;
 
-- (NSMutableURLRequest *)SignUpRequestWithData: (EDXSignUpData)data{
-    return [[EDXSignUpRequest alloc] initWithSignUpData:data];
+- (NSURLRequest *)SignUpRequestWithData: (EDXSignUpData)data{
+    return [self ProduceRequest:[[EDXSignUpRequest alloc] initWithSignUpData:data]];
+}
+
+- (NSURLRequest *)ProduceRequest:(EDXNetworkRequest *)request {
+    [request setRequestURL];
+    [request setMethod];
+    [request setContentType];
+    return request;
 }
 
 @end

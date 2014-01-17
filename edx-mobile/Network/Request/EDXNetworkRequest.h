@@ -4,9 +4,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EDXURLHelper.h"
 
-
-@interface EDXNetworkRequest : NSMutableURLRequest
+@interface EDXNetworkRequest : NSMutableURLRequest{
+    EDXURLHelper *helper;
+}
+@property (strong, nonatomic)EDXURLHelper *helper;
 -(void)setContentType;
 -(void)setMethod;
 -(void)setRequestURL;

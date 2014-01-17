@@ -6,8 +6,19 @@
 //  Copyright (c) 2013年 mulab. All rights reserved.
 //
 
+#import <Objection/JSObjectionModule.h>
+#import <Objection/JSObjection.h>
 #import "EDXAppDelegate.h"
 #import "EDXLoginViewController.h"
+@interface MyAppModule : JSObjectionModule {
+
+}
+@end
+@implementation MyAppModule
+- (void)configure {
+    [self bindClass:[EDXNetworkRequestFactory class] inScope:JSObjectionScopeSingleton];
+}
+@end
 @implementation EDXAppDelegate
 void uncaughtExceptionHandler(NSException *exception) {
     NSLog(@"CRASH: %@", exception);
@@ -16,6 +27,9 @@ void uncaughtExceptionHandler(NSException *exception) {
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    JSObjectionModule *module = [[MyAppModule alloc] init];
+    JSObjectionInjector *injector = [JSObjection createInjector:module];
+    [JSObjection setDefaultInjector:injector];
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

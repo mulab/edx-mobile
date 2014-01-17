@@ -4,21 +4,18 @@
 //
 
 #import "EDXSignUpRequest.h"
-#import <Objection/Objection.h>
-
+#import "EDXUtilities.h"
 @implementation EDXSignUpRequest {
 
 }
-objection_requires(@"helper")
-@synthesize helper;
 - (id)initWithSignUpData:(EDXSignUpData)data {
     self = [super init];
     if(self){
         NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithCapacity:4];
-        [dictionary setValue:data.email forKey:@"email"];
-        [dictionary setValue:data.username forKey:@"username"];
-        [dictionary setValue:data.full_name forKey:@"full_name"];
-        [dictionary setValue:data.password forKey:@"password"];
+        [dictionary setValue:[EDXUtilities CharToNSString:data.email] forKey:@"email"];
+        [dictionary setValue:[EDXUtilities CharToNSString:data.username] forKey:@"username"];
+        [dictionary setValue:[EDXUtilities CharToNSString:data.full_name] forKey:@"full_name"];
+        [dictionary setValue:[EDXUtilities CharToNSString:data.password] forKey:@"password"];
         NSError *error = nil;
         NSData *body = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:&error];
         [self setHTTPBody:body];
@@ -27,8 +24,9 @@ objection_requires(@"helper")
 }
 
 - (void)setRequestURL {
-    [super setRequestURL];
-    [self setURL:[helper BuildUrlFor:kBusinessTagSignUp]];
+    //[super setRequestURL];
+    NSURL *url = [helper BuildUrlFor:kBusinessTagSignUp];
+    [self setURL:url];
 }
 
 

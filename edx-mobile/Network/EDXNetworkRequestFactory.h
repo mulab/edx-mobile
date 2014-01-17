@@ -9,6 +9,6 @@
 #import "EDXSignUpRequest.h"
 
 @interface EDXNetworkRequestFactory : NSObject
-- (NSMutableURLRequest *)SignUpRequestWithData: (EDXSignUpData)data;
+- (NSURLRequest *)SignUpRequestWithData: (EDXSignUpData)data;
 @property (nonatomic, strong)EDXURLHelper *helper;
 @end

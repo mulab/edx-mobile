@@ -7,12 +7,11 @@
 #import "EDXNetworkRequest.h"
 #import "EDXURLHelper.h"
 typedef struct {
-    __strong NSString *email;
-    __strong NSString *username;
-    __strong NSString *password;
-    __strong NSString *full_name;
+    char *email;
+    char *username;
+    char *password;
+    char *full_name;
 } EDXSignUpData;
 @interface EDXSignUpRequest : EDXNetworkRequest
 -(id)initWithSignUpData:(EDXSignUpData)data;
-@property (strong, nonatomic)EDXURLHelper *helper;
 @end
