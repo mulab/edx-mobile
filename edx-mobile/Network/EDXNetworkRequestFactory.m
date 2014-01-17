@@ -35,6 +35,10 @@ objection_requires(@"helper")
     return [self ProduceRequest:[[EDXGetEnrollsRequest alloc] initWithToken:token]];
 }
 
+- (NSURLRequest *)GetCourseNavigationWithCourseId:(NSString *)course Token:(NSString *)token {
+    return [self ProduceRequest:[[EDXGetCourseNavigationRequest alloc] initWithCourseId:course Token:token]];
+}
+
 
 - (NSURLRequest *)ProduceRequest:(EDXNetworkRequest *)request {
     [request setRequestURL];

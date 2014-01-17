@@ -36,6 +36,8 @@ objection_register_singleton(EDXURLHelper );
         case kBusinessTagGetCourseVideoList:break;
         case kBusinessTagGetEnrolls:
             return [NSURL URLWithString:[NSString stringWithFormat:host, Get_Enrolls]];
+        case kBusinessTagGetCourseNavigation:
+            return [NSURL URLWithString:[NSString stringWithFormat:host, Get_Enrolls]];
     }
     return nil;
 }

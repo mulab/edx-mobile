@@ -17,6 +17,7 @@ enum kBusinessTag{
     kBusinessTagUserLogin,
     kBusinessTagEnrollCourse,
     kBusinessTagGetEnrolls,
+    kBusinessTagGetCourseNavigation,
     kBusinessTagGetCourseVideoList
 };
 typedef enum kBusinessTag kBusinessTag;
