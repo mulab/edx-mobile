@@ -82,6 +82,19 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
                 });
             });
+
+            context(@"when used for producint get course element request", ^{
+                NSURLRequest *request = [factory GetCourseElementRequestWithCourseId:@"hello" ElementType:@"vedio" Token:@"1234567890"];
+                it(@"should have correct url", ^{
+                    [[[[request URL] absoluteString]should] containString:@"/edx-api/courseware/v1/hello?type=vedio"];
+                });
+                it(@"should have correct method", ^{
+                    [[[request HTTPMethod]should] equal:@"GET"];
+                });
+                it(@"should have header with token",^{
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                });
+            });
         });
 SPEC_END
 

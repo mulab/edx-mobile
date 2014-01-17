@@ -5,6 +5,7 @@
 
 #import "EDXNetworkRequestFactory.h"
 #import <Objection/Objection.h>
+
 @interface EDXNetworkRequestFactory()
 -(NSURLRequest *)ProduceRequest:(EDXNetworkRequest *)request;
 @end
@@ -37,6 +38,10 @@ objection_requires(@"helper")
 
 - (NSURLRequest *)GetCourseNavigationWithCourseId:(NSString *)course Token:(NSString *)token {
     return [self ProduceRequest:[[EDXGetCourseNavigationRequest alloc] initWithCourseId:course Token:token]];
+}
+
+- (NSURLRequest *)GetCourseElementRequestWithCourseId:(NSString *)course ElementType:(NSString *)type Token:(NSString *)token {
+    return [self ProduceRequest:[[EDXGetCourseElementRequest alloc] initWithCourseId:course ElementType:type Token:token]];
 }
 
 

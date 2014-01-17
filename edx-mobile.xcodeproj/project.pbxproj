@@ -37,6 +37,7 @@
 		C396518E1832645F00984745 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C396518C1832645F00984745 /* EDXMainViewController.m */; };
 		C396518F1832645F00984745 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C396518D1832645F00984745 /* EDXMainViewController.xib */; };
 		D86E9125A76B4B1C8B95334B /* libPods-edx-mobile Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F752CA97F5D643EEAD405A84 /* libPods-edx-mobile Tests.a */; };
+		EE3DB31E14ED5094B1115270 /* EDXGetCourseElementRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB85CD746A0E28AD3843B /* EDXGetCourseElementRequest.m */; };
 		EE3DB446D9A361B5E6E2C5A4 /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB9C1717814498CF694A2 /* EDXNetworkRequest.m */; };
 		EE3DB5E0DAB26611B4D277F8 /* EDXUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBDDB7A6B99636F0BC515 /* EDXUtilities.m */; };
 		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
@@ -118,10 +119,12 @@
 		EE3DB48D78C302881AB88D35 /* EDXSignUpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXSignUpRequest.h; sourceTree = "<group>"; };
 		EE3DB492183A5A59F03EEBBD /* EDXGetEnrollsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXGetEnrollsRequest.m; sourceTree = "<group>"; };
 		EE3DB495F47D29982B4874EC /* EDXChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXChapter.m; sourceTree = "<group>"; };
+		EE3DB5D2C0C0F04FE3BCDF84 /* EDXGetCourseElementRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseElementRequest.h; sourceTree = "<group>"; };
 		EE3DB727A0819E5E1E67AC82 /* EDXURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURLHelper.h; sourceTree = "<group>"; };
 		EE3DB755D9EC387A92FE186A /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
 		EE3DB757FFB339B0AB779DF5 /* EDXChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXChapter.h; sourceTree = "<group>"; };
 		EE3DB820F12CF00BA864C24D /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
+		EE3DB85CD746A0E28AD3843B /* EDXGetCourseElementRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXGetCourseElementRequest.m; sourceTree = "<group>"; };
 		EE3DB89B52A0F8724409EA44 /* EDXAccessTokenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXAccessTokenRequest.m; sourceTree = "<group>"; };
 		EE3DB989DF77A764B6766B65 /* EDXURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURLHelper.m; sourceTree = "<group>"; };
 		EE3DB98F14ECB87C468A9136 /* EDXUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUtilities.h; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				EE3DB0E576BE4AE01CF58903 /* EDXGetEnrollsRequest.h */,
 				EE3DBCA8C27515ECF3EE57CE /* EDXGetCourseNavigationRequest.m */,
 				EE3DB14193BC7B0CD1E6D3A3 /* EDXGetCourseNavigationRequest.h */,
+				EE3DB85CD746A0E28AD3843B /* EDXGetCourseElementRequest.m */,
+				EE3DB5D2C0C0F04FE3BCDF84 /* EDXGetCourseElementRequest.h */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				EE3DBB281B5E4EF6FCB6CFC1 /* EDXDeleteEnrollCourseRequest.m in Sources */,
 				EE3DBCEAEB601637EBF919F4 /* EDXGetEnrollsRequest.m in Sources */,
 				EE3DB8F74F3243C2F0087DFC /* EDXGetCourseNavigationRequest.m in Sources */,
+				EE3DB31E14ED5094B1115270 /* EDXGetCourseElementRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

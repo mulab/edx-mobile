@@ -12,6 +12,7 @@
 #import "EDXDeleteEnrollCourseRequest.h"
 #import "EDXGetEnrollsRequest.h"
 #import "EDXGetCourseNavigationRequest.h"
+#import "EDXGetCourseElementRequest.h"
 
 @interface EDXNetworkRequestFactory : NSObject
 - (NSURLRequest *)SignUpRequestWithData: (EDXSignUpData)data;
@@ -20,6 +21,6 @@
 - (NSURLRequest *)DeleteEnrollCourseRequestWithCourseId: (NSString *)course Token:(NSString *)token;
 - (NSURLRequest *)GetEnrollsRequestWithToken:(NSString *)token;
 - (NSURLRequest *)GetCourseNavigationWithCourseId: (NSString *)course Token:(NSString *)token;
-
+- (NSURLRequest *)GetCourseElementRequestWithCourseId: (NSString *)course ElementType:(NSString *)type Token:(NSString *)token;
 @property (nonatomic, strong)EDXURLHelper *helper;
 @end
