@@ -11,6 +11,8 @@
 #import "EDXViewController.h"
 #import "EDXDataManager.h"
 #import "EDXNetworkManager.h"
+#import "EDXNetworkRequestFactory.h"
+@class EDXDataManager,EDXNetworkRequestFactory;
 @interface EDXLoginViewController : EDXViewController<EDXNetworkDelegate>
 {
     EDXDataManager *dataManager;
@@ -18,7 +20,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property (nonatomic, strong) EDXDataManager *dataManager;
-@property (nonatomic, strong) EDXNetworkManager *networkManager;
+@property (nonatomic, strong) EDXNetworkRequestFactory *factory;
+
 - (IBAction)LoginAction:(id)sender;
 - (IBAction)GetEnrollmentAction:(id)sender;
 - (void) LoginWith:(NSString *)username password:(NSString *)password;

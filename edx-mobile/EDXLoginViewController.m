@@ -7,18 +7,17 @@
 //
 
 #import "EDXLoginViewController.h"
-#import "EDXConstants.h"
 #import "EDXMainViewController.h"
-#import "EDXNetworkManager.h"
+#import <Objection/Objection.h>
 @interface EDXLoginViewController ()
 
 @end
 
 @implementation EDXLoginViewController
-//objection_requires(@"dataManager",@"networkManager");
+objection_requires_sel(@selector(dataManager), @selector(factory));
 @synthesize userName;
 @synthesize password;
-@synthesize dataManager,networkManager;
+@synthesize dataManager,factory;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,11 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    factory = [[JSObjection defaultInjector] getObject:[EDXNetworkRequestFactory class]];
     [userName setText:[dataManager GetUserName]];
     if (![[dataManager GetLoginAccess:self] isEqualToString:@""]) {
         [self NavigateToDashBoard];
     }
+    EDXSignUpData data = {"user@user.com","username","password","user_full"};
+    NSString *url = [[[factory SignUpRequestWithData:data] URL] absoluteString];
+    //[userName setText:[[[factory SignUpRequestWithData:data] URL] absoluteString]];
 }
 
 - (void)didReceiveMemoryWarning

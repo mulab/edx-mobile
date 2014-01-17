@@ -9,7 +9,7 @@
 @implementation EDXNetworkRequest {
 
 }
-objection_requires(@"helper")
+objection_requires_sel(@selector(helper))
 @synthesize helper;
 - (id)init {
     self = [super init];
