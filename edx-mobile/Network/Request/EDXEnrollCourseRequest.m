@@ -5,16 +5,18 @@
 
 #import "EDXEnrollCourseRequest.h"
 
-
+@interface EDXEnrollCourseRequest(){
+    NSString * _course;
+}
+@end
 @implementation EDXEnrollCourseRequest {
 
 }
 - (id)initWithCourseId:(NSString *)course Token:(NSString *)token {
     self = [super init];
     if(self){
-        NSString *url = [[self URL] absoluteString];
-        [self setURL:[NSURL URLWithString:[NSString stringWithFormat:url,course]]];
         [self setAccessToken:token];
+        _course = course;
     }
     return self;
 }
@@ -22,7 +24,12 @@
 - (void)setRequestURL {
     [super setRequestURL];
     NSURL *url = [helper BuildUrlFor:kBusinessTagGetEnrollments];
-    [self setURL:url];
+    [self setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[url absoluteString],_course]]];
+}
+
+- (void)setMethod {
+    [super setMethod];
+    [self setHTTPMethod:@"GET"];
 }
 
 

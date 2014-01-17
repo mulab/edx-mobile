@@ -19,6 +19,15 @@ objection_requires(@"helper")
     return [self ProduceRequest:[[EDXSignUpRequest alloc] initWithSignUpData:data]];
 }
 
+- (NSURLRequest *)AccessTokenRequestWithData:(EDXLoginData)data {
+    return [self ProduceRequest:[[EDXAccessTokenRequest alloc] initWithLoginData:data]];
+}
+
+- (NSURLRequest *)EnrollCourseRequestWithCourseId:(NSString *)course Token:(NSString *)token {
+    return [self ProduceRequest:[[EDXEnrollCourseRequest alloc] initWithCourseId:course Token:token]];
+}
+
+
 - (NSURLRequest *)ProduceRequest:(EDXNetworkRequest *)request {
     [request setRequestURL];
     [request setMethod];

@@ -30,6 +30,19 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[request valueForHTTPHeaderField:@"content-type"] should] equal:json_header];
                 });
             });
+
+            context(@"when used for producing enroll course request", ^{
+                NSURLRequest *request = [factory EnrollCourseRequestWithCourseId:@"hello" Token:@"1234567890"];
+                it(@"should have correct url", ^{
+                    [[[[request URL] absoluteString]should] containString:@"hello"];
+                });
+                it(@"should have correct method", ^{
+                    [[[request HTTPMethod]should] equal:@"GET"];
+                });
+                it(@"should have header with token",^{
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                });
+            });
         });
 SPEC_END
 
