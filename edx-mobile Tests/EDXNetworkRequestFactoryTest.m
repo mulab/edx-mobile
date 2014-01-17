@@ -34,7 +34,7 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
             context(@"when used for producing enroll course request", ^{
                 NSURLRequest *request = [factory EnrollCourseRequestWithCourseId:@"hello" Token:@"1234567890"];
                 it(@"should have correct url", ^{
-                    [[[[request URL] absoluteString]should] containString:@"hello"];
+                    [[[[request URL] absoluteString]should] containString:@"/edx-api/enrollments/v1/hello"];
                 });
                 it(@"should have correct method", ^{
                     [[[request HTTPMethod]should] equal:@"GET"];
@@ -47,7 +47,7 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
             context(@"when used for producing delete enrolled course request", ^{
                 NSURLRequest *request = [factory DeleteEnrollCourseRequestWithCourseId:@"hello" Token:@"1234567890"];
                 it(@"should have correct url", ^{
-                    [[[[request URL] absoluteString]should] containString:@"hello"];
+                    [[[[request URL] absoluteString]should] containString:@"/edx-api/enrollments/v1/hello"];
                 });
                 it(@"should have correct method", ^{
                     [[[request HTTPMethod]should] equal:@"DELETE"];
