@@ -15,7 +15,8 @@ extern NSString * const loginPost;
 enum kBusinessTag{
     kBusinessTagSignUp,
     kBusinessTagUserLogin,
-    kBusinessTagGetEnrollments,
+    kBusinessTagEnrollCourse,
+    kBusinessTagGetEnrolls,
     kBusinessTagGetCourseVideoList
 };
 typedef enum kBusinessTag kBusinessTag;

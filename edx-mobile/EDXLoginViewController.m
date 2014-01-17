@@ -84,7 +84,7 @@ objection_requires_sel(@selector(dataManager), @selector(factory));
             message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
             [message show];
         }
-    }else if (tag==kBusinessTagGetEnrollments){
+    }else if (tag== kBusinessTagEnrollCourse){
         NSDictionary *response = result;
         if([response objectForKey:@"enrollments"]){
             NSArray *enrolls =  [response objectForKey:@"enrollments"];

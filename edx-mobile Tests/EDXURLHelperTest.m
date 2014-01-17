@@ -25,7 +25,7 @@ describe(@"URLHelper", ^{
             [[result.absoluteString should] containString:@"access_token"];
         });
         it(@"should return get enrollments url", ^{
-            NSURL *result = [helper BuildUrlFor:kBusinessTagGetEnrollments];
+            NSURL *result = [helper BuildUrlFor:kBusinessTagEnrollCourse];
             [[result shouldNot] beNil];
             [[result.absoluteString should] containString:@"enrollments"];
         });

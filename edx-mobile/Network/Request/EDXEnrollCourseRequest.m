@@ -23,7 +23,7 @@
 
 - (void)setRequestURL {
     [super setRequestURL];
-    NSURL *url = [helper BuildUrlFor:kBusinessTagGetEnrollments];
+    NSURL *url = [helper BuildUrlFor:kBusinessTagEnrollCourse];
     [self setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[url absoluteString],_course]]];
 }
 

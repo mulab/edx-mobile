@@ -56,6 +56,19 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
                 });
             });
+
+            context(@"when used for producing get enrolled course list request", ^{
+                NSURLRequest *request = [factory GetEnrollsRequestWithToken:@"1234567890"];
+                it(@"should have correct url", ^{
+                    [[[[request URL] absoluteString]should] containString:@"/edx-api/courseware/v1"];
+                });
+                it(@"should have correct method", ^{
+                    [[[request HTTPMethod]should] equal:@"GET"];
+                });
+                it(@"should have header with token",^{
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                });
+            });
         });
 SPEC_END
 

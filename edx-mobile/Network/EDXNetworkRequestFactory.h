@@ -10,11 +10,13 @@
 #import "EDXAccessTokenRequest.h"
 #import "EDXEnrollCourseRequest.h"
 #import "EDXDeleteEnrollCourseRequest.h"
+#import "EDXGetEnrollsRequest.h"
 
 @interface EDXNetworkRequestFactory : NSObject
 - (NSURLRequest *)SignUpRequestWithData: (EDXSignUpData)data;
 - (NSURLRequest *)AccessTokenRequestWithData: (EDXLoginData)data;
 - (NSURLRequest *)EnrollCourseRequestWithCourseId: (NSString *)course Token:(NSString *)token;
 - (NSURLRequest *)DeleteEnrollCourseRequestWithCourseId: (NSString *)course Token:(NSString *)token;
+- (NSURLRequest *)GetEnrollsRequestWithToken:(NSString *)token;
 @property (nonatomic, strong)EDXURLHelper *helper;
 @end

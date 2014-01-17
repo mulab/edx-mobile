@@ -35,7 +35,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    //[[EDXNetwork sharedEDXNetwork]getBusinessReq:kBusinessTagGetEnrollments owner:self];
+    //[[EDXNetwork sharedEDXNetwork]getBusinessReq:kBusinessTagEnrollCourse owner:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,7 +63,7 @@
 -(void) beginPost:(kBusinessTag)tag{
 }
 -(void) endPost:(id)result business:(kBusinessTag)tag{
-    if (tag==kBusinessTagGetEnrollments){
+    if (tag== kBusinessTagEnrollCourse){
         NSDictionary *response = result;
         if([response objectForKey:@"enrollments"]){
             NSArray *enrolls =  [response objectForKey:@"enrollments"];
