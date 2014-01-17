@@ -27,6 +27,10 @@ objection_requires(@"helper")
     return [self ProduceRequest:[[EDXEnrollCourseRequest alloc] initWithCourseId:course Token:token]];
 }
 
+- (NSURLRequest *)DeleteEnrollCourseRequestWithCourseId:(NSString *)course Token:(NSString *)token {
+    return [self ProduceRequest:[[EDXDeleteEnrollCourseRequest alloc] initWithCourseId:course Token:token]];
+}
+
 
 - (NSURLRequest *)ProduceRequest:(EDXNetworkRequest *)request {
     [request setRequestURL];

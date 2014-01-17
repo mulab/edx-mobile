@@ -43,6 +43,19 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
                 });
             });
+
+            context(@"when used for producing delete enrolled course request", ^{
+                NSURLRequest *request = [factory DeleteEnrollCourseRequestWithCourseId:@"hello" Token:@"1234567890"];
+                it(@"should have correct url", ^{
+                    [[[[request URL] absoluteString]should] containString:@"hello"];
+                });
+                it(@"should have correct method", ^{
+                    [[[request HTTPMethod]should] equal:@"DELETE"];
+                });
+                it(@"should have header with token",^{
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                });
+            });
         });
 SPEC_END
 
