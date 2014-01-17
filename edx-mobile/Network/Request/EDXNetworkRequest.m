@@ -32,5 +32,9 @@ objection_requires_sel(@selector(helper))
 
 }
 
+- (void)setAccessToken:(NSString *)token {
+    [self setValue:token forHTTPHeaderField:@"Authorization"];
+}
+
 
 @end

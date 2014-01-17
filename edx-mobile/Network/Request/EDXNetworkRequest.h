@@ -14,4 +14,5 @@
 -(void)setContentType;
 -(void)setMethod;
 -(void)setRequestURL;
+-(void)setAccessToken:(NSString *)token;
 @end

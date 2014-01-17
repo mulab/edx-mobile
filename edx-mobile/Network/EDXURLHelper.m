@@ -8,7 +8,7 @@
 
 static NSString *Sign_UP = @"/edx-api/signup/v1/register";
 static NSString *Login = @"/edx-api/auth/v1/oauth2/access_token";
-static NSString *Get_Enroll = @"/edx-api/enrollments/v1/";
+static NSString *Enroll_Course = @"/edx-api/enrollments/v1/%@";
 @implementation EDXURLHelper {
 
 }
@@ -31,7 +31,7 @@ objection_register_singleton(EDXURLHelper );
         case kBusinessTagUserLogin:
             return [NSURL URLWithString:[NSString stringWithFormat:host, Login]];
         case kBusinessTagGetEnrollments:
-            return [NSURL URLWithString:[NSString stringWithFormat:host, Get_Enroll]];
+            return [NSURL URLWithString:[NSString stringWithFormat:host, Enroll_Course]];
         case kBusinessTagGetCourseVideoList:break;
     }
     return nil;
