@@ -10,18 +10,20 @@
 @implementation EDXNetworkManager {
 
 }
-objection_requires(@"EDXNetworkRequestFactory")
+objection_requires(@"factory")
 @synthesize factory;
 - (void)SignUpWith:(EDXSignUpData)info owner:(id <EDXNetworkDelegate>)owner {
     [owner before:kBusinessTagSignUp];
-    NSMutableURLRequest *request = [factory SignUpRequestWithData:info];
+    NSURLRequest *request = [factory SignUpRequestWithData:info];
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    op.responseSerializer = [AFJSONResponseSerializer serializer];
+    op.responseSerializer = [AFHTTPResponseSerializer serializer];
+    op.responseSerializer.acceptableContentTypes= [NSSet setWithObjects:@"application/json", @"text/plain", nil];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
         [owner success:responseObject business:kBusinessTagSignUp];
     } failure:^(AFHTTPRequestOperation *operation,NSError *err){
         [owner error:err];
     }];
+    [[NSOperationQueue mainQueue] addOperation:op];
 }
 
 
