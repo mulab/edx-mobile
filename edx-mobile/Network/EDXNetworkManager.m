@@ -27,4 +27,16 @@ objection_requires(@"factory")
 }
 
 
+- (void)LoginWith:(EDXLoginData)data owner:(id <EDXNetworkDelegate>)owner {
+    [owner before:kBusinessTagUserLogin];
+    NSURLRequest *request = [factory AccessTokenRequestWithData:data];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    op.responseSerializer = [AFJSONResponseSerializer serializer];
+    [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation,id responseObject){
+        [owner success:responseObject business:kBusinessTagSignUp];
+    } failure:^(AFHTTPRequestOperation *operation,NSError *error){
+        [owner error:error];
+    }];
+    [[NSOperationQueue mainQueue] addOperation:op];
+}
 @end

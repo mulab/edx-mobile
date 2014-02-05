@@ -9,6 +9,6 @@
 @protocol EDXNetworkDelegate <NSObject>
 @optional
 - (void)before:(kBusinessTag)tag;
-- (void)success:(NSData *)result business:(kBusinessTag)tag;
+- (void)success:(id)result business:(kBusinessTag)tag;
 - (void)error:(NSError *)err;
 @end

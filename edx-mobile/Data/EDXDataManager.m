@@ -7,8 +7,6 @@
 //
 
 #import "EDXDataManager.h"
-#import "EDXNetworkManager.h"
-#import "EDXConstants.h"
 
 enum methodTag{
     kGetLoginAccess=0,
@@ -89,7 +87,7 @@ typedef enum methodTag kMethodTag;
 - (void)before:(kBusinessTag)tag {
 }
 
-- (void)success:(NSData *)result business:(kBusinessTag)tag {
+- (void)success:(id)result business:(kBusinessTag)tag {
     //TODO : write to database
     //TODO : write to cache
     [_owner RefreshView];

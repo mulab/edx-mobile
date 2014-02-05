@@ -13,4 +13,6 @@
 }
 - (void)SignUpWith:(EDXSignUpData)info owner:(id<EDXNetworkDelegate>)owner;
 @property (nonatomic, strong)EDXNetworkRequestFactory *factory;
+
+- (void)LoginWith:(EDXLoginData)data owner:(id <EDXNetworkDelegate>)owner;
 @end
