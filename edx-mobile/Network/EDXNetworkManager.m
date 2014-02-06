@@ -14,6 +14,7 @@
 }
 objection_requires(@"factory")
 @synthesize factory;
+@synthesize access_token;
 - (void)SignUpWith:(EDXSignUpData)info owner:(id <EDXNetworkDelegate>)owner {
     [owner before:kBusinessTagSignUp];
     NSURLRequest *request = [factory SignUpRequestWithData:info];
@@ -26,6 +27,14 @@ objection_requires(@"factory")
 - (void)LoginWith:(EDXLoginData)data owner:(id <EDXNetworkDelegate>)owner {
     [owner before:kBusinessTagUserLogin];
     NSURLRequest *request = [factory AccessTokenRequestWithData:data];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    op.responseSerializer = [AFJSONResponseSerializer serializer];
+    [self startOperation:op ForOwner:owner];
+}
+
+- (void)GetEnrollCourseFor:(id<EDXNetworkDelegate>)owner{
+    [owner before:kBusinessTagGetEnrolls];
+    NSURLRequest *request = [factory GetEnrollsRequestWithToken:access_token];
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [self startOperation:op ForOwner:owner];

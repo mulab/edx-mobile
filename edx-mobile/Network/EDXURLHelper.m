@@ -9,7 +9,7 @@
 static NSString *Sign_UP = @"/edx-api/signup/v1/register";
 static NSString *Login = @"/edx-api/auth/v1/oauth2/access_token";
 static NSString *Enroll_Course = @"/edx-api/enrollments/v1/";
-static NSString *Get_Enrolls = @"/edx-api/courseware/v1";
+static NSString *Get_Enrolls = @"/edx-api/enrollments/v1/";
 @implementation EDXURLHelper {
 
 }

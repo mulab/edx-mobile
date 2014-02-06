@@ -33,7 +33,8 @@ objection_requires_sel(@selector(helper))
 }
 
 - (void)setAccessToken:(NSString *)token {
-    [self setValue:token forHTTPHeaderField:@"Authorization"];
+    NSString *Bearer_Token = [NSString stringWithFormat:@"Bearer %@",token];
+    [self setValue:Bearer_Token forHTTPHeaderField:@"Authorization"];
 }
 
 

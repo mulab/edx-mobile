@@ -10,9 +10,12 @@
 
 @interface EDXNetworkManager : NSObject{
     EDXNetworkRequestFactory *factory;
+    NSString *access_token;
 }
 - (void)SignUpWith:(EDXSignUpData)info owner:(id<EDXNetworkDelegate>)owner;
 @property (nonatomic, strong)EDXNetworkRequestFactory *factory;
-
+@property (nonatomic, strong)NSString *access_token;
 - (void)LoginWith:(EDXLoginData)data owner:(id <EDXNetworkDelegate>)owner;
+
+- (void)GetEnrollCourseFor:(id <EDXNetworkDelegate>)owner;
 @end
