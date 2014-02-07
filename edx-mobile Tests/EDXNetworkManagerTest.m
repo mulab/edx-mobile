@@ -104,6 +104,41 @@ SPEC_BEGIN(EDXNetworkManagerTest)
                     [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
                     [[expectFutureValue([owner.data objectForKey:@"enrollments"]) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] beEmpty];
                 });
+                it(@"should be ok to enroll an existing course",^{
+                    BaseOwner *owner = [[BaseOwner alloc] init];
+                    manager.access_token=access_token;
+                    [manager EnrollCourse:@"20220332_1X" owner:owner];
+                    [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
+                });
+                it(@"should return enrolled course after enroll",^{
+                    BaseOwner *owner = [[BaseOwner alloc] init];
+                    manager.access_token=access_token;
+                    [manager GetEnrollCourseFor:owner];
+                    [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
+                    [[expectFutureValue([owner.data objectForKey:@"enrollments"]) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] haveCountOf:1];
+                });
+                it(@"should be ok to unenroll an enrolled course",^{
+                   BaseOwner *owner = [[BaseOwner alloc] init];
+                    manager.access_token = access_token;
+                    [manager UnEnrollCourse:@"20220332_1X" owner:owner];
+                    [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
+                });
+                it(@"should return {'enrollments':[]} after unenroll", ^{
+                    BaseOwner *owner = [[BaseOwner alloc] init];
+                    manager.access_token=access_token;
+                    [manager GetEnrollCourseFor:owner];
+                    [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
+                    [[expectFutureValue([owner.data objectForKey:@"enrollments"]) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] beEmpty];
+                });
+            });
+            context(@"test courseware",^{
+                it(@"should return all courses ",^{
+                    BaseOwner *owner = [[BaseOwner alloc] init];
+                    manager.access_token=access_token;
+                    [manager GetCoursesFor:owner];
+                    [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
+                    [[expectFutureValue([owner.data objectForKey:@"courses"]) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] haveCountOf:3];
+                });
             });
         });
         SPEC_END

@@ -4,10 +4,12 @@
 //
 
 #import "EDXNetworkRequestFactory.h"
+#import "EDXGetCoursesRequest.h"
 #import <Objection/Objection.h>
 
 @interface EDXNetworkRequestFactory()
 -(NSURLRequest *)ProduceRequest:(EDXNetworkRequest *)request;
+- (NSURLRequest *)ProduceAuthorizedRequest:(EDXNetworkRequest *)request Token:(NSString *)token;
 @end
 @implementation EDXNetworkRequestFactory {
 
@@ -36,6 +38,10 @@ objection_requires(@"helper")
     return [self ProduceRequest:[[EDXGetEnrollsRequest alloc] initWithToken:token]];
 }
 
+- (NSURLRequest *)GetCoursesWithToken:(NSString *)token{
+    return [self ProduceAuthorizedRequest:[[EDXGetCoursesRequest alloc]init] Token:token];
+}
+
 - (NSURLRequest *)GetCourseNavigationWithCourseId:(NSString *)course Token:(NSString *)token {
     return [self ProduceRequest:[[EDXGetCourseNavigationRequest alloc] initWithCourseId:course Token:token]];
 }
@@ -50,6 +56,11 @@ objection_requires(@"helper")
     [request setMethod];
     [request setContentType];
     return request;
+}
+
+- (NSURLRequest *)ProduceAuthorizedRequest:(EDXNetworkRequest *)request Token:(NSString *)token{
+    [request setAccessToken:token];
+    return [self ProduceRequest:request];
 }
 
 @end

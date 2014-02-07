@@ -40,6 +40,32 @@ objection_requires(@"factory")
     [self startOperation:op ForOwner:owner];
 }
 
+- (void)EnrollCourse:(NSString *)courseId owner:(id<EDXNetworkDelegate>)owner{
+    [owner before:kBusinessTagEnrollCourse];
+    NSURLRequest *request = [factory EnrollCourseRequestWithCourseId:courseId Token:access_token];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    op.responseSerializer = [AFHTTPResponseSerializer serializer];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/plain", nil];
+    [self startOperation:op ForOwner:owner];
+}
+
+- (void)UnEnrollCourse:(NSString *)courseId owner:(id<EDXNetworkDelegate>)owner{
+    [owner before:kBusinessTagUnEnrollCourse];
+    NSURLRequest *request = [factory DeleteEnrollCourseRequestWithCourseId:courseId Token:access_token];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    op.responseSerializer = [AFHTTPResponseSerializer serializer];
+    op.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/plain",nil];
+    [self startOperation:op ForOwner:owner];
+}
+
+- (void)GetCoursesFor:(id<EDXNetworkDelegate>)owner{
+    [owner before:kBusinessTagGetCourses];
+    NSURLRequest *request = [factory GetCoursesWithToken:access_token];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    op.responseSerializer= [AFJSONResponseSerializer serializer];
+    [self startOperation:op ForOwner:owner];
+}
+
 - (void)startOperation:(AFHTTPRequestOperation *)operation ForOwner:(id <EDXNetworkDelegate>)owner {
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *op, id responseObject) {
         [owner success:responseObject business:kBusinessTagSignUp];

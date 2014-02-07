@@ -18,4 +18,10 @@
 - (void)LoginWith:(EDXLoginData)data owner:(id <EDXNetworkDelegate>)owner;
 
 - (void)GetEnrollCourseFor:(id <EDXNetworkDelegate>)owner;
+
+- (void)EnrollCourse:(NSString *)courseId owner:(id <EDXNetworkDelegate>)owner;
+
+- (void)UnEnrollCourse:(NSString *)courseId owner:(id <EDXNetworkDelegate>)owner;
+
+- (void)GetCoursesFor:(id <EDXNetworkDelegate>)owner;
 @end

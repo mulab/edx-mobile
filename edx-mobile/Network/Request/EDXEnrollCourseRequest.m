@@ -29,7 +29,7 @@
 
 - (void)setMethod {
     [super setMethod];
-    [self setHTTPMethod:@"GET"];
+    [self setHTTPMethod:@"POST"];
 }
 
 

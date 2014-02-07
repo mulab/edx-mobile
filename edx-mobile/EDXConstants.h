@@ -16,6 +16,8 @@ enum kBusinessTag{
     kBusinessTagSignUp,
     kBusinessTagUserLogin,
     kBusinessTagEnrollCourse,
+    kBusinessTagUnEnrollCourse,
+    kBusinessTagGetCourses,
     kBusinessTagGetEnrolls,
     kBusinessTagGetCourseNavigation,
     kBusinessTagGetCourseVideoList
