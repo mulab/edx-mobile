@@ -20,6 +20,9 @@ static const float TIME_OUT = 1.0;
 {
     ResultFlag flag;
     id data;
+    void (^_before)(kBusinessTag tag);
+    void (^_success)(id result,kBusinessTag tag);
+    void (^_error)(NSError *error,kBusinessTag tag);
 }
 @property ResultFlag flag;
 @property id data;
@@ -35,17 +38,35 @@ static const float TIME_OUT = 1.0;
     return self;
 }
 
+- (id) initWith:(void(^)(kBusinessTag tag))before
+        success:(void(^)(id result,kBusinessTag tag))success
+          error:(void(^)(NSError *error,kBusinessTag tag))error{
+    _before = before;
+    _success = success;
+    _error = error;
+    return [self init];
+};
+
 - (void)before:(kBusinessTag)tag {
     flag=Before;
+    if(_before){
+        _before(tag);
+    }
 }
 
 - (void)success:(id)result business:(kBusinessTag)tag {
     flag=Success;
     data=result;
+    if(_success){
+        _success(result,tag);
+    }
 }
 
-- (void)error:(NSError *)err {
+- (void)error:(NSError *)err business:(kBusinessTag)tag {
     flag=Error;
+    if(_error){
+        _error(err,tag);
+    }
 }
 @end
 
@@ -138,6 +159,21 @@ SPEC_BEGIN(EDXNetworkManagerTest)
                     [manager GetCoursesFor:owner];
                     [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
                     [[expectFutureValue([owner.data objectForKey:@"courses"]) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] haveCountOf:3];
+                });
+                it(@"should return course detail after enroll",^{
+                    NSString *course_id = @"30240184_1X";
+                    manager.access_token=access_token;
+                    BaseOwner *owner;
+                    owner = [[BaseOwner alloc] initWith:(void (^)(kBusinessTag)) ^() {
+                    }success:^(id result, kBusinessTag tag){
+                        if(tag==kBusinessTagEnrollCourse){
+                            [manager GetCourseDetail:course_id owner:owner];
+                            [[expectFutureValue(theValue(owner.flag)) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] equal:theValue(Success)];
+                            [[expectFutureValue([[[[owner.data objectForKey:@"course"] objectForKey:@"children"] objectForKey:@"children"] objectForKey:@"children"]) shouldEventuallyBeforeTimingOutAfter(TIME_OUT)] haveAtLeast:1];
+                        }
+                    }error:(void (^)(NSError *, kBusinessTag)) ^() {
+                    }];
+                    [manager EnrollCourse:course_id owner:owner];
                 });
             });
         });

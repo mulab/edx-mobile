@@ -10,5 +10,5 @@
 @optional
 - (void)before:(kBusinessTag)tag;
 - (void)success:(id)result business:(kBusinessTag)tag;
-- (void)error:(NSError *)err;
+- (void)error:(NSError *)err business:(kBusinessTag)tag;
 @end

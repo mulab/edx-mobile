@@ -93,7 +93,7 @@ typedef enum methodTag kMethodTag;
     [_owner RefreshView];
 }
 
-- (void)error:(NSError *)err {
+- (void)error:(NSError *)err business:(kBusinessTag)tag {
     [_owner ErrorOnRefreshView:err];
 }
 

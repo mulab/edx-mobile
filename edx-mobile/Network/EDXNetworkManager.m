@@ -7,7 +7,7 @@
 #import "EDXNetworkManager.h"
 #import "AFHTTPRequestOperation.h"
 @interface EDXNetworkManager()
-- (void)startOperation:(AFHTTPRequestOperation *)operation ForOwner:(id <EDXNetworkDelegate>)owner;
+- (void)startOperation:(AFHTTPRequestOperation *)operation owner:(id <EDXNetworkDelegate>)owner business:(kBusinessTag)tag;
 @end
 @implementation EDXNetworkManager {
 
@@ -21,7 +21,7 @@ objection_requires(@"factory")
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFHTTPResponseSerializer serializer];
     op.responseSerializer.acceptableContentTypes= [NSSet setWithObjects:@"application/json", @"text/plain", nil];
-    [self startOperation:op ForOwner:owner];
+    [self startOperation:op owner:owner business:(kBusinessTagSignUp)];
 }
 
 - (void)LoginWith:(EDXLoginData)data owner:(id <EDXNetworkDelegate>)owner {
@@ -29,7 +29,7 @@ objection_requires(@"factory")
     NSURLRequest *request = [factory AccessTokenRequestWithData:data];
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-    [self startOperation:op ForOwner:owner];
+    [self startOperation:op owner:owner business:(kBusinessTagUserLogin)];
 }
 
 - (void)GetEnrollCourseFor:(id<EDXNetworkDelegate>)owner{
@@ -37,7 +37,7 @@ objection_requires(@"factory")
     NSURLRequest *request = [factory GetEnrollsRequestWithToken:access_token];
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
-    [self startOperation:op ForOwner:owner];
+    [self startOperation:op owner:owner business:(kBusinessTagGetEnrolls)];
 }
 
 - (void)EnrollCourse:(NSString *)courseId owner:(id<EDXNetworkDelegate>)owner{
@@ -46,7 +46,7 @@ objection_requires(@"factory")
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFHTTPResponseSerializer serializer];
     op.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/plain", nil];
-    [self startOperation:op ForOwner:owner];
+    [self startOperation:op owner:owner business:(kBusinessTagEnrollCourse)];
 }
 
 - (void)UnEnrollCourse:(NSString *)courseId owner:(id<EDXNetworkDelegate>)owner{
@@ -55,7 +55,7 @@ objection_requires(@"factory")
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFHTTPResponseSerializer serializer];
     op.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/plain",nil];
-    [self startOperation:op ForOwner:owner];
+    [self startOperation:op owner:owner business:(kBusinessTagUnEnrollCourse)];
 }
 
 - (void)GetCoursesFor:(id<EDXNetworkDelegate>)owner{
@@ -63,14 +63,22 @@ objection_requires(@"factory")
     NSURLRequest *request = [factory GetCoursesWithToken:access_token];
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer= [AFJSONResponseSerializer serializer];
-    [self startOperation:op ForOwner:owner];
+    [self startOperation:op owner:owner business:(kBusinessTagGetCourses)];
 }
 
-- (void)startOperation:(AFHTTPRequestOperation *)operation ForOwner:(id <EDXNetworkDelegate>)owner {
+- (void)GetCourseDetail:(NSString *)courseId owner:(id<EDXNetworkDelegate>)owner{
+    [owner before:kBusinessTagGetCourseNavigation];
+    NSURLRequest *request = [factory GetCourseNavigationWithCourseId:courseId Token:access_token];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    op.responseSerializer = [AFJSONResponseSerializer serializer];
+    [self startOperation:op owner:owner business:(kBusinessTagGetCourseNavigation)];
+}
+
+- (void)startOperation:(AFHTTPRequestOperation *)operation owner:(id <EDXNetworkDelegate>)owner business:(kBusinessTag)tag {
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *op, id responseObject) {
-        [owner success:responseObject business:kBusinessTagSignUp];
+        [owner success:responseObject business:tag];
     }                                failure:^(AFHTTPRequestOperation *op, NSError *err) {
-        [owner error:err];
+        [owner error:err business:(tag)];
     }];
     [[NSOperationQueue mainQueue] addOperation:operation];
 }

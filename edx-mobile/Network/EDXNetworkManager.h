@@ -24,4 +24,6 @@
 - (void)UnEnrollCourse:(NSString *)courseId owner:(id <EDXNetworkDelegate>)owner;
 
 - (void)GetCoursesFor:(id <EDXNetworkDelegate>)owner;
+
+- (void)GetCourseDetail:(NSString *)courseId owner:(id <EDXNetworkDelegate>)owner;
 @end
