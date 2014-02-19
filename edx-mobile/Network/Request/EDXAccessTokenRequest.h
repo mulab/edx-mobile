@@ -9,8 +9,8 @@ typedef struct {
     char *client_id;
     char *client_secret;
     char *grant_type;
-    char *username;
-    char *password;
+    char const *username;
+    char const *password;
 }EDXLoginData;
 @interface EDXAccessTokenRequest : EDXNetworkRequest
 -(id)initWithLoginData:(EDXLoginData)data;
