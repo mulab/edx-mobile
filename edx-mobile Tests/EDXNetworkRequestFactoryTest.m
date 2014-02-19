@@ -37,10 +37,10 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[[request URL] absoluteString]should] containString:@"/edx-api/enrollments/v1/hello"];
                 });
                 it(@"should have correct method", ^{
-                    [[[request HTTPMethod]should] equal:@"GET"];
+                    [[[request HTTPMethod]should] equal:@"POST"];
                 });
                 it(@"should have header with token",^{
-                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"Bearer 1234567890"];
                 });
             });
 
@@ -53,20 +53,20 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[request HTTPMethod]should] equal:@"DELETE"];
                 });
                 it(@"should have header with token",^{
-                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"Bearer 1234567890"];
                 });
             });
 
             context(@"when used for producing get enrolled course list request", ^{
                 NSURLRequest *request = [factory GetEnrollsRequestWithToken:@"1234567890"];
                 it(@"should have correct url", ^{
-                    [[[[request URL] absoluteString]should] containString:@"/edx-api/courseware/v1"];
+                    [[[[request URL] absoluteString]should] containString:@"/edx-api/enrollments/v1/"];
                 });
                 it(@"should have correct method", ^{
                     [[[request HTTPMethod]should] equal:@"GET"];
                 });
                 it(@"should have header with token",^{
-                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"Bearer 1234567890"];
                 });
             });
 
@@ -79,7 +79,7 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[request HTTPMethod]should] equal:@"GET"];
                 });
                 it(@"should have header with token",^{
-                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"Bearer 1234567890"];
                 });
             });
 
@@ -92,7 +92,7 @@ SPEC_BEGIN(EDXNetworkRequestFactoryTest)
                     [[[request HTTPMethod]should] equal:@"GET"];
                 });
                 it(@"should have header with token",^{
-                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"1234567890"];
+                    [[[request valueForHTTPHeaderField:@"Authorization"]should] equal:@"Bearer 1234567890"];
                 });
             });
         });
