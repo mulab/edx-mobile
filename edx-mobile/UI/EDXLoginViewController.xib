@@ -17,59 +17,84 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4">
-                    <rect key="frame" x="464" y="95" width="97" height="30"/>
+                <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="353" y="193" width="316" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="97" id="5"/>
+                        <constraint firstAttribute="width" constant="316" id="FLl-KQ-XlT"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8">
-                    <rect key="frame" x="464" y="177" width="97" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                    <rect key="frame" x="353" y="282" width="316" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="316" id="ebd-bi-Mzo"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15">
-                    <rect key="frame" x="475" y="242" width="73" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15">
+                    <rect key="frame" x="424" y="340" width="177" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="73" id="19"/>
+                        <constraint firstAttribute="height" constant="30" id="6Bm-Tq-2vY"/>
                     </constraints>
-                    <state key="normal" title="Login">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <state key="normal" title="登录" backgroundImage="login_button.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="LoginAction:" destination="-1" eventType="touchUpInside" id="35"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36">
-                    <rect key="frame" x="263" y="469" width="134" height="30"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学堂在线" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-h0-S60">
+                    <rect key="frame" x="424" y="68" width="177" height="52"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Test Get Enrollment">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="177" id="VGf-8Q-V0Y"/>
+                        <constraint firstAttribute="height" constant="52" id="w4J-33-5kd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="44"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7S-jh-gth">
+                    <rect key="frame" x="353" y="387" width="60" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="kWD-9Y-PN9"/>
+                    </constraints>
+                    <state key="normal" title="现在注册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="GetEnrollmentAction:" destination="-1" eventType="touchUpInside" id="39"/>
+                        <action selector="signUpAction:" destination="-1" eventType="touchUpInside" id="LGG-kl-2Ru"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.45098039215686275" green="0.16470588235294117" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="8" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="10"/>
-                <constraint firstItem="8" firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="11"/>
                 <constraint firstItem="4" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="20"/>
-                <constraint firstItem="4" firstAttribute="top" secondItem="2" secondAttribute="top" constant="95" id="21"/>
-                <constraint firstItem="8" firstAttribute="top" secondItem="2" secondAttribute="top" constant="177" id="22"/>
-                <constraint firstItem="15" firstAttribute="top" secondItem="2" secondAttribute="top" constant="242" id="23"/>
-                <constraint firstItem="15" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="475" id="24"/>
-                <constraint firstAttribute="bottom" secondItem="36" secondAttribute="bottom" constant="269" id="37"/>
-                <constraint firstItem="36" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="263" id="38"/>
+                <constraint firstItem="15" firstAttribute="centerX" secondItem="8" secondAttribute="centerX" id="12X-bT-Wx2"/>
+                <constraint firstItem="fMq-h0-S60" firstAttribute="top" secondItem="2" secondAttribute="top" constant="68" id="3db-Wj-Cgt"/>
+                <constraint firstItem="15" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="28" id="IP1-77-tBD"/>
+                <constraint firstItem="P7S-jh-gth" firstAttribute="leading" secondItem="8" secondAttribute="leading" id="OpR-qx-p7k"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="4" secondAttribute="bottom" constant="59" id="Sda-S7-lYh"/>
+                <constraint firstItem="fMq-h0-S60" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="SvA-cD-JNQ"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="fMq-h0-S60" secondAttribute="bottom" constant="74" id="YU1-yj-LbJ"/>
+                <constraint firstItem="P7S-jh-gth" firstAttribute="top" secondItem="15" secondAttribute="bottom" constant="17" id="q1p-z9-gBZ"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="8" secondAttribute="leading" id="una-i6-oRE"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
+    <resources>
+        <image name="login_button.png" width="420" height="81"/>
+    </resources>
 </document>

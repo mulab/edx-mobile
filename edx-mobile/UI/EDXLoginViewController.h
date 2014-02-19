@@ -20,11 +20,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property (nonatomic, strong) EDXDataManager *dataManager;
-@property (nonatomic, strong) EDXNetworkRequestFactory *factory;
+@property (nonatomic, strong) EDXNetworkManager *networkManager;
 
 - (IBAction)LoginAction:(id)sender;
-- (IBAction)GetEnrollmentAction:(id)sender;
-- (void) LoginWith:(NSString *)username password:(NSString *)password;
 - (void) LoginWith:(NSString *)access;
 - (void) NavigateToDashBoard;
 @end
