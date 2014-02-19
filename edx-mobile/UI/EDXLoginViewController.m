@@ -8,7 +8,8 @@
 
 #import "EDXLoginViewController.h"
 #import <Objection/Objection.h>
-#import "EDXConstants.h"
+#import "EDXMainViewController.h"
+
 @interface EDXLoginViewController ()
 
 @end
@@ -83,6 +84,8 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
         [dataManager saveAccessToken:[result objectForKey:@"access_token"]];
         NSLog(@"token:%@",[dataManager getAccessToken]);
         [networkManager setAccess_token:[result objectForKey:@"access_token"]];
+        EDXMainViewController *mainViewController = [[EDXMainViewController alloc] init];
+        [self presentViewController:mainViewController animated:YES completion:nil];
     }
 }
 
