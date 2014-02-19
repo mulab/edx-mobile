@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 extern NSString * const api_key;
+extern char * const client_id;
+extern char * const client_secret;
+extern char * const grant_type;
+extern NSString * const host_string;
+extern NSString * const out_register_url;
 extern NSString * const json_header;
 extern NSString * const form_header;
 extern NSString * const loginUrl;
