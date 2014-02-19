@@ -12,6 +12,7 @@
 @implementation EDXNetworkManager {
 
 }
+objection_register_singleton(EDXNetworkManager )
 objection_requires(@"factory")
 @synthesize factory;
 @synthesize access_token;

@@ -18,6 +18,7 @@
 - (void)configure {
     [self bindClass:[EDXNetworkRequestFactory class] inScope:JSObjectionScopeSingleton];
     [self bindClass:[EDXURLHelper class] inScope:JSObjectionScopeSingleton];
+    [self bindClass:[EDXNetworkManager class] inScope:JSObjectionScopeSingleton];
 }
 @end
 @implementation EDXAppDelegate
