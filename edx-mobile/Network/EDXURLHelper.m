@@ -20,7 +20,7 @@ objection_register_singleton(EDXURLHelper );
 - (id)init {
     self = [super init];
     if (self) {
-        self.host = @"http://lab.mu:3000%@";
+        self.host = host_string;
     }
 
     return self;
@@ -41,6 +41,7 @@ objection_register_singleton(EDXURLHelper );
             return [NSURL URLWithString:[NSString stringWithFormat:host, Get_Courses]];
         case kBusinessTagGetCourses:
             return [NSURL URLWithString:[NSString stringWithFormat:host, Get_Courses]];
+        case kBusinessTagUnEnrollCourse:break;
     }
     return nil;
 }
