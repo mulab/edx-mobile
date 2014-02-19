@@ -30,11 +30,10 @@
 		C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517E1832361600984745 /* libz.1.2.5.dylib */; };
 		C39651881832440200984745 /* EDXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C39651871832440200984745 /* EDXConstants.m */; };
 		D86E9125A76B4B1C8B95334B /* libPods-edx-mobile Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F752CA97F5D643EEAD405A84 /* libPods-edx-mobile Tests.a */; };
-		EE3DB011371EFC2F25D323F1 /* EDXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB4E8B294B4094C9F96C0 /* EDXMainViewController.xib */; };
 		EE3DB31E14ED5094B1115270 /* EDXGetCourseElementRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB85CD746A0E28AD3843B /* EDXGetCourseElementRequest.m */; };
+		EE3DB39DA6C7A4C39A9DD03F /* login_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB0DA53E14009B6D457CF /* login_button.png */; };
 		EE3DB44473CA9C6D96CA77F0 /* EDXMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB565121C76C6EF87A9D9 /* EDXMPViewController.m */; };
 		EE3DB446D9A361B5E6E2C5A4 /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB9C1717814498CF694A2 /* EDXNetworkRequest.m */; };
-		EE3DB48E2541D19B658A9705 /* EDXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB3DC0461B8B7F025A69A /* EDXMainViewController.m */; };
 		EE3DB5E0DAB26611B4D277F8 /* EDXUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBDDB7A6B99636F0BC515 /* EDXUtilities.m */; };
 		EE3DB823E5642CC6B24EAEFF /* EDXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBF6EB115946E26071145 /* EDXLoginViewController.m */; };
 		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
@@ -101,20 +100,18 @@
 		C39651861832440200984745 /* EDXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXConstants.h; sourceTree = "<group>"; };
 		C39651871832440200984745 /* EDXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXConstants.m; sourceTree = "<group>"; };
 		EE3DB0A74242AA13C1438AC9 /* EDXSignUpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXSignUpRequest.m; sourceTree = "<group>"; };
+		EE3DB0DA53E14009B6D457CF /* login_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button.png; sourceTree = "<group>"; };
 		EE3DB0E576BE4AE01CF58903 /* EDXGetEnrollsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetEnrollsRequest.h; sourceTree = "<group>"; };
 		EE3DB14193BC7B0CD1E6D3A3 /* EDXGetCourseNavigationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseNavigationRequest.h; sourceTree = "<group>"; };
 		EE3DB14DC2F7C1F109C21009 /* EDXGetCoursesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCoursesRequest.h; sourceTree = "<group>"; };
 		EE3DB20B7FEFAA4699E5D949 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
 		EE3DB2393B657E4938B57BF0 /* EDXEnrollCourseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXEnrollCourseRequest.h; sourceTree = "<group>"; };
 		EE3DB28D9DC3513EE40A85FC /* EDXDeleteEnrollCourseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDeleteEnrollCourseRequest.h; sourceTree = "<group>"; };
-		EE3DB3DC0461B8B7F025A69A /* EDXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXMainViewController.m; sourceTree = "<group>"; };
 		EE3DB41013EE6D081A204CB7 /* EDXAccessTokenRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXAccessTokenRequest.h; sourceTree = "<group>"; };
 		EE3DB48D78C302881AB88D35 /* EDXSignUpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXSignUpRequest.h; sourceTree = "<group>"; };
 		EE3DB492183A5A59F03EEBBD /* EDXGetEnrollsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXGetEnrollsRequest.m; sourceTree = "<group>"; };
 		EE3DB495F47D29982B4874EC /* EDXChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXChapter.m; sourceTree = "<group>"; };
-		EE3DB4E8B294B4094C9F96C0 /* EDXMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EDXMainViewController.xib; sourceTree = "<group>"; };
 		EE3DB565121C76C6EF87A9D9 /* EDXMPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXMPViewController.m; sourceTree = "<group>"; };
-		EE3DB5CD5E8F7ECC1EFAF1EF /* EDXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXMainViewController.h; sourceTree = "<group>"; };
 		EE3DB5D2C0C0F04FE3BCDF84 /* EDXGetCourseElementRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseElementRequest.h; sourceTree = "<group>"; };
 		EE3DB727A0819E5E1E67AC82 /* EDXURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURLHelper.h; sourceTree = "<group>"; };
 		EE3DB755D9EC387A92FE186A /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
@@ -273,6 +270,7 @@
 				C39650CC18314F1C00984745 /* Default.png */,
 				C39650CE18314F1C00984745 /* Default@2x.png */,
 				C39650D018314F1C00984745 /* Default-568h@2x.png */,
+				EE3DB0DA53E14009B6D457CF /* login_button.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -345,12 +343,9 @@
 				EE3DBBB36035632D2DF691A4 /* EDXViewController.m */,
 				EE3DBDAFDFD6C128AA8C4FDF /* EDXMPViewController.h */,
 				EE3DB565121C76C6EF87A9D9 /* EDXMPViewController.m */,
-				EE3DB5CD5E8F7ECC1EFAF1EF /* EDXMainViewController.h */,
-				EE3DB3DC0461B8B7F025A69A /* EDXMainViewController.m */,
 				EE3DBDF0CBC8292E73CCA7EA /* EDXMPViewController.xib */,
 				EE3DBD44064EBDA2DC7BF2A0 /* EDXLoginViewController.h */,
 				EE3DBF6EB115946E26071145 /* EDXLoginViewController.m */,
-				EE3DB4E8B294B4094C9F96C0 /* EDXMainViewController.xib */,
 				EE3DBCF3FC3C358EA36690D9 /* EDXLoginViewController.xib */,
 			);
 			path = UI;
@@ -452,8 +447,8 @@
 				C39650CF18314F1C00984745 /* Default@2x.png in Resources */,
 				C39650D118314F1C00984745 /* Default-568h@2x.png in Resources */,
 				EE3DBEB2B5E7C0163C8286F1 /* EDXMPViewController.xib in Resources */,
-				EE3DB011371EFC2F25D323F1 /* EDXMainViewController.xib in Resources */,
 				EE3DBF63D7130CA2E1BBEE5B /* EDXLoginViewController.xib in Resources */,
+				EE3DB39DA6C7A4C39A9DD03F /* login_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +553,6 @@
 				EE3DB9FAD6C539CC811E02CF /* EDXGetCoursesRequest.m in Sources */,
 				EE3DB947E6697A3D9CB95489 /* EDXViewController.m in Sources */,
 				EE3DB44473CA9C6D96CA77F0 /* EDXMPViewController.m in Sources */,
-				EE3DB48E2541D19B658A9705 /* EDXMainViewController.m in Sources */,
 				EE3DB823E5642CC6B24EAEFF /* EDXLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
