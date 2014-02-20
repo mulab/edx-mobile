@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EDXMyCourseViewController">
             <connections>
+                <outlet property="myCourseTable" destination="X65-b8-eLx" id="fFD-TV-hAh"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -14,7 +15,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="X65-b8-eLx">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0pL-3k-Qql"/>
+                        <outlet property="delegate" destination="-1" id="HMv-Bf-rrJ"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="X65-b8-eLx" firstAttribute="top" secondItem="2" secondAttribute="top" id="A1t-kD-Kyc"/>
+                <constraint firstAttribute="bottom" secondItem="X65-b8-eLx" secondAttribute="bottom" id="R18-LN-lqU"/>
+                <constraint firstAttribute="centerX" secondItem="X65-b8-eLx" secondAttribute="centerX" id="YKq-AQ-Qxr"/>
+                <constraint firstItem="X65-b8-eLx" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="qrp-oh-Ldr"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>

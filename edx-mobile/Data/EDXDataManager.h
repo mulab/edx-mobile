@@ -14,4 +14,8 @@
 -(NSString *) GetUserName;
 -(void)saveAccessToken:(NSString *)token;
 - (NSString *)getAccessToken;
+
+- (void)saveMyCourseList:(id)result;
+
+- (NSMutableArray *)getMyCourseList;
 @end

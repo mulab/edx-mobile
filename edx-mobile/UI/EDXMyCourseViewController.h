@@ -7,7 +7,16 @@
 //
 
 #import "EDXViewController.h"
+#import "EDXNetworkDelegate.h"
 
-@interface EDXMyCourseViewController : EDXViewController
+@class EDXNetworkManager;
+@class EDXDataManager;
 
+@interface EDXMyCourseViewController : EDXViewController<UITableViewDelegate, UITableViewDataSource, EDXNetworkDelegate>
+{
+}
+@property (nonatomic, strong) EDXDataManager *dataManager;
+@property (nonatomic, strong) EDXNetworkManager *networkManager;
+@property (strong, nonatomic) IBOutlet UITableView *myCourseTable;
+@property (nonatomic, strong) NSMutableArray *myCourseList;
 @end
