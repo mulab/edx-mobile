@@ -15,6 +15,8 @@
 -(void)saveAccessToken:(NSString *)token;
 - (NSString *)getAccessToken;
 
+- (NSMutableArray *)parseCourseList:(id)courseList;
+
 - (void)saveMyCourseList:(id)result;
 
 - (NSMutableArray *)getMyCourseList;
