@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "EDXNetworkDelegate.h"
 #import "EDXUIViewDelegate.h"
+
+@class EDXCourseDetailModel;
+
 //#import <Objection/Objection.h>
 @interface EDXDataManager : NSObject
 -(NSString *) GetUserName;
@@ -17,7 +20,13 @@
 
 - (NSMutableArray *)parseCourseList:(id)courseList;
 
+- (EDXCourseDetailModel *)parseCourseDetail:(id)courseDetail;
+
+- (void)saveCourseDetail:(id)result;
+
 - (void)saveMyCourseList:(id)result;
 
 - (NSMutableArray *)getMyCourseList;
+
+- (EDXCourseDetailModel *)getCourseDetail:(NSString *)courseId;
 @end
