@@ -101,7 +101,9 @@ objection_requires_sel(@selector(networkManager))
     NSLog(@"tab downside");
     switch (self.type){
 
-        case MyCourseCell:break;
+        case MyCourseCell:
+            [self.networkManager GetCourseDetail:self.courseId owner:self.container];
+            break;
         case FindCourseCell:
             [self.networkManager EnrollCourse:self.courseId owner:self.container];
             break;
