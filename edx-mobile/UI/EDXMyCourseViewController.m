@@ -94,15 +94,10 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     static NSString *myCourseCell = @"myCourseCell";
     EDXMyCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:myCourseCell];
     if(cell == nil){
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EDXMyCourseCell" owner:self options:nil];
-        for (id item in nib){
-            if([item isKindOfClass:[EDXMyCourseCell class]]){
-                cell = [(EDXMyCourseCell *)item initWithStyle:UITableViewCellStyleDefault reuseIdentifier:myCourseCell];
-            }
-        }
+        cell = [[EDXMyCourseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:myCourseCell];
     }
     EDXCourseModel *model = (EDXCourseModel *) [self.myCourseList objectAtIndex:(NSUInteger) indexPath.row];
-    [cell setupCell:model];
+    [cell setupCell:model type:MyCourseCell];
     return cell;
 }
 
