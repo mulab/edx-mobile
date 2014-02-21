@@ -6,13 +6,28 @@
 //  Copyright (c) 2014 mulab. All rights reserved.
 //
 
+#import <Objection/JSObjection.h>
+#import "EDXNetworkDelegate.h"
 #import "EDXFindCourseViewController.h"
+#import "EDXDataManager.h"
+#import "EDXNetworkManager.h"
 
 @interface EDXFindCourseViewController ()
 
 @end
 
 @implementation EDXFindCourseViewController
+@synthesize courseList,dataManager,networkManager,courseTable;
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        networkManager = [[JSObjection defaultInjector] getObject:[EDXNetworkManager class]];
+        dataManager = [[JSObjection defaultInjector] getObject:[EDXDataManager class]];
+    }
+
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,13 +43,66 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.courseTable.delegate=self;
+    self.courseTable.dataSource=self;
+    [self.networkManager GetCoursesFor:self];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.courseList.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *courseCell = @"courseCell";
+    EDXMyCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:courseCell];
+    if(cell == nil){
+        cell = [[EDXMyCourseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:courseCell];
+    }
+    EDXCourseModel *model = (EDXCourseModel *) [self.courseList objectAtIndex:(NSUInteger) indexPath.row];
+    [cell setupCell:model type:FindCourseCell];
+    return cell;
+}
+
+#pragma mark UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 184.0f;
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath;
+}
+#pragma mark EDXNetworkDelegate
+- (void)before:(kBusinessTag)tag {
+
+}
+
+- (void)success:(id)result business:(kBusinessTag)tag {
+    switch (tag){
+        case kBusinessTagGetCourses:
+            self.courseList = [self.dataManager parseCourseList:[result objectForKey:@"courses"]];
+            [courseTable reloadData];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)error:(NSError *)err business:(kBusinessTag)tag {
+
 }
 
 @end
