@@ -21,6 +21,7 @@
 		8A8B2E0A18B7B1C200FBDABB /* EDXChapterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B2E0918B7B1C200FBDABB /* EDXChapterModel.m */; };
 		8A8B2E0D18B7B1EB00FBDABB /* EDXSubChapterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B2E0C18B7B1EB00FBDABB /* EDXSubChapterModel.m */; };
 		8A8B2E1018B7B20900FBDABB /* EDXItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B2E0F18B7B20900FBDABB /* EDXItemModel.m */; };
+		8A8B2E1318B7BA1800FBDABB /* EDXVideoItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B2E1218B7BA1800FBDABB /* EDXVideoItemModel.m */; };
 		8ACD2C581883E81D006ACA9B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACD2C571883E81D006ACA9B /* XCTest.framework */; };
 		8ACD2C591883E81D006ACA9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BC18314F1C00984745 /* Foundation.framework */; };
 		8ACD2C5A1883E81D006ACA9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39650BA18314F1C00984745 /* UIKit.framework */; };
@@ -110,6 +111,8 @@
 		8A8B2E0C18B7B1EB00FBDABB /* EDXSubChapterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXSubChapterModel.m; sourceTree = "<group>"; };
 		8A8B2E0E18B7B20900FBDABB /* EDXItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXItemModel.h; sourceTree = "<group>"; };
 		8A8B2E0F18B7B20900FBDABB /* EDXItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXItemModel.m; sourceTree = "<group>"; };
+		8A8B2E1118B7BA1800FBDABB /* EDXVideoItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXVideoItemModel.h; sourceTree = "<group>"; };
+		8A8B2E1218B7BA1800FBDABB /* EDXVideoItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXVideoItemModel.m; sourceTree = "<group>"; };
 		8ACD2C561883E81D006ACA9B /* edx-mobile Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "edx-mobile Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACD2C571883E81D006ACA9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8ACD2C5D1883E81D006ACA9B /* edx-mobile Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "edx-mobile Tests-Info.plist"; sourceTree = "<group>"; };
@@ -402,6 +405,8 @@
 				8A8B2E0C18B7B1EB00FBDABB /* EDXSubChapterModel.m */,
 				8A8B2E0E18B7B20900FBDABB /* EDXItemModel.h */,
 				8A8B2E0F18B7B20900FBDABB /* EDXItemModel.m */,
+				8A8B2E1118B7BA1800FBDABB /* EDXVideoItemModel.h */,
+				8A8B2E1218B7BA1800FBDABB /* EDXVideoItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				EE3DB8F74F3243C2F0087DFC /* EDXGetCourseNavigationRequest.m in Sources */,
 				EE3DB31E14ED5094B1115270 /* EDXGetCourseElementRequest.m in Sources */,
 				8A8B2E0A18B7B1C200FBDABB /* EDXChapterModel.m in Sources */,
+				8A8B2E1318B7BA1800FBDABB /* EDXVideoItemModel.m in Sources */,
 				8A8B2DB218B4918100FBDABB /* EDXFindCourseViewController.m in Sources */,
 				EE3DB9FAD6C539CC811E02CF /* EDXGetCoursesRequest.m in Sources */,
 				EE3DB947E6697A3D9CB95489 /* EDXViewController.m in Sources */,

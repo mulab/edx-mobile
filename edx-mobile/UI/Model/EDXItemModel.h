@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EDXItemModel : NSObject<NSCoding>
+@interface EDXItemModel : NSObject<NSCoding>{
+    NSString *type;
+    NSString *displayName;
+    NSString *location;
+}
 @property (nonatomic, strong)NSString *type;
 @property (nonatomic, strong)NSString *displayName;
 @property (nonatomic, strong)NSString *location;
