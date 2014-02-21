@@ -10,6 +10,11 @@
 #import "EDXCourseModel.h"
 #import "EDXNetworkDelegate.h"
 #import "EDXNetworkManager.h"
+@protocol EDXCourseCellDelegate
+@optional
+-(void)tapUpsideButton:(id)sender;
+-(void)tapDownsideButton:(id)sender;
+@end
 typedef enum {
     MyCourseCell,
     FindCourseCell
@@ -32,4 +37,5 @@ typedef enum {
 
 @property (strong, nonatomic)EDXNetworkManager *networkManager;
 @property (strong, nonatomic)NSString *courseId;
+@property (strong, nonatomic)id<EDXCourseCellDelegate> container;
 @end
