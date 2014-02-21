@@ -19,4 +19,8 @@
 @property (nonatomic, strong) EDXNetworkManager *networkManager;
 @property (strong, nonatomic) IBOutlet UITableView *myCourseTable;
 @property (nonatomic, strong) NSMutableArray *myCourseList;
+
++ (instancetype)getInstance;
+
+- (void)refreshView;
 @end

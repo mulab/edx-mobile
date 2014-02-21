@@ -10,6 +10,7 @@
 #import "EDXNetworkDelegate.h"
 #import "EDXFindCourseViewController.h"
 #import "EDXDataManager.h"
+#import "EDXMyCourseViewController.h"
 
 @interface EDXFindCourseViewController ()
 
@@ -96,6 +97,8 @@
             self.courseList = [self.dataManager parseCourseList:[result objectForKey:@"courses"]];
             [courseTable reloadData];
             break;
+        case kBusinessTagEnrollCourse:
+            [[EDXMyCourseViewController getInstance] refreshView];
         default:
             break;
     }

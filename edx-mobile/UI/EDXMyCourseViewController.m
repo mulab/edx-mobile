@@ -9,14 +9,12 @@
 #import <Objection/Objection.h>
 #import "EDXMyCourseViewController.h"
 #import "EDXMyCourseCell.h"
-#import "EDXNetworkManager.h"
 #import "EDXDataManager.h"
-#import "EDXCourseModel.h"
 
 @interface EDXMyCourseViewController ()
 
 @end
-
+static EDXMyCourseViewController *instance = nil;
 @implementation EDXMyCourseViewController
 objection_requires_sel(@selector(dataManager), @selector(networkManager));
 @synthesize dataManager,networkManager,myCourseList,myCourseTable;
@@ -25,9 +23,14 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     if (self) {
         networkManager = [[JSObjection defaultInjector] getObject:[EDXNetworkManager class]];
         dataManager = [[JSObjection defaultInjector] getObject:[EDXDataManager class]];
+        instance = self;
     }
 
     return self;
+}
+
++ (instancetype) getInstance{
+    return instance;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,8 +47,13 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [networkManager GetEnrollCourseFor:self];
+    [self refreshView];
 }
+
+- (void)refreshView {
+    [self.networkManager GetEnrollCourseFor:self];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
