@@ -74,6 +74,7 @@
     }
     EDXCourseModel *model = (EDXCourseModel *) [self.courseList objectAtIndex:(NSUInteger) indexPath.row];
     [cell setupCell:model type:FindCourseCell];
+    cell.container = self;
     return cell;
 }
 
@@ -104,5 +105,15 @@
 - (void)error:(NSError *)err business:(kBusinessTag)tag {
 
 }
+
+#pragma mark EDXCourseCellDelegate
+- (void)tapUpsideButton:(id)sender {
+
+}
+
+- (void)tapDownsideButton:(id)sender {
+
+}
+
 
 @end
