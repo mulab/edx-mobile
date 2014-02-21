@@ -1,12 +1,12 @@
 //
-//  EDXChapterItemModel.m
+//  EDXItemModel.m
 //  edx-mobile
 //
 //  Created by Guang Chen on 2/22/14.
 //  Copyright (c) 2014 mulab. All rights reserved.
 //
 
-#import "EDXChapterItemModel.h"
+#import "EDXItemModel.h"
 
 static NSString *const _DISPLAY_NAME = @"display_name";
 
@@ -14,7 +14,7 @@ static NSString *const _TYPE = @"type";
 
 static NSString *const _LOCATION = @"location";
 
-@implementation EDXChapterItemModel
+@implementation EDXItemModel
 @synthesize displayName,type,location;
 
 - (void)encodeWithCoder:(NSCoder *)coder {
