@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EDXChapterItemModel : NSObject
-
+@interface EDXChapterItemModel : NSObject<NSCoding>
+@property (nonatomic, strong)NSString *type;
+@property (nonatomic, strong)NSString *displayName;
+@property (nonatomic, strong)NSString *location;
 @end
