@@ -13,4 +13,5 @@
 @property (nonatomic, strong) NSArray *children;
 @property (nonatomic, strong) NSString *location;
 @property (nonatomic, strong) NSString *start;
+@property (nonatomic, strong) NSString *courseId;
 @end
