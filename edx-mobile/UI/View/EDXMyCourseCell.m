@@ -103,21 +103,9 @@ objection_requires_sel(@selector(networkManager))
 
         case MyCourseCell:break;
         case FindCourseCell:
-            [self.networkManager EnrollCourse:self.courseId owner:self];
+            [self.networkManager EnrollCourse:self.courseId owner:self.container];
             break;
     }
-}
-
-- (void)before:(kBusinessTag)tag {
-
-}
-
-- (void)success:(id)result business:(kBusinessTag)tag {
-
-}
-
-- (void)error:(NSError *)err business:(kBusinessTag)tag {
-
 }
 
 @end

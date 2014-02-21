@@ -11,7 +11,7 @@
 
 @class EDXNetworkManager;
 @class EDXDataManager;
-@interface EDXFindCourseViewController : EDXViewController<UITableViewDelegate, UITableViewDataSource, EDXNetworkDelegate, EDXCourseCellDelegate>
+@interface EDXFindCourseViewController : EDXViewController<UITableViewDelegate, UITableViewDataSource, EDXNetworkDelegate>
 @property (nonatomic, strong) NSMutableArray *courseList;
 @property (nonatomic, strong) EDXDataManager *dataManager;
 @property (nonatomic, strong) EDXNetworkManager *networkManager;

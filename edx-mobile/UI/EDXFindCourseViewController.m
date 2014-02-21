@@ -10,7 +10,6 @@
 #import "EDXNetworkDelegate.h"
 #import "EDXFindCourseViewController.h"
 #import "EDXDataManager.h"
-#import "EDXNetworkManager.h"
 
 @interface EDXFindCourseViewController ()
 
@@ -105,15 +104,5 @@
 - (void)error:(NSError *)err business:(kBusinessTag)tag {
 
 }
-
-#pragma mark EDXCourseCellDelegate
-- (void)tapUpsideButton:(id)sender {
-
-}
-
-- (void)tapDownsideButton:(id)sender {
-
-}
-
 
 @end
