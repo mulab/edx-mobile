@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EDXSubChapterModel : NSObject
+@interface EDXSubChapterModel : NSObject<NSCoding>
+@property (nonatomic, strong) NSString *displayName;
+@property (nonatomic, strong) NSArray *children;
+@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSString *start;
 
 @end
