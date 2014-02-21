@@ -78,6 +78,8 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
             myCourseList = [dataManager getMyCourseList];
             [myCourseTable reloadData];
             break;
+        case kBusinessTagGetCourseNavigation:
+            break;
         default:
             break;
     }
@@ -106,6 +108,7 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     }
     EDXCourseModel *model = (EDXCourseModel *) [self.myCourseList objectAtIndex:(NSUInteger) indexPath.row];
     [cell setupCell:model type:MyCourseCell];
+    cell.container = self;
     return cell;
 }
 
