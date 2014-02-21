@@ -10,6 +10,7 @@
 #import "EDXMyCourseViewController.h"
 #import "EDXMyCourseCell.h"
 #import "EDXDataManager.h"
+#import "EDXCourseDetailModel.h"
 
 @interface EDXMyCourseViewController ()
 
@@ -79,6 +80,7 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
             [myCourseTable reloadData];
             break;
         case kBusinessTagGetCourseNavigation:
+            [dataManager saveCourseDetail:result];
             break;
         default:
             break;
