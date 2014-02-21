@@ -40,10 +40,10 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="showLastUpdate:" destination="MOh-QJ-D2x" eventType="touchUpInside" id="81K-Gd-fGJ"/>
+                            <action selector="upsideButtonAction:" destination="MOh-QJ-D2x" eventType="touchUpInside" id="KRR-6H-g3W"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeZ-yh-DGE">
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeZ-yh-DGE">
                         <rect key="frame" x="356" y="99" width="164" height="76"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.60784313725490191" green="0.19607843137254902" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,7 +52,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="showCourseDetail:" destination="MOh-QJ-D2x" eventType="touchUpInside" id="TaN-52-BhA"/>
+                            <action selector="downSideAction:" destination="MOh-QJ-D2x" eventType="touchUpInside" id="KFI-E2-hYp"/>
                         </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQH-Dz-Ya9">
@@ -79,10 +79,15 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="content" destination="c2a-NL-LzA" id="Oea-Gz-7iJ"/>
                 <outlet property="courseDate" destination="6dn-mx-43R" id="gx9-hi-Mvu"/>
                 <outlet property="courseImageView" destination="v3K-fo-wGM" id="Wa1-rO-yFY"/>
                 <outlet property="courseLastUpdateDate" destination="qQH-Dz-Ya9" id="2tw-iX-tGM"/>
                 <outlet property="courseName" destination="aWH-bE-8h2" id="RdC-1n-4V4"/>
+                <outlet property="downsideButton" destination="OeZ-yh-DGE" id="iH9-6W-68a"/>
+                <outlet property="downsideButtonTItle" destination="8UA-5u-SK5" id="xDN-Hw-W4y"/>
+                <outlet property="upsideButton" destination="yCZ-zf-IJ1" id="ILz-2H-k7n"/>
+                <outlet property="upsideButtonTitle" destination="q4F-xr-pmG" id="N7q-0T-Zm4"/>
             </connections>
         </tableViewCell>
     </objects>

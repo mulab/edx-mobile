@@ -7,18 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class EDXCourseModel;
-
+#import "EDXCourseModel.h"
+typedef enum {
+    MyCourseCell,
+    FindCourseCell
+} CellType;
 @interface EDXMyCourseCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *courseImageView;
 @property (strong, nonatomic) IBOutlet UILabel *courseName;
 @property (strong, nonatomic) IBOutlet UILabel *courseDate;
 @property (strong, nonatomic) IBOutlet UILabel *courseLastUpdateDate;
+@property (strong, nonatomic) IBOutlet UIButton *upsideButton;
+@property (strong, nonatomic) IBOutlet UILabel *upsideButtonTitle;
+- (IBAction)upsideButtonAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *downsideButton;
+@property (strong, nonatomic) IBOutlet UILabel *downsideButtonTItle;
+- (IBAction)downSideAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *content;
 
-- (void)setupCell:(EDXCourseModel *)model;
-
-- (IBAction)showLastUpdate:(id)sender;
-- (IBAction)showCourseDetail:(id)sender;
-
+@property (assign, nonatomic)CellType type;
+- (void)setupCell:(EDXCourseModel *)model type:(CellType)type;
 @end
