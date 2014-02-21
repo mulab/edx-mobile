@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "EDXCourseModel.h"
+#import "EDXNetworkDelegate.h"
+#import "EDXNetworkManager.h"
 typedef enum {
     MyCourseCell,
     FindCourseCell
 } CellType;
-@interface EDXMyCourseCell : UITableViewCell
+@interface EDXMyCourseCell : UITableViewCell<EDXNetworkDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *courseImageView;
 @property (strong, nonatomic) IBOutlet UILabel *courseName;
 @property (strong, nonatomic) IBOutlet UILabel *courseDate;
@@ -27,4 +29,7 @@ typedef enum {
 
 @property (assign, nonatomic)CellType type;
 - (void)setupCell:(EDXCourseModel *)model type:(CellType)type;
+
+@property (strong, nonatomic)EDXNetworkManager *networkManager;
+@property (strong, nonatomic)NSString *courseId;
 @end

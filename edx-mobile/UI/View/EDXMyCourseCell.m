@@ -7,12 +7,16 @@
 //
 
 #import "EDXMyCourseCell.h"
-
+#import <Objection/Objection.h>
 @implementation EDXMyCourseCell
+objection_requires_sel(@selector(networkManager))
+@synthesize networkManager;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        networkManager = [[JSObjection defaultInjector] getObject:[EDXNetworkManager class]];
+
         //courseImage
         self.courseImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 338, 166)];
         [self.contentView addSubview:self.courseImageView];
@@ -65,6 +69,7 @@
     [self.courseName setText:model.displayName];
     self.courseDate.text = model.start;
     self.courseLastUpdateDate.text = @"";
+    self.courseId = model.courseId;
     NSURL *courseImageUrl = [NSURL URLWithString:model.courseImageUrl];
     UIImage *courseImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:courseImageUrl]];
     self.courseImageView.image = courseImage;
@@ -84,8 +89,35 @@
 
 - (IBAction)upsideButtonAction:(id)sender {
     NSLog(@"tap unside");
+    switch (self.type){
+
+        case MyCourseCell:
+            break;
+        case FindCourseCell:
+            break;
+    }
 }
 - (IBAction)downSideAction:(id)sender {
     NSLog(@"tab downside");
+    switch (self.type){
+
+        case MyCourseCell:break;
+        case FindCourseCell:
+            [self.networkManager EnrollCourse:self.courseId owner:self];
+            break;
+    }
 }
+
+- (void)before:(kBusinessTag)tag {
+
+}
+
+- (void)success:(id)result business:(kBusinessTag)tag {
+
+}
+
+- (void)error:(NSError *)err business:(kBusinessTag)tag {
+
+}
+
 @end
