@@ -63,8 +63,8 @@
     sectionIdxToHeaderTitleMap = [[NSMutableDictionary alloc] init];
     heightOfShortestCellSeen = 35;
     temporaryRowCountOverrideSectionIdx = -1;
-    collapsedIndicator = [[NSString alloc] initWithString:@"+"];
-    expandedIndicator = [[NSString alloc] initWithString:@"–"];
+    collapsedIndicator = @"+";
+    expandedIndicator = @"–";
     showBusyIndicator = YES;
     sectionsInitiallyCollapsed = NO;
 }
@@ -94,12 +94,6 @@
 {
     return self = [super initWithFrame:frame];
 }
-
-
-#pragma mark -
-#pragma mark Deallocation
-
-
 
 #pragma mark -
 #pragma mark Miscellaneous methods
@@ -166,7 +160,7 @@
     else
     {
         toggledSection = sectionIdx;
-        [self reloadSections:[NSIndexSet indexSetWithIndex:sectionIdx] withRowAnimation:UITableViewRowAnimationNone];
+        [self reloadSections:[NSIndexSet indexSetWithIndex:(NSUInteger) sectionIdx] withRowAnimation:UITableViewRowAnimationNone];
         toggledSection = -1;
     }
     
@@ -211,14 +205,14 @@
 - (void)deleteRows:(NSArray *)argArray
 {
     NSArray *indexPaths = argArray[0];
-    UITableViewRowAnimation rowAnimation = [argArray[1] intValue];
+    UITableViewRowAnimation rowAnimation = (UITableViewRowAnimation) [argArray[1] intValue];
     [super deleteRowsAtIndexPaths:indexPaths withRowAnimation:rowAnimation];
 }
 
 - (void)insertRows:(NSArray *)argArray
 {
     NSArray *indexPaths = argArray[0];
-    UITableViewRowAnimation rowAnimation = [argArray[1] intValue];
+    UITableViewRowAnimation rowAnimation = (UITableViewRowAnimation) [argArray[1] intValue];
     [super insertRowsAtIndexPaths:indexPaths withRowAnimation:rowAnimation];
 }
 
@@ -240,7 +234,7 @@
             usleep(10000);
             
             // Remove invisible rows piece-wise, so that the busy indicator gets a chance to start spinning if we take too long.
-            NSMutableArray* indexPaths = [[NSMutableArray alloc] initWithCapacity:MIN(rowCount - maximumVisibleRowEstimate,MAX_REMOVE_ROW_COUNT)];
+            NSMutableArray* indexPaths = [[NSMutableArray alloc] initWithCapacity:(NSUInteger) MIN(rowCount - maximumVisibleRowEstimate, MAX_REMOVE_ROW_COUNT)];
             NSArray *args = @[indexPaths,@(UITableViewRowAnimationNone)];
             for (int lowerBound=MAX(rowCount - MAX_REMOVE_ROW_COUNT,maximumVisibleRowEstimate); YES; lowerBound=MAX(lowerBound - MAX_REMOVE_ROW_COUNT,maximumVisibleRowEstimate))
             {
@@ -260,8 +254,8 @@
         rowCount = maximumVisibleRowEstimate;
     }
     
-    UITableViewRowAnimation rowAnimation = [params[@"rowAnimation"] intValue];
-    NSMutableArray* indexPaths = [[NSMutableArray alloc] initWithCapacity:rowCount];
+    UITableViewRowAnimation rowAnimation = (UITableViewRowAnimation) [params[@"rowAnimation"] intValue];
+    NSMutableArray* indexPaths = [[NSMutableArray alloc] initWithCapacity:(NSUInteger) rowCount];
     for (int i=0; i<rowCount; i++)
         [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:sectionIdx]];
     NSArray *args = @[indexPaths,[NSNumber numberWithInt:rowAnimation]];
@@ -300,7 +294,7 @@
         // Insert-rows optimization (see http://stackoverflow.com/questions/6077885/insertrowsatindexpaths-calling-cellforrowatindexpath-for-every-row
         // for more info; specifically, the topmost answer to the question).
         int rowCount = [realDataSource tableView:self numberOfRowsInSection:temporaryRowCountOverrideSectionIdx];
-        NSMutableArray* indexPaths = [[NSMutableArray alloc] initWithCapacity:rowCount - temporaryRowCountOverride];
+        NSMutableArray* indexPaths = [[NSMutableArray alloc] initWithCapacity:(NSUInteger) (rowCount - temporaryRowCountOverride)];
         for (int i=temporaryRowCountOverride; i<rowCount; i++)
             [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:temporaryRowCountOverrideSectionIdx]];
         temporaryRowCountOverrideSectionIdx = -1;
@@ -383,7 +377,7 @@
         if (headerTitleToSectionIdxMap[headerTitle])
         {
             [self reinitializeSectionIndexReferences];
-            [self reloadSections:[NSIndexSet indexSetWithIndex:[headerTitleToSectionIdxMap[headerTitle] intValue]] withRowAnimation:rowAnimation];
+            [self reloadSections:[NSIndexSet indexSetWithIndex:(NSUInteger) [headerTitleToSectionIdxMap[headerTitle] intValue]] withRowAnimation:rowAnimation];
         }
     }
 }
@@ -434,20 +428,20 @@
     NSMutableIndexSet *sectionsToReload = [[NSMutableIndexSet alloc] init],*sectionsNotToReload = [[NSMutableIndexSet alloc] init];
     for (NSIndexPath* nextIndexPath in indexPaths)
     {
-        if ([sectionsToReload containsIndex:nextIndexPath.section])
+        if ([sectionsToReload containsIndex:(NSUInteger) nextIndexPath.section])
             [newIndexPaths removeObject:nextIndexPath];
         else
         {
             NSNumber* sectionNumber = @(nextIndexPath.section);
-            if (! [sectionsNotToReload containsIndex:sectionNumber])
+            if (![sectionsNotToReload containsIndex:[sectionNumber unsignedIntegerValue]])
             {
                 if ([realDataSource tableView:self numberOfRowsInSection:nextIndexPath.section]==0)
                 {
-                    [sectionsToReload addIndex:nextIndexPath.section];
+                    [sectionsToReload addIndex:(NSUInteger) nextIndexPath.section];
                     [newIndexPaths removeObject:nextIndexPath];
                 }
                 else
-                    [sectionsNotToReload addIndex:sectionNumber];
+                    [sectionsNotToReload addIndex:[sectionNumber unsignedIntegerValue]];
             }
         }
     }
@@ -473,10 +467,10 @@
     for (NSNumber* nextSection in rowsAddedPerSection.keyEnumerator)
         if ([rowsAddedPerSection[nextSection] integerValue]==[realDataSource tableView:self numberOfRowsInSection:nextSection.integerValue])
         {
-            [sectionsToReload addIndex:nextSection.integerValue];
+            [sectionsToReload addIndex:(NSUInteger) nextSection.integerValue];
             for (int i=0; i<newIndexPaths.count; i++)
-                if ([newIndexPaths[i] section]==nextSection.integerValue)
-                    [newIndexPaths removeObjectAtIndex:i--];
+                if ([newIndexPaths[(NSUInteger) i] section]==nextSection.integerValue)
+                    [newIndexPaths removeObjectAtIndex:(NSUInteger) i--];
         }
     
     if (newIndexPaths.count)
@@ -515,12 +509,12 @@
 - (void) superScrollToRow:(NSDictionary*) params
 {
     if (temporaryRowCountOverrideSectionIdx==-1)
-        [super scrollToRowAtIndexPath:params[@"indexPath"] atScrollPosition:[params[@"scrollPosition"] intValue] animated:[params[@"animated"] boolValue]];
+        [super scrollToRowAtIndexPath:params[@"indexPath"] atScrollPosition:(UITableViewScrollPosition) [params[@"scrollPosition"] intValue] animated:[params[@"animated"] boolValue]];
     else
     {
         NSIndexPath* indexPath = params[@"indexPath"];
         if ([self numberOfRowsInSection:indexPath.section]>indexPath.row)
-            [super scrollToRowAtIndexPath:indexPath atScrollPosition:[params[@"scrollPosition"] intValue] animated:[params[@"animated"] boolValue]];
+            [super scrollToRowAtIndexPath:indexPath atScrollPosition:(UITableViewScrollPosition) [params[@"scrollPosition"] intValue] animated:[params[@"animated"] boolValue]];
         else
         {
             // Insert-rows optimization: Wait for the remaining rows to be inserted.
@@ -551,12 +545,12 @@
 - (void) superSelectRowWithParams:(NSDictionary*) params
 {
     if (temporaryRowCountOverrideSectionIdx==-1)
-        [super selectRowAtIndexPath:params[@"indexPath"] animated:[params[@"animated"] boolValue] scrollPosition:[params[@"scrollPosition"] intValue]];
+        [super selectRowAtIndexPath:params[@"indexPath"] animated:[params[@"animated"] boolValue] scrollPosition:(UITableViewScrollPosition) [params[@"scrollPosition"] intValue]];
     else
     {
         NSIndexPath* indexPath = params[@"indexPath"];
         if ([self numberOfRowsInSection:indexPath.section]>indexPath.row)
-            [super selectRowAtIndexPath:indexPath animated:[params[@"animated"] boolValue] scrollPosition:[params[@"scrollPosition"] intValue]];
+            [super selectRowAtIndexPath:indexPath animated:[params[@"animated"] boolValue] scrollPosition:(UITableViewScrollPosition) [params[@"scrollPosition"] intValue]];
         else
         {
             // Insert-rows optimization: Wait for the remaining rows to be inserted.
@@ -664,7 +658,7 @@
         return [realDelegate tableView:tableView heightForHeaderInSection:section];
     while (headerHeightArray.count<=section)
         [self tableView:tableView viewForHeaderInSection:headerHeightArray.count];
-    return [headerHeightArray[section] intValue];
+    return [headerHeightArray[(NSUInteger) section] intValue];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -673,7 +667,7 @@
         return [realDelegate tableView:tableView heightForFooterInSection:section];
     while (footerHeightArray.count<=section)
         [self tableView:tableView viewForFooterInSection:footerHeightArray.count];
-    return [footerHeightArray[section] intValue];
+    return [footerHeightArray[(NSUInteger) section] intValue];
 }
 
 - (void) cacheIntValue:(int) intValue forSection:(int) section inCacheArray:(NSMutableArray*) cacheArray
@@ -684,20 +678,20 @@
     if (cacheArray.count==section)
         [cacheArray addObject:valueNumber];
     else
-        cacheArray[section] = valueNumber;
+        cacheArray[(NSUInteger) section] = valueNumber;
 }
 
 - (void) cacheHeaderHeight:(int) headerHeight forHeaderOfSection:(int) section
 {
     if (! headerHeightArray)
-        headerHeightArray = [[NSMutableArray alloc] initWithCapacity:[self numberOfSectionsInTableView:self] + 5];
+        headerHeightArray = [[NSMutableArray alloc] initWithCapacity:(NSUInteger) ([self numberOfSectionsInTableView:self] + 5)];
     [self cacheIntValue:headerHeight forSection:section inCacheArray:headerHeightArray];
 }
 
 - (void) cacheFooterHeight:(int) footerHeight forFooterOfSection:(int) section
 {
     if (! footerHeightArray)
-        footerHeightArray = [[NSMutableArray alloc] initWithCapacity:[self numberOfSectionsInTableView:self] + 5];
+        footerHeightArray = [[NSMutableArray alloc] initWithCapacity:(NSUInteger) ([self numberOfSectionsInTableView:self] + 5)];
     [self cacheIntValue:footerHeight forSection:section inCacheArray:footerHeightArray];
 }
 
@@ -745,7 +739,7 @@
     BOOL isCollapsed;
     if (isCollapsedNumber)
     {
-        isCollapsed = toggledSection==section ? ! [isCollapsedNumber boolValue] : [isCollapsedNumber boolValue];
+        isCollapsed = toggledSection==section == ! [isCollapsedNumber boolValue];
         headerViewController.isCollapsed = isCollapsed;
     }
     else
@@ -790,7 +784,7 @@
     if (footerHeightArray.count==section)
         [footerHeightArray addObject:heightNumber];
     else
-        footerHeightArray[section] = heightNumber;
+        footerHeightArray[(NSUInteger) section] = heightNumber;
     
     [self cacheFooterHeight:(int) theView.frame.size.height forFooterOfSection:section];
     

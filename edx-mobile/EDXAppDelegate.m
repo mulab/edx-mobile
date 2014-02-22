@@ -24,7 +24,7 @@
 }
 @end
 @implementation EDXAppDelegate
-@synthesize backView;
+@synthesize backView,currentCourse;
 void uncaughtExceptionHandler(NSException *exception) {
     NSLog(@"CRASH: %@", exception);
     NSLog(@"Stack Trace: %@", [exception callStackSymbols]);

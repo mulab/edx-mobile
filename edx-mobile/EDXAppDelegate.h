@@ -14,4 +14,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) EDXViewController *backView;
+@property (strong, nonatomic) NSString *currentCourse;
 @end

@@ -7,7 +7,13 @@
 //
 
 #import "EDXViewController.h"
+#import "CollapsableTableViewDelegate.h"
+#import "EDXDataManager.h"
+@class EDXCourseDetailModel;
 
-@interface EDXCourseDetailViewController : EDXViewController
-@property (nonatomic, strong)NSString *courseId;
+@interface EDXCourseDetailViewController : EDXViewController<UITableViewDelegate,UITableViewDataSource,CollapsableTableViewDelegate>
+@property (nonatomic, retain)NSString *courseId;
+@property (nonatomic, strong)EDXDataManager *dataManager;
+@property (nonatomic, strong)EDXCourseDetailModel *courseDetail;
+@property (strong, nonatomic) IBOutlet CollapsableTableView *navigateView;
 @end

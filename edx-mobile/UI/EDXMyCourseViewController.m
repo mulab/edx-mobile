@@ -91,12 +91,13 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
 }
 
 - (void)navigateToCourseDetail:(NSString *)courseId{
+    EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
+    app.currentCourse = courseId;
     EDXCourseDetailViewController *courseDetailViewController = [[EDXCourseDetailViewController alloc] init];
-    courseDetailViewController.courseId = courseId;
     EDXMPViewController *edxMPViewController = [[EDXMPViewController alloc] init];
     UISplitViewController* splitVC = [[UISplitViewController alloc] init];
     splitVC.viewControllers = [NSArray arrayWithObjects:courseDetailViewController, edxMPViewController, nil];
-    EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
+    splitVC.presentsWithGesture = YES;
     app.backView = (EDXViewController *) app.window.rootViewController;
     app.window.rootViewController = splitVC;
 }
