@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 mulab. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "EDXViewController.h"
 
-@interface EDXCourseDetailViewController : UISplitViewController
-
+@interface EDXCourseDetailViewController : EDXViewController
+@property (nonatomic, strong)NSString *courseId;
 @end

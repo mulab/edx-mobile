@@ -10,6 +10,8 @@
 #import <Objection/JSObjection.h>
 #import "EDXAppDelegate.h"
 #import "EDXLoginViewController.h"
+#import "EDXViewController.h"
+
 @interface MyAppModule : JSObjectionModule {
 
 }
@@ -22,6 +24,7 @@
 }
 @end
 @implementation EDXAppDelegate
+@synthesize backView;
 void uncaughtExceptionHandler(NSException *exception) {
     NSLog(@"CRASH: %@", exception);
     NSLog(@"Stack Trace: %@", [exception callStackSymbols]);

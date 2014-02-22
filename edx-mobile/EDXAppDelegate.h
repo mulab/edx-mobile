@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class EDXViewController;
+
 @interface EDXAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) EDXViewController *backView;
 @end
