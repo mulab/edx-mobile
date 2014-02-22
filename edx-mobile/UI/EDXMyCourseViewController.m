@@ -101,8 +101,7 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     courseDetailViewController.view.frame = CGRectMake(0, 0, 265, 1004);
     [splitVC.view addSubview:edxMPViewController.view];
     [splitVC.view addSubview:courseDetailViewController.view];
-    app.backView = (EDXViewController *) app.window.rootViewController;
-    app.window.rootViewController = splitVC;
+    [self presentViewController:splitVC animated:YES completion:nil];
 }
 
 - (void)error:(NSError *)err business:(kBusinessTag)tag {
