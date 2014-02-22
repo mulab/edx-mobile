@@ -48,32 +48,45 @@
 		C396517F1832361600984745 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C396517E1832361600984745 /* libz.1.2.5.dylib */; };
 		C39651881832440200984745 /* EDXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C39651871832440200984745 /* EDXConstants.m */; };
 		D86E9125A76B4B1C8B95334B /* libPods-edx-mobile Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F752CA97F5D643EEAD405A84 /* libPods-edx-mobile Tests.a */; };
+		EE3DB1D36EEFB1E3429F3005 /* CollapsableTableViewHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB304653AADA135866DDD /* CollapsableTableViewHeaderViewController.m */; };
+		EE3DB2034237159B7B164F73 /* CollapsableTableViewHeaderViewGrouped_iOS7.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DBE4D146D7360321424E0 /* CollapsableTableViewHeaderViewGrouped_iOS7.xib */; };
 		EE3DB30D0BDE9AD8D59C1248 /* tab_bar_item_find_course.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB968F70D157766F5CD45 /* tab_bar_item_find_course.png */; };
 		EE3DB31E14ED5094B1115270 /* EDXGetCourseElementRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB85CD746A0E28AD3843B /* EDXGetCourseElementRequest.m */; };
 		EE3DB39DA6C7A4C39A9DD03F /* login_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB0DA53E14009B6D457CF /* login_button.png */; };
 		EE3DB44473CA9C6D96CA77F0 /* EDXMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB565121C76C6EF87A9D9 /* EDXMPViewController.m */; };
 		EE3DB446D9A361B5E6E2C5A4 /* EDXNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB9C1717814498CF694A2 /* EDXNetworkRequest.m */; };
+		EE3DB55F709AA54033E9B793 /* CollapsableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB4CB039782C643E7EE45 /* CollapsableTableView.m */; };
 		EE3DB5E0DAB26611B4D277F8 /* EDXUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBDDB7A6B99636F0BC515 /* EDXUtilities.m */; };
+		EE3DB7A332A9516E5ED38B6F /* CollapsableTableViewFooterViewPlain_iOS7.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB3D788D8046BB9DC8012 /* CollapsableTableViewFooterViewPlain_iOS7.xib */; };
 		EE3DB823E5642CC6B24EAEFF /* EDXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBF6EB115946E26071145 /* EDXLoginViewController.m */; };
+		EE3DB8826BD446DC88833992 /* CollapsableTableViewTapRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB7B2D1EA5130465B0C46 /* CollapsableTableViewTapRecognizer.m */; };
 		EE3DB8DDC4480D19F7DB135D /* EDXDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */; };
+		EE3DB8F248EF8AE64E34D035 /* CollapsableTableViewFooterViewGrouped_iOS7.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB9651F2E1C24E9855001 /* CollapsableTableViewFooterViewGrouped_iOS7.xib */; };
 		EE3DB8F74F3243C2F0087DFC /* EDXGetCourseNavigationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBCA8C27515ECF3EE57CE /* EDXGetCourseNavigationRequest.m */; };
 		EE3DB947E6697A3D9CB95489 /* EDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBB36035632D2DF691A4 /* EDXViewController.m */; };
 		EE3DB9FAD6C539CC811E02CF /* EDXGetCoursesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB7FC16D2A224C821DB28 /* EDXGetCoursesRequest.m */; };
 		EE3DBB0C48DB967B4431F672 /* tab_bar_item_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB8396F892D26D4CD07E2 /* tab_bar_item_setting.png */; };
 		EE3DBB281B5E4EF6FCB6CFC1 /* EDXDeleteEnrollCourseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBCED9B5A8C298836B20C /* EDXDeleteEnrollCourseRequest.m */; };
+		EE3DBB5A77965FF05F443C48 /* CollapsableTableViewHeaderViewPlain_iOS7.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB7B2E3CAD12483A3BCB3 /* CollapsableTableViewHeaderViewPlain_iOS7.xib */; };
 		EE3DBBF03813455685492B5F /* EDXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB989DF77A764B6766B65 /* EDXURLHelper.m */; };
 		EE3DBBF18651F3EC67D1A4CE /* EDXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBBE980BA944702860DB4 /* EDXNetworkManager.m */; };
 		EE3DBC2BA67FE34496E0DBAB /* tab_bar_item_my_course.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3DBAFD23983161E60B197D /* tab_bar_item_my_course.png */; };
+		EE3DBC3639B5695068308D89 /* CollapsableTableViewFooterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB214A0EE16CC83FCE28F /* CollapsableTableViewFooterViewController.m */; };
 		EE3DBC4755B1807D9548C642 /* EDXNetworkRequestFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBF0DCC8C52600976545C /* EDXNetworkRequestFactoryTest.m */; };
+		EE3DBC62D7F6134B48071B91 /* CollapsableTableViewHeaderViewGrouped.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB49CE900587465AFDC81 /* CollapsableTableViewHeaderViewGrouped.xib */; };
 		EE3DBC7EF1EC50281E2EAA0C /* EDXNetworkManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBF14712711BF197F8059 /* EDXNetworkManagerTest.m */; };
 		EE3DBC9F94A35E415873843A /* EDXAccessTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB89B52A0F8724409EA44 /* EDXAccessTokenRequest.m */; };
 		EE3DBCEAEB601637EBF919F4 /* EDXGetEnrollsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB492183A5A59F03EEBBD /* EDXGetEnrollsRequest.m */; };
 		EE3DBDB4917A19F21337C5F4 /* EDXChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB495F47D29982B4874EC /* EDXChapter.m */; };
+		EE3DBDC587F319AA33E93C8F /* CollapsableTableViewHeaderViewPlain.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DBE76998C743297951842 /* CollapsableTableViewHeaderViewPlain.xib */; };
+		EE3DBE19363494D5E98DB255 /* CollapsableTableViewFooterViewPlain.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DBA54A3FD82155D69BA73 /* CollapsableTableViewFooterViewPlain.xib */; };
 		EE3DBE28D035A770B1F3D72E /* EDXSignUpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DB0A74242AA13C1438AC9 /* EDXSignUpRequest.m */; };
+		EE3DBE943C45537BD557C167 /* plaintableheader.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB9E0BE34EDFDCEE4E33F /* plaintableheader.png */; };
 		EE3DBEA989E129C5ABA356D8 /* EDXNetworkRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBA3B353F0C8722A9B58E /* EDXNetworkRequestFactory.m */; };
 		EE3DBEB2B5E7C0163C8286F1 /* EDXMPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DBDF0CBC8292E73CCA7EA /* EDXMPViewController.xib */; };
 		EE3DBEDF98E1538B74F2F73A /* EDXEnrollCourseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DBCB45BFD4AD13B4440CC /* EDXEnrollCourseRequest.m */; };
 		EE3DBF63D7130CA2E1BBEE5B /* EDXLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DBCF3FC3C358EA36690D9 /* EDXLoginViewController.xib */; };
+		EE3DBFF7EB41DCAD3DBF119A /* CollapsableTableViewFooterViewGrouped.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DB81003B7380A602CD791 /* CollapsableTableViewFooterViewGrouped.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,27 +169,42 @@
 		EE3DB14193BC7B0CD1E6D3A3 /* EDXGetCourseNavigationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseNavigationRequest.h; sourceTree = "<group>"; };
 		EE3DB14DC2F7C1F109C21009 /* EDXGetCoursesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCoursesRequest.h; sourceTree = "<group>"; };
 		EE3DB20B7FEFAA4699E5D949 /* EDXUIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUIViewDelegate.h; sourceTree = "<group>"; };
+		EE3DB214A0EE16CC83FCE28F /* CollapsableTableViewFooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableViewFooterViewController.m; sourceTree = "<group>"; };
 		EE3DB2393B657E4938B57BF0 /* EDXEnrollCourseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXEnrollCourseRequest.h; sourceTree = "<group>"; };
 		EE3DB28D9DC3513EE40A85FC /* EDXDeleteEnrollCourseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXDeleteEnrollCourseRequest.h; sourceTree = "<group>"; };
+		EE3DB304653AADA135866DDD /* CollapsableTableViewHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableViewHeaderViewController.m; sourceTree = "<group>"; };
+		EE3DB3D788D8046BB9DC8012 /* CollapsableTableViewFooterViewPlain_iOS7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewFooterViewPlain_iOS7.xib; sourceTree = "<group>"; };
 		EE3DB41013EE6D081A204CB7 /* EDXAccessTokenRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXAccessTokenRequest.h; sourceTree = "<group>"; };
 		EE3DB48D78C302881AB88D35 /* EDXSignUpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXSignUpRequest.h; sourceTree = "<group>"; };
 		EE3DB492183A5A59F03EEBBD /* EDXGetEnrollsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXGetEnrollsRequest.m; sourceTree = "<group>"; };
 		EE3DB495F47D29982B4874EC /* EDXChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXChapter.m; sourceTree = "<group>"; };
+		EE3DB49CE900587465AFDC81 /* CollapsableTableViewHeaderViewGrouped.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewHeaderViewGrouped.xib; sourceTree = "<group>"; };
+		EE3DB4CB039782C643E7EE45 /* CollapsableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableView.m; sourceTree = "<group>"; };
 		EE3DB565121C76C6EF87A9D9 /* EDXMPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXMPViewController.m; sourceTree = "<group>"; };
 		EE3DB5D2C0C0F04FE3BCDF84 /* EDXGetCourseElementRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXGetCourseElementRequest.h; sourceTree = "<group>"; };
 		EE3DB727A0819E5E1E67AC82 /* EDXURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXURLHelper.h; sourceTree = "<group>"; };
 		EE3DB755D9EC387A92FE186A /* EDXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkManager.h; sourceTree = "<group>"; };
 		EE3DB757FFB339B0AB779DF5 /* EDXChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXChapter.h; sourceTree = "<group>"; };
+		EE3DB7B2D1EA5130465B0C46 /* CollapsableTableViewTapRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsableTableViewTapRecognizer.m; sourceTree = "<group>"; };
+		EE3DB7B2E3CAD12483A3BCB3 /* CollapsableTableViewHeaderViewPlain_iOS7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewHeaderViewPlain_iOS7.xib; sourceTree = "<group>"; };
+		EE3DB7BDC87423A42BECD887 /* CollapsableTableViewFooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableViewFooterViewController.h; sourceTree = "<group>"; };
 		EE3DB7FC16D2A224C821DB28 /* EDXGetCoursesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXGetCoursesRequest.m; sourceTree = "<group>"; };
+		EE3DB81003B7380A602CD791 /* CollapsableTableViewFooterViewGrouped.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewFooterViewGrouped.xib; sourceTree = "<group>"; };
 		EE3DB820F12CF00BA864C24D /* EDXNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXNetworkDelegate.h; sourceTree = "<group>"; };
 		EE3DB8396F892D26D4CD07E2 /* tab_bar_item_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_item_setting.png; sourceTree = "<group>"; };
 		EE3DB85CD746A0E28AD3843B /* EDXGetCourseElementRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXGetCourseElementRequest.m; sourceTree = "<group>"; };
+		EE3DB87235B36C74EE0C42E9 /* TapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDelegate.h; sourceTree = "<group>"; };
 		EE3DB89B52A0F8724409EA44 /* EDXAccessTokenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXAccessTokenRequest.m; sourceTree = "<group>"; };
+		EE3DB9651F2E1C24E9855001 /* CollapsableTableViewFooterViewGrouped_iOS7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewFooterViewGrouped_iOS7.xib; sourceTree = "<group>"; };
 		EE3DB968F70D157766F5CD45 /* tab_bar_item_find_course.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_item_find_course.png; sourceTree = "<group>"; };
 		EE3DB989DF77A764B6766B65 /* EDXURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXURLHelper.m; sourceTree = "<group>"; };
 		EE3DB98F14ECB87C468A9136 /* EDXUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXUtilities.h; sourceTree = "<group>"; };
 		EE3DB9C1717814498CF694A2 /* EDXNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequest.m; sourceTree = "<group>"; };
+		EE3DB9D821936F1EEB9884D0 /* CollapsableTableViewHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableViewHeaderViewController.h; sourceTree = "<group>"; };
+		EE3DB9E0BE34EDFDCEE4E33F /* plaintableheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plaintableheader.png; sourceTree = "<group>"; };
 		EE3DBA3B353F0C8722A9B58E /* EDXNetworkRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequestFactory.m; sourceTree = "<group>"; };
+		EE3DBA3DAA4881625A8EE71B /* CollapsableTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableViewDelegate.h; sourceTree = "<group>"; };
+		EE3DBA54A3FD82155D69BA73 /* CollapsableTableViewFooterViewPlain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewFooterViewPlain.xib; sourceTree = "<group>"; };
 		EE3DBAFD23983161E60B197D /* tab_bar_item_my_course.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_item_my_course.png; sourceTree = "<group>"; };
 		EE3DBBA3FC8B82799C023B12 /* EDXDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXDataManager.m; sourceTree = "<group>"; };
 		EE3DBBB36035632D2DF691A4 /* EDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXViewController.m; sourceTree = "<group>"; };
@@ -192,9 +220,13 @@
 		EE3DBDAFDFD6C128AA8C4FDF /* EDXMPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXMPViewController.h; sourceTree = "<group>"; };
 		EE3DBDDB7A6B99636F0BC515 /* EDXUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXUtilities.m; sourceTree = "<group>"; };
 		EE3DBDF0CBC8292E73CCA7EA /* EDXMPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EDXMPViewController.xib; sourceTree = "<group>"; };
+		EE3DBE4D146D7360321424E0 /* CollapsableTableViewHeaderViewGrouped_iOS7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewHeaderViewGrouped_iOS7.xib; sourceTree = "<group>"; };
+		EE3DBE76998C743297951842 /* CollapsableTableViewHeaderViewPlain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsableTableViewHeaderViewPlain.xib; sourceTree = "<group>"; };
 		EE3DBEB90A01E3F7F2C46622 /* EDXBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXBlock.h; sourceTree = "<group>"; };
 		EE3DBF0DCC8C52600976545C /* EDXNetworkRequestFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkRequestFactoryTest.m; sourceTree = "<group>"; };
+		EE3DBF13DAF5C7DAFFE7E0FC /* CollapsableTableViewTapRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableViewTapRecognizer.h; sourceTree = "<group>"; };
 		EE3DBF14712711BF197F8059 /* EDXNetworkManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXNetworkManagerTest.m; sourceTree = "<group>"; };
+		EE3DBF255ABE657D1387E7C4 /* CollapsableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsableTableView.h; sourceTree = "<group>"; };
 		EE3DBF6EB115946E26071145 /* EDXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDXLoginViewController.m; sourceTree = "<group>"; };
 		EE3DBFC6D17E32D8EBDF4FBB /* EDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDXViewController.h; sourceTree = "<group>"; };
 		F113093608F84F158AC24FD4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -238,6 +270,7 @@
 				8A8B2DBE18B5D79E00FBDABB /* EDXMyCourseCell.h */,
 				8A8B2DBF18B5D79E00FBDABB /* EDXMyCourseCell.m */,
 				8A8B2DC118B5D7CC00FBDABB /* EDXMyCourseCell.xib */,
+				EE3DB43712E4324CD44FFF4E /* CollapsableTableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +400,23 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		EE3DB43712E4324CD44FFF4E /* CollapsableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DBB6434D3903A6DA079BA /* Classes */,
+				EE3DB9E0BE34EDFDCEE4E33F /* plaintableheader.png */,
+				EE3DBA54A3FD82155D69BA73 /* CollapsableTableViewFooterViewPlain.xib */,
+				EE3DBE76998C743297951842 /* CollapsableTableViewHeaderViewPlain.xib */,
+				EE3DB81003B7380A602CD791 /* CollapsableTableViewFooterViewGrouped.xib */,
+				EE3DB49CE900587465AFDC81 /* CollapsableTableViewHeaderViewGrouped.xib */,
+				EE3DB3D788D8046BB9DC8012 /* CollapsableTableViewFooterViewPlain_iOS7.xib */,
+				EE3DB7B2E3CAD12483A3BCB3 /* CollapsableTableViewHeaderViewPlain_iOS7.xib */,
+				EE3DB9651F2E1C24E9855001 /* CollapsableTableViewFooterViewGrouped_iOS7.xib */,
+				EE3DBE4D146D7360321424E0 /* CollapsableTableViewHeaderViewGrouped_iOS7.xib */,
+			);
+			path = CollapsableTableView;
+			sourceTree = "<group>";
+		};
 		EE3DB77DE5EFAD47BFEE48DC /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +469,23 @@
 				8A8B2E1518B7BC7D00FBDABB /* EDXCourseDetailModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EE3DBB6434D3903A6DA079BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DB87235B36C74EE0C42E9 /* TapDelegate.h */,
+				EE3DBF255ABE657D1387E7C4 /* CollapsableTableView.h */,
+				EE3DB4CB039782C643E7EE45 /* CollapsableTableView.m */,
+				EE3DBA3DAA4881625A8EE71B /* CollapsableTableViewDelegate.h */,
+				EE3DBF13DAF5C7DAFFE7E0FC /* CollapsableTableViewTapRecognizer.h */,
+				EE3DB7B2D1EA5130465B0C46 /* CollapsableTableViewTapRecognizer.m */,
+				EE3DB7BDC87423A42BECD887 /* CollapsableTableViewFooterViewController.h */,
+				EE3DB214A0EE16CC83FCE28F /* CollapsableTableViewFooterViewController.m */,
+				EE3DB9D821936F1EEB9884D0 /* CollapsableTableViewHeaderViewController.h */,
+				EE3DB304653AADA135866DDD /* CollapsableTableViewHeaderViewController.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		EE3DBDFDF14AAE6F5E1E0C52 /* UI */ = {
@@ -561,6 +628,15 @@
 				EE3DB30D0BDE9AD8D59C1248 /* tab_bar_item_find_course.png in Resources */,
 				EE3DBB0C48DB967B4431F672 /* tab_bar_item_setting.png in Resources */,
 				EE3DBC2BA67FE34496E0DBAB /* tab_bar_item_my_course.png in Resources */,
+				EE3DBE943C45537BD557C167 /* plaintableheader.png in Resources */,
+				EE3DBE19363494D5E98DB255 /* CollapsableTableViewFooterViewPlain.xib in Resources */,
+				EE3DBDC587F319AA33E93C8F /* CollapsableTableViewHeaderViewPlain.xib in Resources */,
+				EE3DBFF7EB41DCAD3DBF119A /* CollapsableTableViewFooterViewGrouped.xib in Resources */,
+				EE3DBC62D7F6134B48071B91 /* CollapsableTableViewHeaderViewGrouped.xib in Resources */,
+				EE3DB7A332A9516E5ED38B6F /* CollapsableTableViewFooterViewPlain_iOS7.xib in Resources */,
+				EE3DBB5A77965FF05F443C48 /* CollapsableTableViewHeaderViewPlain_iOS7.xib in Resources */,
+				EE3DB8F248EF8AE64E34D035 /* CollapsableTableViewFooterViewGrouped_iOS7.xib in Resources */,
+				EE3DB2034237159B7B164F73 /* CollapsableTableViewHeaderViewGrouped_iOS7.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +754,10 @@
 				EE3DB44473CA9C6D96CA77F0 /* EDXMPViewController.m in Sources */,
 				EE3DB823E5642CC6B24EAEFF /* EDXLoginViewController.m in Sources */,
 				8A8B2DA818B4905100FBDABB /* EDXMainViewController.m in Sources */,
+				EE3DB55F709AA54033E9B793 /* CollapsableTableView.m in Sources */,
+				EE3DB8826BD446DC88833992 /* CollapsableTableViewTapRecognizer.m in Sources */,
+				EE3DBC3639B5695068308D89 /* CollapsableTableViewFooterViewController.m in Sources */,
+				EE3DB1D36EEFB1E3429F3005 /* CollapsableTableViewHeaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
