@@ -95,10 +95,13 @@ objection_requires_sel(@selector(dataManager));
                 if([item.type isEqualToString: @"video"]){
                     EDXVideoItemModel *video = (EDXVideoItemModel *) item;
                     EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
-                    UISplitViewController *sp = (UISplitViewController *) app.window.rootViewController;
-                    EDXMPViewController *mp = sp.viewControllers[1];
+                    UIViewController *sp = app.window.rootViewController;
+                    EDXMPViewController *mp = sp.childViewControllers[1];
                     [mp.moviePlayer setContentURL:[[NSURL alloc] initWithString:video.url]];
                     [mp.moviePlayer play];
+                    [UIView animateWithDuration:0.5 animations:^{
+                        self.view.hidden = YES;
+                    }];
                 }
             }
         }

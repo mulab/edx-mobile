@@ -95,9 +95,12 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     app.currentCourse = courseId;
     EDXCourseDetailViewController *courseDetailViewController = [[EDXCourseDetailViewController alloc] init];
     EDXMPViewController *edxMPViewController = [[EDXMPViewController alloc] init];
-    UISplitViewController* splitVC = [[UISplitViewController alloc] init];
-    splitVC.viewControllers = [NSArray arrayWithObjects:courseDetailViewController, edxMPViewController, nil];
-    splitVC.presentsWithGesture = YES;
+    UIViewController* splitVC = [[UIViewController alloc] init];
+    [splitVC addChildViewController:courseDetailViewController];
+    [splitVC addChildViewController:edxMPViewController];
+    courseDetailViewController.view.frame = CGRectMake(0, 0, 265, 1004);
+    [splitVC.view addSubview:edxMPViewController.view];
+    [splitVC.view addSubview:courseDetailViewController.view];
     app.backView = (EDXViewController *) app.window.rootViewController;
     app.window.rootViewController = splitVC;
 }
