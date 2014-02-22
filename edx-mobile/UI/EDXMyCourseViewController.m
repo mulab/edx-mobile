@@ -10,10 +10,12 @@
 #import "EDXMyCourseViewController.h"
 #import "EDXMyCourseCell.h"
 #import "EDXDataManager.h"
-#import "EDXCourseDetailModel.h"
+#import "EDXCourseDetailViewController.h"
+#import "EDXMPViewController.h"
+#import "EDXAppDelegate.h"
 
 @interface EDXMyCourseViewController ()
-
+- (void)navigateToCourseDetail:(NSString *)courseId;
 @end
 static EDXMyCourseViewController *instance = nil;
 @implementation EDXMyCourseViewController
@@ -81,10 +83,22 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
             break;
         case kBusinessTagGetCourseNavigation:
             [dataManager saveCourseDetail:result];
+            [self navigateToCourseDetail:[[result objectForKey:@"course"] objectForKey:@"course_id"]];
             break;
         default:
             break;
     }
+}
+
+- (void)navigateToCourseDetail:(NSString *)courseId{
+    EDXCourseDetailViewController *courseDetailViewController = [[EDXCourseDetailViewController alloc] init];
+    courseDetailViewController.courseId = courseId;
+    EDXMPViewController *edxMPViewController = [[EDXMPViewController alloc] init];
+    UISplitViewController* splitVC = [[UISplitViewController alloc] init];
+    splitVC.viewControllers = [NSArray arrayWithObjects:courseDetailViewController, edxMPViewController, nil];
+    EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
+    app.backView = (EDXViewController *) app.window.rootViewController;
+    app.window.rootViewController = splitVC;
 }
 
 - (void)error:(NSError *)err business:(kBusinessTag)tag {
