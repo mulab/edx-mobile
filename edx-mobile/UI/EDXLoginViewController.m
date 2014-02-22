@@ -43,6 +43,7 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     NSLog(@"token:%@",[dataManager getAccessToken]);
     NSString *token = [self.dataManager getAccessToken];
     if(token){
+        [networkManager setAccess_token:token];
         [self navigateToMainView:NO];
     }
 //    EDXSignUpData data = {"user@user.com","username","password","user_full"};

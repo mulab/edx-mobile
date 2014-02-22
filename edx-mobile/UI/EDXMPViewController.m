@@ -8,6 +8,7 @@
 
 #import "EDXMPViewController.h"
 #import "EDXAppDelegate.h"
+#import "EDXViewController.h"
 
 @interface EDXMPViewController ()
 
@@ -28,7 +29,7 @@
 
 - (void)videoDidPause{
     EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
-    UIViewController *sp = app.window.rootViewController;
+    EDXViewController *sp = app.backView;
     UIViewController *nav = sp.childViewControllers[0];
     switch (self.moviePlayer.playbackState){
         case MPMoviePlaybackStatePlaying:{

@@ -7,6 +7,7 @@
 //
 
 #import "EDXMyCourseCell.h"
+#import "EDXMyCourseViewController.h"
 #import <Objection/Objection.h>
 @implementation EDXMyCourseCell
 objection_requires_sel(@selector(networkManager))
@@ -107,7 +108,8 @@ objection_requires_sel(@selector(networkManager))
     switch (self.type){
 
         case MyCourseCell:
-            [self.networkManager GetCourseDetail:self.courseId owner:self.container];
+//            [self.networkManager GetCourseDetail:self.courseId owner:self.container];
+            [(EDXMyCourseViewController *)self.container navigateToCourseDetail:self.courseId];
             break;
         case FindCourseCell:
             [self.networkManager EnrollCourse:self.courseId owner:self.container];

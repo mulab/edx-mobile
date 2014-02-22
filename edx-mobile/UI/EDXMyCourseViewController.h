@@ -21,6 +21,6 @@
 @property (nonatomic, strong) NSMutableArray *myCourseList;
 
 + (instancetype)getInstance;
-
+- (void)navigateToCourseDetail:(NSString *)courseId;
 - (void)refreshView;
 @end

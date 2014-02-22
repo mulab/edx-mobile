@@ -15,7 +15,7 @@
 #import "EDXAppDelegate.h"
 
 @interface EDXMyCourseViewController ()
-- (void)navigateToCourseDetail:(NSString *)courseId;
+
 @end
 static EDXMyCourseViewController *instance = nil;
 @implementation EDXMyCourseViewController
@@ -84,8 +84,8 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
             [myCourseTable reloadData];
             break;
         case kBusinessTagGetCourseNavigation:
-            [dataManager saveCourseDetail:result];
-            [self navigateToCourseDetail:[[result objectForKey:@"course"] objectForKey:@"course_id"]];
+//            [dataManager saveCourseDetail:result];
+//            [self navigateToCourseDetail:[[result objectForKey:@"course"] objectForKey:@"course_id"]];
             break;
         default:
             break;
@@ -97,12 +97,13 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     app.currentCourse = courseId;
     EDXCourseDetailViewController *courseDetailViewController = [[EDXCourseDetailViewController alloc] init];
     EDXMPViewController *edxMPViewController = [[EDXMPViewController alloc] init];
-    UIViewController* splitVC = [[UIViewController alloc] init];
+    EDXViewController *splitVC = [[EDXViewController alloc] init];
     [splitVC addChildViewController:courseDetailViewController];
     [splitVC addChildViewController:edxMPViewController];
     courseDetailViewController.view.frame = CGRectMake(0, 0, 265, 1004);
     [splitVC.view addSubview:edxMPViewController.view];
     [splitVC.view addSubview:courseDetailViewController.view];
+    app.backView = splitVC;
     [self presentViewController:splitVC animated:YES completion:nil];
 }
 

@@ -16,14 +16,15 @@
 #import "EDXItemModel.h"
 #import "EDXVideoItemModel.h"
 #import "EDXMPViewController.h"
+#import "EDXNetworkManager.h"
 
 @interface EDXCourseDetailViewController ()
 
 @end
 
 @implementation EDXCourseDetailViewController
-objection_requires_sel(@selector(dataManager));
-@synthesize courseId,dataManager;
+objection_requires_sel(@selector(dataManager), @selector(networkManager));
+@synthesize courseId,dataManager,networkManager;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,6 +33,7 @@ objection_requires_sel(@selector(dataManager));
         self.courseId = app.currentCourse;
         self.dataManager = [[JSObjection defaultInjector] getObject:[EDXDataManager class]];
         self.courseDetail = [self.dataManager getCourseDetail:self.courseId];
+        [self.networkManager GetCourseDetail:self.courseId owner:self];
     }
     return self;
 }
@@ -52,6 +54,20 @@ objection_requires_sel(@selector(dataManager));
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)before:(kBusinessTag)tag {
+
+}
+
+- (void)success:(id)result business:(kBusinessTag)tag {
+    [self.dataManager saveCourseDetail:result];
+    self.courseDetail = [self.dataManager getCourseDetail:self.courseId];
+    [self.navigateView reloadData];
+}
+
+- (void)error:(NSError *)err business:(kBusinessTag)tag {
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -95,7 +111,7 @@ objection_requires_sel(@selector(dataManager));
                 if([item.type isEqualToString: @"video"]){
                     EDXVideoItemModel *video = (EDXVideoItemModel *) item;
                     EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
-                    UIViewController *sp = app.window.rootViewController;
+                    UIViewController *sp = app.backView;
                     EDXMPViewController *mp = sp.childViewControllers[1];
                     [mp.moviePlayer setContentURL:[[NSURL alloc] initWithString:video.url]];
                     [mp.moviePlayer play];
