@@ -50,6 +50,8 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.myCourseList = [self.dataManager getMyCourseList];
+    [self.myCourseTable reloadData];
     [self refreshView];
 }
 
