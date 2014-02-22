@@ -16,4 +16,5 @@
 @property (nonatomic, strong)EDXDataManager *dataManager;
 @property (nonatomic, strong)EDXCourseDetailModel *courseDetail;
 @property (strong, nonatomic) IBOutlet CollapsableTableView *navigateView;
+- (IBAction)back:(id)sender;
 @end
