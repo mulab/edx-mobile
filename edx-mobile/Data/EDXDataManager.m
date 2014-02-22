@@ -108,7 +108,24 @@ objection_register_singleton(EDXDataManager)
 }
 
 - (void)saveMyCourseList:(id)result {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES);
+    NSString *cachesDirectory = [paths objectAtIndex:0];
+    cachesDirectory = [cachesDirectory stringByAppendingPathComponent:@"MyCourseImageCache"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cachesDirectory]){
+        NSError *error = nil;
+        [[NSFileManager defaultManager] createDirectoryAtPath:cachesDirectory
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:&error];
+    }
     NSMutableArray *myCourseList = [self parseCourseList:[result objectForKey:@"enrollments"]];
+    for(EDXCourseModel *item in myCourseList){
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[[NSURL alloc] initWithString:item.courseImageUrl]]];
+        NSString *path = [cachesDirectory stringByAppendingPathComponent:item.courseId];
+        NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+        [[NSFileManager defaultManager] createFileAtPath:path contents:imageData attributes:nil];
+        item.courseImageUrl = path;
+    }
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:myCourseList];
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"mycourse"];
     [[NSUserDefaults standardUserDefaults] synchronize];

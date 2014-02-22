@@ -70,18 +70,23 @@ objection_requires_sel(@selector(networkManager))
     self.courseDate.text = model.start;
     self.courseLastUpdateDate.text = @"";
     self.courseId = model.courseId;
-    NSURL *courseImageUrl = [NSURL URLWithString:model.courseImageUrl];
-    UIImage *courseImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:courseImageUrl]];
-    self.courseImageView.image = courseImage;
     self.type = type;
     switch (type) {
-        case FindCourseCell:
+        case FindCourseCell:{
             self.upsideButtonTitle.text = @"课程介绍";
             self.downsideButtonTItle.text = @"注册课程";
+            NSURL *courseImageUrl = [NSURL URLWithString:model.courseImageUrl];
+            UIImage *courseImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:courseImageUrl]];
+            self.courseImageView.image = courseImage;
             break;
-        case MyCourseCell:
+        }
+        case MyCourseCell:{
             self.upsideButtonTitle.text = @"课程更新";
             self.downsideButtonTItle.text = @"查看课程";
+            UIImage *courseImage = [UIImage imageWithContentsOfFile:model.courseImageUrl];
+            self.courseImageView.image = courseImage;
+            break;
+        }
         default:
             break;
     }
