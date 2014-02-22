@@ -9,6 +9,7 @@
 #import "EDXLoginViewController.h"
 #import <Objection/Objection.h>
 #import "EDXMainViewController.h"
+#import "EDXAppDelegate.h"
 
 @interface EDXLoginViewController ()
 
@@ -40,6 +41,10 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     dataManager = [[JSObjection defaultInjector] getObject:[EDXDataManager class]];
     [userName setText:[dataManager GetUserName]];
     NSLog(@"token:%@",[dataManager getAccessToken]);
+    NSString *token = [self.dataManager getAccessToken];
+    if(token){
+        [self navigateToMainView:NO];
+    }
 //    EDXSignUpData data = {"user@user.com","username","password","user_full"};
 //    NSString *url = [[[networkManager SignUpRequestWithData:data] URL] absoluteString];
     //[userName setText:[[[factory SignUpRequestWithData:data] URL] absoluteString]];
@@ -84,8 +89,17 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
         [dataManager saveAccessToken:[result objectForKey:@"access_token"]];
         NSLog(@"token:%@",[dataManager getAccessToken]);
         [networkManager setAccess_token:[result objectForKey:@"access_token"]];
-        EDXMainViewController *mainViewController = [[EDXMainViewController alloc] init];
+        [self navigateToMainView:YES];
+    }
+}
+
+- (void)navigateToMainView:(BOOL)animated {
+    EDXMainViewController *mainViewController = [[EDXMainViewController alloc] init];
+    if(animated){
         [self presentViewController:mainViewController animated:YES completion:nil];
+    } else{
+        EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
+        app.window.rootViewController = mainViewController;
     }
 }
 
