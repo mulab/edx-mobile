@@ -7,6 +7,7 @@
 //
 
 #import "EDXMPViewController.h"
+#import "EDXAppDelegate.h"
 
 @interface EDXMPViewController ()
 
@@ -18,9 +19,33 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoDidPause)
+                                                     name:MPMoviePlayerPlaybackStateDidChangeNotification
+                                                   object:nil];
     }
     return self;
+}
+
+- (void)videoDidPause{
+    EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
+    UIViewController *sp = app.window.rootViewController;
+    UIViewController *nav = sp.childViewControllers[0];
+    switch (self.moviePlayer.playbackState){
+        case MPMoviePlaybackStatePlaying:{
+            [UIView animateWithDuration:0.5 animations:^{
+                nav.view.hidden = YES;
+            }];
+            break;
+        }
+        case MPMoviePlaybackStatePaused:{
+            [UIView animateWithDuration:0.5 animations:^{
+                nav.view.hidden = NO;
+            }];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 - (void)viewDidLoad

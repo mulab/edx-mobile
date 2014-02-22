@@ -99,9 +99,6 @@ objection_requires_sel(@selector(dataManager));
                     EDXMPViewController *mp = sp.childViewControllers[1];
                     [mp.moviePlayer setContentURL:[[NSURL alloc] initWithString:video.url]];
                     [mp.moviePlayer play];
-                    [UIView animateWithDuration:0.5 animations:^{
-                        self.view.hidden = YES;
-                    }];
                 }
             }
         }
