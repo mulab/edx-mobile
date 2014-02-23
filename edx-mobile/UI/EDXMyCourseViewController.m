@@ -136,7 +136,7 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 184.0f;
+    return 219.0f;
 }
 
 

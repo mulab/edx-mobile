@@ -33,4 +33,5 @@ typedef enum {
 @property (strong, nonatomic)EDXNetworkManager *networkManager;
 @property (strong, nonatomic)NSString *courseId;
 @property (strong, nonatomic)id<EDXNetworkDelegate> container;
+@property(nonatomic, strong) UILabel *courseIdLabel;
 @end

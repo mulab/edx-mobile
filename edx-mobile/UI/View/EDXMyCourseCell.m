@@ -18,41 +18,47 @@ objection_requires_sel(@selector(networkManager))
     if (self) {
         networkManager = [[JSObjection defaultInjector] getObject:[EDXNetworkManager class]];
 
+        //courseId
+        self.courseIdLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 90, 135, 28)];
+        [self.courseIdLabel setTextColor:[UIColor purpleColor]];
+        [self.contentView addSubview:self.courseIdLabel];
+
         //courseImage
-        self.courseImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 338, 166)];
+        self.courseImageView = [[UIImageView alloc]initWithFrame:CGRectMake(253, 0, 555, 219)];
         [self.contentView addSubview:self.courseImageView];
         
         //courseName
-        self.courseName = [[UILabel alloc]initWithFrame:CGRectMake(10, 113, 338, 21)];
-        [self.courseName setTextColor:[UIColor whiteColor]];
+        self.courseName = [[UILabel alloc]initWithFrame:CGRectMake(37, 121, 174, 28)];
+        [self.courseName setTextColor:[UIColor purpleColor]];
         [self.contentView addSubview:self.courseName];
         
         //courseDate
-        self.courseDate = [[UILabel alloc]initWithFrame:CGRectMake(10, 142, 338, 21)];
+        self.courseDate = [[UILabel alloc]initWithFrame:CGRectMake(39, 170, 100, 28)];
         [self.courseDate setTextColor:[UIColor whiteColor]];
+        [self.courseDate setBackgroundColor:[UIColor purpleColor]];
         [self.contentView addSubview:self.courseDate];
         
         //upsideButton
         self.upsideButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [self.upsideButton setFrame:CGRectMake(356, 9, 164, 75)];
+        [self.upsideButton setFrame:CGRectMake(807, 0, 133, 109)];
         [self.upsideButton setBackgroundColor:[UIColor colorWithRed:243/255.0 green:152/255.0 blue:1/255.0 alpha:1.0]];
         [self.upsideButton addTarget:self action:@selector(upsideButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:self.upsideButton];
         
         //upsideLabel
-        self.upsideButtonTitle = [[UILabel alloc]initWithFrame:CGRectMake(402, 49, 70, 21)];
+        self.upsideButtonTitle = [[UILabel alloc]initWithFrame:CGRectMake(825, 72, 113, 39)];
         [self.upsideButtonTitle setTextColor:[UIColor whiteColor]];
         [self.contentView addSubview:self.upsideButtonTitle];
         
         //downsideButton
         self.downsideButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [self.downsideButton setFrame:CGRectMake(356, 99, 164, 75)];
+        [self.downsideButton setFrame:CGRectMake(807, 110, 113, 109)];
         [self.downsideButton setBackgroundColor:[UIColor colorWithRed:155/255.0 green:50/255.0 blue:133/255.0 alpha:1.0]];
         [self.downsideButton addTarget:self action:@selector(downSideAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:self.downsideButton];
         
         //downsideTitle
-        self.downsideButtonTItle = [[UILabel alloc]initWithFrame:CGRectMake(402, 126, 70, 21)];
+        self.downsideButtonTItle = [[UILabel alloc]initWithFrame:CGRectMake(825, 182, 113, 39)];
         [self.downsideButtonTItle setTextColor:[UIColor whiteColor]];
         [self.contentView addSubview:self.downsideButtonTItle];
     }
@@ -72,6 +78,7 @@ objection_requires_sel(@selector(networkManager))
     self.courseLastUpdateDate.text = @"";
     self.courseId = model.courseId;
     self.type = type;
+    [self.courseIdLabel setText:self.courseId];
     switch (type) {
         case FindCourseCell:{
             self.upsideButtonTitle.text = @"课程介绍";
