@@ -32,6 +32,7 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
         EDXAppDelegate *app = (EDXAppDelegate *) [[UIApplication sharedApplication] delegate];
         self.courseId = app.currentCourse;
         self.dataManager = [[JSObjection defaultInjector] getObject:[EDXDataManager class]];
+        self.networkManager = [[JSObjection defaultInjector] getObject:[EDXNetworkManager class]];
         self.courseDetail = [self.dataManager getCourseDetail:self.courseId];
         [self.networkManager GetCourseDetail:self.courseId owner:self];
     }

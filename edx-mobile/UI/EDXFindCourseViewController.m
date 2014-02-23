@@ -75,12 +75,15 @@
     EDXCourseModel *model = (EDXCourseModel *) [self.courseList objectAtIndex:(NSUInteger) indexPath.row];
     [cell setupCell:model type:FindCourseCell];
     cell.container = self;
+    UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 219, 920, 11)];
+    [separatorLineView setBackgroundColor:[UIColor lightGrayColor]];
+    [cell.contentView addSubview:separatorLineView];
     return cell;
 }
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 184.0f;
+    return 230.0f;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {

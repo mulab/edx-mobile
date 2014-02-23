@@ -131,12 +131,15 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     EDXCourseModel *model = (EDXCourseModel *) [self.myCourseList objectAtIndex:(NSUInteger) indexPath.row];
     [cell setupCell:model type:MyCourseCell];
     cell.container = self;
+    UIView *separatorLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 219, 920, 11)];
+    [separatorLineView setBackgroundColor:[UIColor lightGrayColor]];
+    [cell.contentView addSubview:separatorLineView];
     return cell;
 }
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 219.0f;
+    return 230.0f;
 }
 
 

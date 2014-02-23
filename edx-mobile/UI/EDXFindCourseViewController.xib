@@ -17,24 +17,33 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xCz-ZR-aKs">
-                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <rect key="frame" x="40" y="132" width="920" height="656"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="656" id="DbX-gk-ksg"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="eBz-LT-GgW"/>
                         <outlet property="delegate" destination="-1" id="Tji-Ek-UJ3"/>
                     </connections>
                 </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hpq-Yj-XAU">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="xCz-ZR-aKs" secondAttribute="centerX" id="0dn-er-HjL"/>
-                <constraint firstItem="xCz-ZR-aKs" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="0fl-0V-7TA"/>
-                <constraint firstAttribute="bottom" secondItem="xCz-ZR-aKs" secondAttribute="bottom" id="4Ts-Pg-B7A"/>
-                <constraint firstItem="xCz-ZR-aKs" firstAttribute="top" secondItem="2" secondAttribute="top" id="TLX-EP-thX"/>
+                <constraint firstAttribute="trailing" secondItem="xCz-ZR-aKs" secondAttribute="trailing" constant="64" id="4n0-yG-wcd"/>
+                <constraint firstAttribute="bottom" secondItem="xCz-ZR-aKs" secondAttribute="bottom" constant="-20" id="Ien-VD-S5o"/>
+                <constraint firstItem="xCz-ZR-aKs" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="40" id="Tgs-ng-lof"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
+    <resources>
+        <image name="title_bar.png" width="1024" height="64"/>
+    </resources>
 </document>
