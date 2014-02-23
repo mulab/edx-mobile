@@ -46,6 +46,11 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
         [networkManager setAccess_token:token];
         [self navigateToMainView:NO];
     }
+    self.userName.delegate = self;
+    self.password.delegate = self;
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    gesture.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:gesture];
 //    EDXSignUpData data = {"user@user.com","username","password","user_full"};
 //    NSString *url = [[[networkManager SignUpRequestWithData:data] URL] absoluteString];
     //[userName setText:[[[factory SignUpRequestWithData:data] URL] absoluteString]];
@@ -71,12 +76,35 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
     [networkManager LoginWith:data owner:self];
 }
 
-- (void) LoginWith:(NSString *)access{
-    NSLog(@"login with access token:%@",access);
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    NSTimeInterval animationDuration=0.30f;
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    float width = self.view.frame.size.width;
+    float height = self.view.frame.size.height;
+    CGRect rect=CGRectMake(-120.0f,0.0f,width,height);
+    self.view.frame=rect;
+    [UIView commitAnimations];
+    return YES;
 }
 
-- (void) NavigateToDashBoard{
-    NSLog(@"navigate to dashboard");
+-(void)resumeView
+{
+    NSTimeInterval animationDuration=0.30f;
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    float width = self.view.frame.size.width;
+    float height = self.view.frame.size.height;
+    CGRect rect=CGRectMake(0.0f,0.0f,width,height);
+    self.view.frame=rect;
+    [UIView commitAnimations];
+}
+
+-(void)hideKeyboard
+{
+    [self.userName resignFirstResponder];
+    [self.password resignFirstResponder];
+    [self resumeView];
 }
 
 #pragma mark EDXNetworkDelegate
@@ -105,37 +133,5 @@ objection_requires_sel(@selector(dataManager), @selector(networkManager));
 }
 
 - (void)error:(NSError *)err business:(kBusinessTag)tag {
-
-}
-
--(void) beginPost:(kBusinessTag)tag{
-}
--(void) endPost:(id)result business:(kBusinessTag)tag{
-    UIAlertView *message = nil;
-    if(tag==kBusinessTagUserLogin){
-        NSDictionary *respond = result;
-        if ([respond objectForKey:@"access_token"]) {
-            //if success
-            NSLog(@"access_token:%@",[respond objectForKey:@"access_token"]);
-//            EDXMainViewController* mainVC = [[EDXMainViewController alloc]init];
-//            UINavigationController* vc =[[UINavigationController alloc]initWithRootViewController:mainVC];
-//            [self.view.window setRootViewController:vc];
-        } else {
-            //if not success
-            message = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Login Failed" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-            [message show];
-        }
-    }else if (tag== kBusinessTagEnrollCourse){
-        NSDictionary *response = result;
-        if([response objectForKey:@"enrollments"]){
-            NSArray *enrolls =  [response objectForKey:@"enrollments"];
-            NSLog(@"enrolls:%@",[enrolls[0] objectForKey:@"display_name"]);
-        }
-    }
-}
--(void) errorPost:(NSError *)err{
-    NSLog(@"err:%@",[err localizedDescription]);
-    NSLog(@"reason:%@",[err localizedFailureReason]);
-    NSLog(@"suggestion:%@",[err localizedRecoverySuggestion]);
 }
 @end

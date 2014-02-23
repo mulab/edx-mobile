@@ -13,7 +13,7 @@
 #import "EDXNetworkManager.h"
 #import "EDXNetworkRequestFactory.h"
 @class EDXDataManager,EDXNetworkRequestFactory;
-@interface EDXLoginViewController : EDXViewController<EDXNetworkDelegate>
+@interface EDXLoginViewController : EDXViewController<EDXNetworkDelegate,UITextFieldDelegate>
 {
     EDXDataManager *dataManager;
 }
@@ -23,6 +23,4 @@
 @property (nonatomic, strong) EDXNetworkManager *networkManager;
 
 - (IBAction)LoginAction:(id)sender;
-- (void) LoginWith:(NSString *)access;
-- (void) NavigateToDashBoard;
 @end
