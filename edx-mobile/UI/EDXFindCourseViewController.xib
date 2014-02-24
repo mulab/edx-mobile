@@ -17,11 +17,11 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xCz-ZR-aKs">
-                    <rect key="frame" x="40" y="132" width="920" height="656"/>
+                    <rect key="frame" x="40" y="132" width="920" height="586"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="656" id="DbX-gk-ksg"/>
+                        <constraint firstAttribute="height" constant="586" id="DbX-gk-ksg"/>
                     </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="eBz-LT-GgW"/>
@@ -36,7 +36,7 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="xCz-ZR-aKs" secondAttribute="trailing" constant="64" id="4n0-yG-wcd"/>
-                <constraint firstAttribute="bottom" secondItem="xCz-ZR-aKs" secondAttribute="bottom" constant="-20" id="Ien-VD-S5o"/>
+                <constraint firstAttribute="bottom" secondItem="xCz-ZR-aKs" secondAttribute="bottom" constant="50" id="Ien-VD-S5o"/>
                 <constraint firstItem="xCz-ZR-aKs" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="40" id="Tgs-ng-lof"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
